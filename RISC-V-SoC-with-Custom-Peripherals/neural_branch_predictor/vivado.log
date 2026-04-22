@@ -1,0 +1,1107 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Sat Mar 28 23:51:38 2026
+# Process ID: 2499596
+# Current directory: /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor
+# Command line: vivado
+# Log file: /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/vivado.log
+# Journal file: /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/vivado.jou
+# Running On: barkie1, OS: Linux, CPU Frequency: 2299.568 MHz, CPU Physical cores: 12, Host memory: 33381 MB
+#-----------------------------------------------------------
+start_gui
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:ac701:part0:1.4 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/ac701/1.4/board.xml as part xc7a200tfbg676-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.6 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kc705/1.6/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.6/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.7/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.4 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.4/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.5 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.5/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu1500:part0:1.2 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu1500/1.2/board.xml as part xcku115-flvb2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:sp701:part0:1.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/sp701/1.0/board.xml as part xc7s100fgga676-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:sp701:part0:1.1 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/sp701/1.1/board.xml as part xc7s100fgga676-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.4 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc707/1.4/board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc709:part0:1.8 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc709/1.8/board.xml as part xc7vx690tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.2 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/2.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.1 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.1/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.6 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.6/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.7/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu110/1.4/board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.0/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.3 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.3/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.4 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.4/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128:part0:1.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu128/production/1.0/board.xml as part xcvu37p-fsvh2892-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu129/production/1.0/board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu1525:part0:1.3 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu1525/1.3/board.xml as part xcvu9p-fsgd2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.2 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/2.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.1 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.1/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180_newl/production/1.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180_es:part0:1.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/es/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:ac701:part0:1.4 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/ac701/1.4/board.xml as part xc7a200tfbg676-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.6 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kc705/1.6/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.6/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.7/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.4 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.4/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.5 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.5/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu1500:part0:1.2 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu1500/1.2/board.xml as part xcku115-flvb2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:sp701:part0:1.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/sp701/1.0/board.xml as part xc7s100fgga676-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:sp701:part0:1.1 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/sp701/1.1/board.xml as part xc7s100fgga676-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.4 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc707/1.4/board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc709:part0:1.8 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc709/1.8/board.xml as part xc7vx690tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.2 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/2.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.1 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.1/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.6 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.6/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.7/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu110/1.4/board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.0/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.3 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.3/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.4 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.4/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128:part0:1.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu128/production/1.0/board.xml as part xcvu37p-fsvh2892-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu129/production/1.0/board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu1525:part0:1.3 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu1525/1.3/board.xml as part xcvu9p-fsgd2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.2 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/2.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.1 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.1/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180_newl/production/1.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180_es:part0:1.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/es/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:ac701:part0:1.4 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/ac701/1.4/board.xml as part xc7a200tfbg676-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.6 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kc705/1.6/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.6/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.7/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.4 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.4/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.5 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.5/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu1500:part0:1.2 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu1500/1.2/board.xml as part xcku115-flvb2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:sp701:part0:1.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/sp701/1.0/board.xml as part xc7s100fgga676-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:sp701:part0:1.1 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/sp701/1.1/board.xml as part xc7s100fgga676-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.4 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc707/1.4/board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc709:part0:1.8 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc709/1.8/board.xml as part xc7vx690tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.2 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/2.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.1 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.1/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.6 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.6/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.7/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu110/1.4/board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.0/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.3 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.3/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.4 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.4/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128:part0:1.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu128/production/1.0/board.xml as part xcvu37p-fsvh2892-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu129/production/1.0/board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu1525:part0:1.3 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu1525/1.3/board.xml as part xcvu9p-fsgd2104-2l-e specified in board_part file is either invalid or not available
+INFO: [Common 17-14] Message 'Board 49-26' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+create_project vivado_linux /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/vivado_linux -part xc7z020clg400-1
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/mnt/ssd/Xilinx/Vivado/2022.2/data/ip'.
+set_property board_part tul.com.tw:pynq-z2:part0:1.0 [current_project]
+add_files -norecurse {/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/mem.v /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/define.v /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/top_bp.v /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/bp_perceptron.v /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/tb.v /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/risc_v_soc_bp.v /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/pc_reg.v /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/bp_top.v /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/id_ex.v /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_bp_metrics.v /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ctrl.v /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/bp_bimodal.v /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/bp_history.v /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ex.v /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/pipeline_reg.v /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/data_ram.v /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/risc_v_soc.v /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/bp_confidence.v /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/if_id.v /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/top.v /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/id.v /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/mem_wb.v /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/reg_file.v /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/i_f.v /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ex_mem.v /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_baseline_metrics.v /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/ctrl_bp.v}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse {/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_bp_metrics.v /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_baseline_metrics.v}
+update_compile_order -fileset sim_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse {/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_bp_branchstress_check.v /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_compare_metrics.v}
+update_compile_order -fileset sim_1
+export_ip_user_files -of_objects  [get_files /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/tb.v] -no_script -reset -force -quiet
+remove_files  /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/tb.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+export_ip_user_files -of_objects  [get_files /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_baseline_metrics.v] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_baseline_metrics.v
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_compare_metrics'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/mnt/ssd/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_compare_metrics' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_compare_metrics_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/bp_bimodal.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bp_bimodal
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/bp_confidence.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bp_confidence
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/bp_history.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bp_history
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/bp_perceptron.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bp_perceptron
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/bp_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bp_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/ctrl_bp.v" into library xil_defaultlib
+ERROR: [VRFC 10-3195] cannot open include file 'define.v' [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/ctrl_bp.v:2]
+INFO: [VRFC 10-311] analyzing module ctrl_bp
+ERROR: [VRFC 10-8530] module 'ctrl_bp' is ignored due to previous errors [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/ctrl_bp.v:4]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/vivado_linux/vivado_linux.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/vivado_linux/vivado_linux.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+export_ip_user_files -of_objects  [get_files /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_baseline_metrics.v] -no_script -reset -force -quiet
+remove_files  /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_baseline_metrics.v
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_bp_branchstress_check.v] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_bp_branchstress_check.v
+export_ip_user_files -of_objects  [get_files /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_bp_metrics.v] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_bp_metrics.v
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_bp_metrics.v] -no_script -reset -force -quiet
+remove_files  /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_bp_metrics.v
+export_ip_user_files -of_objects  [get_files /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/risc_v_soc.v] -no_script -reset -force -quiet
+remove_files  /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/risc_v_soc.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/top.v] -no_script -reset -force -quiet
+remove_files  /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/top.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_compare_metrics.v] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_compare_metrics.v
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_bp_branchstress_check.v
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_bp_branchstress_check'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/mnt/ssd/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_bp_branchstress_check' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_bp_branchstress_check_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/bp_bimodal.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bp_bimodal
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/bp_confidence.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bp_confidence
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/bp_history.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bp_history
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/bp_perceptron.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bp_perceptron
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/bp_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bp_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/ctrl_bp.v" into library xil_defaultlib
+ERROR: [VRFC 10-3195] cannot open include file 'define.v' [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/ctrl_bp.v:2]
+INFO: [VRFC 10-311] analyzing module ctrl_bp
+ERROR: [VRFC 10-8530] module 'ctrl_bp' is ignored due to previous errors [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/ctrl_bp.v:4]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/vivado_linux/vivado_linux.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/vivado_linux/vivado_linux.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_bp_branchstress_check'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/mnt/ssd/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_bp_branchstress_check' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_bp_branchstress_check_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/bp_bimodal.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bp_bimodal
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/bp_confidence.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bp_confidence
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/bp_history.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bp_history
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/bp_perceptron.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bp_perceptron
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/bp_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bp_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/ctrl_bp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ctrl_bp
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/data_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module data_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ex
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ex_mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ex_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/i_f.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i_f
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/id.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module id
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/id_ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module id_ex
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/if_id.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module if_id
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/mem_wb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem_wb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/pc_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pc_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/pipeline_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pipeline_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/reg_file.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reg_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/risc_v_soc_bp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module risc_v_soc_bp
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rom
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/top_bp.v" into library xil_defaultlib
+ERROR: [VRFC 10-3195] cannot open include file 'define.v' [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/top_bp.v:2]
+INFO: [VRFC 10-311] analyzing module top_bp
+ERROR: [VRFC 10-8530] module 'top_bp' is ignored due to previous errors [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/top_bp.v:4]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/vivado_linux/vivado_linux.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/vivado_linux/vivado_linux.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_bp_branchstress_check'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/mnt/ssd/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_bp_branchstress_check' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_bp_branchstress_check_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/bp_bimodal.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bp_bimodal
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/bp_confidence.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bp_confidence
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/bp_history.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bp_history
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/bp_perceptron.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bp_perceptron
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/bp_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bp_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/ctrl_bp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ctrl_bp
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/data_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module data_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ex
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ex_mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ex_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/i_f.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i_f
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/id.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module id
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/id_ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module id_ex
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/if_id.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module if_id
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/mem_wb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem_wb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/pc_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pc_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/pipeline_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pipeline_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/reg_file.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reg_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/risc_v_soc_bp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module risc_v_soc_bp
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rom
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/top_bp.v" into library xil_defaultlib
+ERROR: [VRFC 10-3195] cannot open include file '../define.v' [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/top_bp.v:2]
+INFO: [VRFC 10-311] analyzing module top_bp
+ERROR: [VRFC 10-8530] module 'top_bp' is ignored due to previous errors [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/top_bp.v:4]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/vivado_linux/vivado_linux.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/vivado_linux/vivado_linux.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+export_ip_user_files -of_objects  [get_files /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/define.v] -no_script -reset -force -quiet
+remove_files  /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/define.v
+add_files -norecurse /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/define.v
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_bp_branchstress_check'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/mnt/ssd/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_bp_branchstress_check' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_bp_branchstress_check_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/bp_bimodal.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bp_bimodal
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/bp_confidence.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bp_confidence
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/bp_history.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bp_history
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/bp_perceptron.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bp_perceptron
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/bp_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bp_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/ctrl_bp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ctrl_bp
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/data_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module data_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ex
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ex_mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ex_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/i_f.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i_f
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/id.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module id
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/id_ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module id_ex
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/if_id.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module if_id
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/mem_wb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem_wb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/pc_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pc_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/pipeline_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pipeline_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/reg_file.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reg_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/risc_v_soc_bp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module risc_v_soc_bp
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rom
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/top_bp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_bp
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_bp_branchstress_check.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_bp_branchstress_check
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/vivado_linux/vivado_linux.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_bp_branchstress_check_behav xil_defaultlib.tb_bp_branchstress_check xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /mnt/ssd/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_bp_branchstress_check_behav xil_defaultlib.tb_bp_branchstress_check xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ctrl_bp
+Compiling module xil_defaultlib.pc_reg
+Compiling module xil_defaultlib.i_f
+Compiling module xil_defaultlib.pipeline_reg
+Compiling module xil_defaultlib.if_id
+Compiling module xil_defaultlib.reg_file
+Compiling module xil_defaultlib.id
+Compiling module xil_defaultlib.bp_bimodal_default
+Compiling module xil_defaultlib.bp_confidence
+Compiling module xil_defaultlib.bp_history
+Compiling module xil_defaultlib.bp_perceptron_default
+Compiling module xil_defaultlib.bp_top
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=5)
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=1)
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=3)
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=7)
+Compiling module xil_defaultlib.id_ex
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=8)
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=4)
+Compiling module xil_defaultlib.ex
+Compiling module xil_defaultlib.ex_mem
+Compiling module xil_defaultlib.mem
+Compiling module xil_defaultlib.mem_wb
+Compiling module xil_defaultlib.top_bp
+Compiling module xil_defaultlib.rom
+Compiling module xil_defaultlib.data_ram
+Compiling module xil_defaultlib.risc_v_soc_bp
+Compiling module xil_defaultlib.tb_bp_branchstress_check
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_bp_branchstress_check_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_bp_branchstress_check_behav -key {Behavioral:sim_1:Functional:tb_bp_branchstress_check} -tclbatch {tb_bp_branchstress_check.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_bp_branchstress_check.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+
+===============================================================
+ Innovation CPU Branch-Stress Functional Check
+===============================================================
+WARNING: File instr_data_branchstress.txt referenced on /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/mem_wb.v at line 11 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_bp_branchstress_check_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+run 20 ms
+---------------------------------------------------------------
+x3  final = 0 (expected 10)
+x4  final = 0 (expected 20)
+x30 final = 0 (expected 30)
+STATUS: FAIL
+---------------------------------------------------------------
+$finish called at time : 4 us : File "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_bp_branchstress_check.v" Line 69
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_bp_branchstress_check'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/mnt/ssd/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_bp_branchstress_check' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_bp_branchstress_check_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/bp_bimodal.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bp_bimodal
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/bp_confidence.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bp_confidence
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/bp_history.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bp_history
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/bp_perceptron.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bp_perceptron
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/bp_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bp_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/ctrl_bp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ctrl_bp
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/data_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module data_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ex
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ex_mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ex_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/i_f.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i_f
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/id.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module id
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/id_ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module id_ex
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/if_id.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module if_id
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/mem_wb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem_wb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/pc_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pc_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/pipeline_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pipeline_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/reg_file.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reg_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/risc_v_soc_bp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module risc_v_soc_bp
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rom
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/top_bp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_bp
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_bp_branchstress_check.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_bp_branchstress_check
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_bp_branchstress_check_behav xil_defaultlib.tb_bp_branchstress_check xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /mnt/ssd/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_bp_branchstress_check_behav xil_defaultlib.tb_bp_branchstress_check xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ctrl_bp
+Compiling module xil_defaultlib.pc_reg
+Compiling module xil_defaultlib.i_f
+Compiling module xil_defaultlib.pipeline_reg
+Compiling module xil_defaultlib.if_id
+Compiling module xil_defaultlib.reg_file
+Compiling module xil_defaultlib.id
+Compiling module xil_defaultlib.bp_bimodal_default
+Compiling module xil_defaultlib.bp_confidence
+Compiling module xil_defaultlib.bp_history
+Compiling module xil_defaultlib.bp_perceptron_default
+Compiling module xil_defaultlib.bp_top
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=5)
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=1)
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=3)
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=7)
+Compiling module xil_defaultlib.id_ex
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=8)
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=4)
+Compiling module xil_defaultlib.ex
+Compiling module xil_defaultlib.ex_mem
+Compiling module xil_defaultlib.mem
+Compiling module xil_defaultlib.mem_wb
+Compiling module xil_defaultlib.top_bp
+Compiling module xil_defaultlib.rom
+Compiling module xil_defaultlib.data_ram
+Compiling module xil_defaultlib.risc_v_soc_bp
+Compiling module xil_defaultlib.tb_bp_branchstress_check
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_bp_branchstress_check_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_bp_branchstress_check_behav -key {Behavioral:sim_1:Functional:tb_bp_branchstress_check} -tclbatch {tb_bp_branchstress_check.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_bp_branchstress_check.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+
+===============================================================
+ Innovation CPU Branch-Stress Functional Check
+===============================================================
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_bp_branchstress_check_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+run 20 ms
+---------------------------------------------------------------
+x3  final = 10 (expected 10)
+x4  final = 20 (expected 20)
+x30 final = 30 (expected 30)
+STATUS: PASS
+---------------------------------------------------------------
+$finish called at time : 4 us : File "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_bp_branchstress_check.v" Line 70
+export_ip_user_files -of_objects  [get_files /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_bp_branchstress_check.v] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_bp_branchstress_check.v
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_bp_metrics.v
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_bp_metrics'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/mnt/ssd/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_bp_metrics' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_bp_metrics_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_bp_metrics.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_bp_metrics
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_bp_metrics_behav xil_defaultlib.tb_bp_metrics xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /mnt/ssd/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_bp_metrics_behav xil_defaultlib.tb_bp_metrics xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-2989] 'u_bp' is not declared [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_bp_metrics.v:51]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/vivado_linux/vivado_linux.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/vivado_linux/vivado_linux.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_baseline_metrics.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ctrl.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/risc_v_soc_bp.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/define.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_bp_branchstress_check.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_compare_metrics.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_bp_metrics.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/top_bp.v:]
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_bp_metrics'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/mnt/ssd/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_bp_metrics' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_bp_metrics_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/bp_bimodal.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bp_bimodal
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/bp_confidence.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bp_confidence
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/bp_history.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bp_history
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/bp_perceptron.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bp_perceptron
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/bp_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bp_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/ctrl_bp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ctrl_bp
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/data_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module data_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ex
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ex_mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ex_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/i_f.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i_f
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/id.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module id
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/id_ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module id_ex
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/if_id.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module if_id
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/mem_wb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem_wb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/pc_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pc_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/pipeline_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pipeline_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/reg_file.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reg_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/risc_v_soc_bp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module risc_v_soc_bp
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rom
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/top_bp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_bp
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_bp_metrics.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_bp_metrics
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_bp_metrics_behav xil_defaultlib.tb_bp_metrics xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /mnt/ssd/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_bp_metrics_behav xil_defaultlib.tb_bp_metrics xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ctrl_bp
+Compiling module xil_defaultlib.pc_reg
+Compiling module xil_defaultlib.i_f
+Compiling module xil_defaultlib.pipeline_reg
+Compiling module xil_defaultlib.if_id
+Compiling module xil_defaultlib.reg_file
+Compiling module xil_defaultlib.id
+Compiling module xil_defaultlib.bp_bimodal_default
+Compiling module xil_defaultlib.bp_confidence
+Compiling module xil_defaultlib.bp_history
+Compiling module xil_defaultlib.bp_perceptron_default
+Compiling module xil_defaultlib.bp_top
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=5)
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=1)
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=3)
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=7)
+Compiling module xil_defaultlib.id_ex
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=8)
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=4)
+Compiling module xil_defaultlib.ex
+Compiling module xil_defaultlib.ex_mem
+Compiling module xil_defaultlib.mem
+Compiling module xil_defaultlib.mem_wb
+Compiling module xil_defaultlib.top_bp
+Compiling module xil_defaultlib.rom
+Compiling module xil_defaultlib.data_ram
+Compiling module xil_defaultlib.risc_v_soc_bp
+Compiling module xil_defaultlib.tb_bp_metrics
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_bp_metrics_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_bp_metrics_behav -key {Behavioral:sim_1:Functional:tb_bp_metrics} -tclbatch {tb_bp_metrics.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_bp_metrics.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+===============================================================
+ Innovation CPU Metrics TB
+===============================================================
+ROM[0] = 00000000000000000000000010010011
+[BP] t=124 pc=56 pred=1 actual=1 neural=1 steps=8 total=1 correct=1 mis=0
+[BP] t=180 pc=32 pred=1 actual=1 neural=1 steps=8 total=2 correct=2 mis=0
+[BP] t=228 pc=56 pred=1 actual=0 neural=1 steps=8 total=3 correct=2 mis=1
+[BP] t=300 pc=32 pred=1 actual=1 neural=1 steps=8 total=4 correct=3 mis=1
+[BP] t=348 pc=56 pred=1 actual=1 neural=1 steps=8 total=5 correct=4 mis=1
+[BP] t=404 pc=32 pred=1 actual=1 neural=0 steps=8 total=6 correct=5 mis=1
+[BP] t=452 pc=56 pred=1 actual=0 neural=1 steps=8 total=7 correct=5 mis=2
+[BP] t=524 pc=32 pred=1 actual=1 neural=0 steps=8 total=8 correct=6 mis=2
+[BP] t=572 pc=56 pred=0 actual=1 neural=1 steps=8 total=9 correct=6 mis=3
+[BP] t=636 pc=32 pred=1 actual=1 neural=0 steps=8 total=10 correct=7 mis=3
+[BP] t=684 pc=56 pred=1 actual=0 neural=1 steps=8 total=11 correct=7 mis=4
+[BP] t=756 pc=32 pred=1 actual=1 neural=0 steps=8 total=12 correct=8 mis=4
+[BP] t=804 pc=56 pred=0 actual=1 neural=1 steps=7 total=13 correct=8 mis=5
+[BP] t=868 pc=32 pred=1 actual=1 neural=0 steps=8 total=14 correct=9 mis=5
+[BP] t=916 pc=56 pred=1 actual=0 neural=1 steps=7 total=15 correct=9 mis=6
+[BP] t=988 pc=32 pred=1 actual=1 neural=0 steps=8 total=16 correct=10 mis=6
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_bp_metrics_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+run 20 ms
+[BP] t=1036 pc=56 pred=0 actual=1 neural=1 steps=7 total=17 correct=10 mis=7
+[BP] t=1100 pc=32 pred=1 actual=1 neural=0 steps=8 total=18 correct=11 mis=7
+[BP] t=1148 pc=56 pred=1 actual=0 neural=1 steps=6 total=19 correct=11 mis=8
+[BP] t=1220 pc=32 pred=1 actual=1 neural=0 steps=8 total=20 correct=12 mis=8
+[BP] t=1268 pc=56 pred=0 actual=1 neural=1 steps=8 total=21 correct=12 mis=9
+[BP] t=1332 pc=32 pred=1 actual=1 neural=0 steps=8 total=22 correct=13 mis=9
+[BP] t=1380 pc=56 pred=0 actual=0 neural=1 steps=7 total=23 correct=14 mis=9
+[BP] t=1436 pc=32 pred=1 actual=1 neural=0 steps=8 total=24 correct=15 mis=9
+[BP] t=1484 pc=56 pred=1 actual=1 neural=1 steps=8 total=25 correct=16 mis=9
+[BP] t=1540 pc=32 pred=1 actual=1 neural=0 steps=8 total=26 correct=17 mis=9
+[BP] t=1588 pc=56 pred=0 actual=0 neural=1 steps=7 total=27 correct=18 mis=9
+[BP] t=1644 pc=32 pred=1 actual=1 neural=0 steps=8 total=28 correct=19 mis=9
+[BP] t=1692 pc=56 pred=1 actual=1 neural=1 steps=8 total=29 correct=20 mis=9
+[BP] t=1748 pc=32 pred=1 actual=1 neural=0 steps=8 total=30 correct=21 mis=9
+[BP] t=1796 pc=56 pred=0 actual=0 neural=1 steps=7 total=31 correct=22 mis=9
+[BP] t=1852 pc=32 pred=1 actual=1 neural=0 steps=8 total=32 correct=23 mis=9
+[BP] t=1900 pc=56 pred=1 actual=1 neural=1 steps=8 total=33 correct=24 mis=9
+[BP] t=1956 pc=32 pred=1 actual=1 neural=0 steps=8 total=34 correct=25 mis=9
+[BP] t=2004 pc=56 pred=0 actual=0 neural=1 steps=7 total=35 correct=26 mis=9
+[BP] t=2060 pc=32 pred=1 actual=1 neural=0 steps=8 total=36 correct=27 mis=9
+[BP] t=2108 pc=56 pred=1 actual=1 neural=1 steps=8 total=37 correct=28 mis=9
+[BP] t=2164 pc=32 pred=1 actual=1 neural=0 steps=8 total=38 correct=29 mis=9
+[BP] t=2212 pc=56 pred=0 actual=0 neural=1 steps=7 total=39 correct=30 mis=9
+[BP] t=2268 pc=32 pred=1 actual=0 neural=0 steps=8 total=40 correct=30 mis=10
+---------------------------------------------------------------
+Innovation Summary
+Total Conditional Branches : 40
+Correct Predictions       : 30
+Mispredictions            : 10
+Accuracy (x10000)         : 7500
+Neural Used Count         : 22
+Neural Use Ratio (x10000): 5500
+Avg Used Steps (x10000)  : 77500
+---------------------------------------------------------------
+$finish called at time : 4 us : File "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_bp_metrics.v" Line 111
+launch_runs synth_1 -jobs 10
+WARNING: [Vivado 12-7122] Auto Incremental Compile:: No reference checkpoint was found in run synth_1. Auto-incremental flow will not be run, the standard flow will be run instead.
+[Sun Mar 29 00:37:44 2026] Launched synth_1...
+Run output will be captured here: /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/vivado_linux/vivado_linux.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 10
+[Sun Mar 29 00:40:39 2026] Launched impl_1...
+Run output will be captured here: /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/vivado_linux/vivado_linux.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7557.410 ; gain = 0.000 ; free physical = 9175 ; free virtual = 19561
+INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2022.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF Files: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 7627.191 ; gain = 4.000 ; free physical = 9077 ; free virtual = 19463
+Restored from archive | CPU: 0.020000 secs | Memory: 0.096169 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 7627.191 ; gain = 4.000 ; free physical = 9077 ; free virtual = 19463
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7965.191 ; gain = 0.000 ; free physical = 8737 ; free virtual = 19123
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 8195.570 ; gain = 910.668 ; free physical = 8522 ; free virtual = 18908
+WARNING: [Timing 38-313] There are no user specified timing constraints. Timing constraints are needed for proper timing analysis.
+file mkdir /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/vivado_linux/vivado_linux.srcs/constrs_1
+file mkdir /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/vivado_linux/vivado_linux.srcs/constrs_1/new
+close [ open /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/vivado_linux/vivado_linux.srcs/constrs_1/new/pynq-z2.xdc w ]
+add_files -fileset constrs_1 /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/vivado_linux/vivado_linux.srcs/constrs_1/new/pynq-z2.xdc
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_bp_metrics'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/mnt/ssd/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_bp_metrics' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_bp_metrics_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/bp_bimodal.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bp_bimodal
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/bp_confidence.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bp_confidence
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/bp_history.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bp_history
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/bp_perceptron.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bp_perceptron
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/bp_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bp_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/ctrl_bp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ctrl_bp
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/data_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module data_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ex
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ex_mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ex_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/i_f.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i_f
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/id.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module id
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/id_ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module id_ex
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/if_id.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module if_id
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/mem_wb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem_wb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/pc_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pc_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/pipeline_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pipeline_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/reg_file.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reg_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/risc_v_soc_bp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module risc_v_soc_bp
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rom
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/top_bp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_bp
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_bp_metrics.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_bp_metrics
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_bp_metrics_behav xil_defaultlib.tb_bp_metrics xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /mnt/ssd/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_bp_metrics_behav xil_defaultlib.tb_bp_metrics xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ctrl_bp
+Compiling module xil_defaultlib.pc_reg
+Compiling module xil_defaultlib.i_f
+Compiling module xil_defaultlib.pipeline_reg
+Compiling module xil_defaultlib.if_id
+Compiling module xil_defaultlib.reg_file
+Compiling module xil_defaultlib.id
+Compiling module xil_defaultlib.bp_bimodal_default
+Compiling module xil_defaultlib.bp_confidence
+Compiling module xil_defaultlib.bp_history
+Compiling module xil_defaultlib.bp_perceptron_default
+Compiling module xil_defaultlib.bp_top
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=5)
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=1)
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=3)
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=7)
+Compiling module xil_defaultlib.id_ex
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=8)
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=4)
+Compiling module xil_defaultlib.ex
+Compiling module xil_defaultlib.ex_mem
+Compiling module xil_defaultlib.mem
+Compiling module xil_defaultlib.mem_wb
+Compiling module xil_defaultlib.top_bp
+Compiling module xil_defaultlib.rom
+Compiling module xil_defaultlib.data_ram
+Compiling module xil_defaultlib.risc_v_soc_bp
+Compiling module xil_defaultlib.tb_bp_metrics
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_bp_metrics_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_bp_metrics_behav -key {Behavioral:sim_1:Functional:tb_bp_metrics} -tclbatch {tb_bp_metrics.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_bp_metrics.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+===============================================================
+ Innovation CPU Metrics TB
+===============================================================
+ROM[0] = 00000000000000000000000010010011
+[BP] t=124 pc=56 pred=1 actual=1 neural=1 steps=8 total=1 correct=1 mis=0
+[BP] t=180 pc=32 pred=1 actual=1 neural=1 steps=8 total=2 correct=2 mis=0
+[BP] t=228 pc=56 pred=1 actual=0 neural=1 steps=8 total=3 correct=2 mis=1
+[BP] t=300 pc=32 pred=1 actual=1 neural=1 steps=8 total=4 correct=3 mis=1
+[BP] t=348 pc=56 pred=1 actual=1 neural=1 steps=8 total=5 correct=4 mis=1
+[BP] t=404 pc=32 pred=1 actual=1 neural=0 steps=8 total=6 correct=5 mis=1
+[BP] t=452 pc=56 pred=1 actual=0 neural=1 steps=8 total=7 correct=5 mis=2
+[BP] t=524 pc=32 pred=1 actual=1 neural=0 steps=8 total=8 correct=6 mis=2
+[BP] t=572 pc=56 pred=0 actual=1 neural=1 steps=8 total=9 correct=6 mis=3
+[BP] t=636 pc=32 pred=1 actual=1 neural=0 steps=8 total=10 correct=7 mis=3
+[BP] t=684 pc=56 pred=1 actual=0 neural=1 steps=8 total=11 correct=7 mis=4
+[BP] t=756 pc=32 pred=1 actual=1 neural=0 steps=8 total=12 correct=8 mis=4
+[BP] t=804 pc=56 pred=0 actual=1 neural=1 steps=7 total=13 correct=8 mis=5
+[BP] t=868 pc=32 pred=1 actual=1 neural=0 steps=8 total=14 correct=9 mis=5
+[BP] t=916 pc=56 pred=1 actual=0 neural=1 steps=7 total=15 correct=9 mis=6
+[BP] t=988 pc=32 pred=1 actual=1 neural=0 steps=8 total=16 correct=10 mis=6
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_bp_metrics_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+run 20 ms
+[BP] t=1036 pc=56 pred=0 actual=1 neural=1 steps=7 total=17 correct=10 mis=7
+[BP] t=1100 pc=32 pred=1 actual=1 neural=0 steps=8 total=18 correct=11 mis=7
+[BP] t=1148 pc=56 pred=1 actual=0 neural=1 steps=6 total=19 correct=11 mis=8
+[BP] t=1220 pc=32 pred=1 actual=1 neural=0 steps=8 total=20 correct=12 mis=8
+[BP] t=1268 pc=56 pred=0 actual=1 neural=1 steps=8 total=21 correct=12 mis=9
+[BP] t=1332 pc=32 pred=1 actual=1 neural=0 steps=8 total=22 correct=13 mis=9
+[BP] t=1380 pc=56 pred=0 actual=0 neural=1 steps=7 total=23 correct=14 mis=9
+[BP] t=1436 pc=32 pred=1 actual=1 neural=0 steps=8 total=24 correct=15 mis=9
+[BP] t=1484 pc=56 pred=1 actual=1 neural=1 steps=8 total=25 correct=16 mis=9
+[BP] t=1540 pc=32 pred=1 actual=1 neural=0 steps=8 total=26 correct=17 mis=9
+[BP] t=1588 pc=56 pred=0 actual=0 neural=1 steps=7 total=27 correct=18 mis=9
+[BP] t=1644 pc=32 pred=1 actual=1 neural=0 steps=8 total=28 correct=19 mis=9
+[BP] t=1692 pc=56 pred=1 actual=1 neural=1 steps=8 total=29 correct=20 mis=9
+[BP] t=1748 pc=32 pred=1 actual=1 neural=0 steps=8 total=30 correct=21 mis=9
+[BP] t=1796 pc=56 pred=0 actual=0 neural=1 steps=7 total=31 correct=22 mis=9
+[BP] t=1852 pc=32 pred=1 actual=1 neural=0 steps=8 total=32 correct=23 mis=9
+[BP] t=1900 pc=56 pred=1 actual=1 neural=1 steps=8 total=33 correct=24 mis=9
+[BP] t=1956 pc=32 pred=1 actual=1 neural=0 steps=8 total=34 correct=25 mis=9
+[BP] t=2004 pc=56 pred=0 actual=0 neural=1 steps=7 total=35 correct=26 mis=9
+[BP] t=2060 pc=32 pred=1 actual=1 neural=0 steps=8 total=36 correct=27 mis=9
+[BP] t=2108 pc=56 pred=1 actual=1 neural=1 steps=8 total=37 correct=28 mis=9
+[BP] t=2164 pc=32 pred=1 actual=1 neural=0 steps=8 total=38 correct=29 mis=9
+[BP] t=2212 pc=56 pred=0 actual=0 neural=1 steps=7 total=39 correct=30 mis=9
+[BP] t=2268 pc=32 pred=1 actual=0 neural=0 steps=8 total=40 correct=30 mis=10
+---------------------------------------------------------------
+Innovation Summary
+Total Conditional Branches : 40
+Correct Predictions       : 30
+Mispredictions            : 10
+Accuracy (x10000)         : 7500
+Neural Used Count         : 22
+Neural Use Ratio (x10000): 5500
+Avg Used Steps (x10000)  : 77500
+---------------------------------------------------------------
+$finish called at time : 4 us : File "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_bp_metrics.v" Line 111
+reset_run synth_1
+INFO: [Project 1-1160] Copying file /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/vivado_linux/vivado_linux.runs/synth_1/risc_v_soc_bp.dcp to /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/vivado_linux/vivado_linux.srcs/utils_1/imports/synth_1 and adding it to utils fileset
+launch_runs synth_1 -jobs 10
+[Sun Mar 29 00:50:18 2026] Launched synth_1...
+Run output will be captured here: /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/vivado_linux/vivado_linux.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 10
+[Sun Mar 29 00:51:50 2026] Launched impl_1...
+Run output will be captured here: /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/vivado_linux/vivado_linux.runs/impl_1/runme.log
+refresh_design
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8195.570 ; gain = 0.000 ; free physical = 8616 ; free virtual = 18997
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2022.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF Files: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 8230.141 ; gain = 0.000 ; free physical = 8523 ; free virtual = 18904
+Restored from archive | CPU: 0.010000 secs | Memory: 0.018845 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 8230.141 ; gain = 0.000 ; free physical = 8523 ; free virtual = 18904
+report_power -name {power_1}
+Command: report_power -name power_1
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+0 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+report_power -name {power_2}
+Command: report_power -name power_2
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+0 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+report_utilization -name utilization_1

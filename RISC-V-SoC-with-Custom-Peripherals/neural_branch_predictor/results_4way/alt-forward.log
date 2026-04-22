@@ -1,0 +1,16 @@
+WARNING: ./tb_4way_compare.v:66: $readmemb(instr_data_alternating_forward.txt): Not enough words in the file for the requested range [0:4095].
+WARNING: ./tb_4way_compare.v:67: $readmemb(instr_data_alternating_forward.txt): Not enough words in the file for the requested range [0:4095].
+============================================================================
+  4-Way Predictor Comparison  |  Workload: alt-forward
+============================================================================
+Predictor                           Br.    Acc %  Pen.Cy  Pen.Red%
+----------------------------------------------------------------------------
+PicoRV32 (stall-to-resolve)          34     0.00      68      ref.
+Baseline always-NT                   34    29.41      48     29.41
+Ibex + SBP (bk-T / fwd-NT)           34    73.52      18     73.52
+VexRiscv + BHT (2-bit)               34    70.58      20     70.58
+This work (hybrid+CG+ES)             34    70.58      20     70.58
+----------------------------------------------------------------------------
+Innovation: neural used=10/34, avg_steps=7.35, early_exit=11
+============================================================================
+CSV,alt-forward,34,68,34,29.41,48,34.00,74,18.00,34,70.58,20         3470.5800         20

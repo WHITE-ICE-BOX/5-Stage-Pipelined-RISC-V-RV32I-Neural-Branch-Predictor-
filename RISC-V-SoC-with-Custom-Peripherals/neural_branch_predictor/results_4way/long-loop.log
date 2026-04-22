@@ -1,0 +1,16 @@
+WARNING: ./tb_4way_compare.v:66: $readmemb(instr_data_long_loop.txt): Not enough words in the file for the requested range [0:4095].
+WARNING: ./tb_4way_compare.v:67: $readmemb(instr_data_long_loop.txt): Not enough words in the file for the requested range [0:4095].
+============================================================================
+  4-Way Predictor Comparison  |  Workload: long-loop
+============================================================================
+Predictor                           Br.    Acc %  Pen.Cy  Pen.Red%
+----------------------------------------------------------------------------
+PicoRV32 (stall-to-resolve)          32     0.00      64      ref.
+Baseline always-NT                   32     3.12      62      3.12
+Ibex + SBP (bk-T / fwd-NT)           32    96.87       2     96.87
+VexRiscv + BHT (2-bit)               32    93.75       4     93.75
+This work (hybrid+CG+ES)             32    96.87       2     96.87
+----------------------------------------------------------------------------
+Innovation: neural used=2/32, avg_steps=8.00, early_exit=0
+============================================================================
+CSV,long-loop,32,64,32,3.12,62,32.00,97,2.00,32,93.75,4         3296.8700          2

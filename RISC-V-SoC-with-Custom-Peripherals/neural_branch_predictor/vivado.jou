@@ -1,0 +1,103 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Sat Mar 28 23:51:38 2026
+# Process ID: 2499596
+# Current directory: /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor
+# Command line: vivado
+# Log file: /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/vivado.log
+# Journal file: /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/vivado.jou
+# Running On: barkie1, OS: Linux, CPU Frequency: 2299.568 MHz, CPU Physical cores: 12, Host memory: 33381 MB
+#-----------------------------------------------------------
+start_gui
+create_project vivado_linux /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/vivado_linux -part xc7z020clg400-1
+set_property board_part tul.com.tw:pynq-z2:part0:1.0 [current_project]
+add_files -norecurse {/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/mem.v /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/define.v /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/top_bp.v /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/bp_perceptron.v /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/tb.v /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/risc_v_soc_bp.v /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/pc_reg.v /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/bp_top.v /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/id_ex.v /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_bp_metrics.v /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ctrl.v /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/bp_bimodal.v /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/bp_history.v /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ex.v /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/pipeline_reg.v /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/data_ram.v /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/risc_v_soc.v /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/bp_confidence.v /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/if_id.v /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/top.v /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/id.v /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/mem_wb.v /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/reg_file.v /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/i_f.v /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ex_mem.v /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_baseline_metrics.v /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/ctrl_bp.v}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse {/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_bp_metrics.v /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_baseline_metrics.v}
+update_compile_order -fileset sim_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse {/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_bp_branchstress_check.v /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_compare_metrics.v}
+update_compile_order -fileset sim_1
+export_ip_user_files -of_objects  [get_files /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/tb.v] -no_script -reset -force -quiet
+remove_files  /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/tb.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+export_ip_user_files -of_objects  [get_files /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_baseline_metrics.v] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_baseline_metrics.v
+launch_simulation
+export_ip_user_files -of_objects  [get_files /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_baseline_metrics.v] -no_script -reset -force -quiet
+remove_files  /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_baseline_metrics.v
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_bp_branchstress_check.v] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_bp_branchstress_check.v
+export_ip_user_files -of_objects  [get_files /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_bp_metrics.v] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_bp_metrics.v
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_bp_metrics.v] -no_script -reset -force -quiet
+remove_files  /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_bp_metrics.v
+export_ip_user_files -of_objects  [get_files /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/risc_v_soc.v] -no_script -reset -force -quiet
+remove_files  /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/risc_v_soc.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/top.v] -no_script -reset -force -quiet
+remove_files  /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/top.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_compare_metrics.v] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_compare_metrics.v
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_bp_branchstress_check.v
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+launch_simulation
+launch_simulation
+launch_simulation
+export_ip_user_files -of_objects  [get_files /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/define.v] -no_script -reset -force -quiet
+remove_files  /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/define.v
+add_files -norecurse /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/define.v
+update_compile_order -fileset sources_1
+launch_simulation
+source tb_bp_branchstress_check.tcl
+run 20 ms
+close_sim
+launch_simulation
+source tb_bp_branchstress_check.tcl
+run 20 ms
+export_ip_user_files -of_objects  [get_files /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_bp_branchstress_check.v] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_bp_branchstress_check.v
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_bp_metrics.v
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+launch_simulation
+launch_simulation
+source tb_bp_metrics.tcl
+run 20 ms
+launch_runs synth_1 -jobs 10
+wait_on_run synth_1
+launch_runs impl_1 -jobs 10
+wait_on_run impl_1
+open_run impl_1
+file mkdir /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/vivado_linux/vivado_linux.srcs/constrs_1
+file mkdir /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/vivado_linux/vivado_linux.srcs/constrs_1/new
+close [ open /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/vivado_linux/vivado_linux.srcs/constrs_1/new/pynq-z2.xdc w ]
+add_files -fileset constrs_1 /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/vivado_linux/vivado_linux.srcs/constrs_1/new/pynq-z2.xdc
+close_sim
+launch_simulation
+source tb_bp_metrics.tcl
+run 20 ms
+reset_run synth_1
+launch_runs synth_1 -jobs 10
+wait_on_run synth_1
+launch_runs impl_1 -jobs 10
+wait_on_run impl_1
+refresh_design
+report_power -name {power_1}
+report_power -name {power_2}
+report_utilization -name utilization_1

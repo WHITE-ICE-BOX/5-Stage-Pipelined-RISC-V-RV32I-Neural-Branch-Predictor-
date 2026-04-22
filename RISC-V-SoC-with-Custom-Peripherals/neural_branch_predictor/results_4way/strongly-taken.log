@@ -1,0 +1,16 @@
+WARNING: ./tb_4way_compare.v:66: $readmemb(instr_data_strongly_taken.txt): Not enough words in the file for the requested range [0:4095].
+WARNING: ./tb_4way_compare.v:67: $readmemb(instr_data_strongly_taken.txt): Not enough words in the file for the requested range [0:4095].
+============================================================================
+  4-Way Predictor Comparison  |  Workload: strongly-taken
+============================================================================
+Predictor                           Br.    Acc %  Pen.Cy  Pen.Red%
+----------------------------------------------------------------------------
+PicoRV32 (stall-to-resolve)          16     0.00      32      ref.
+Baseline always-NT                   16     6.25      30      6.25
+Ibex + SBP (bk-T / fwd-NT)           16    93.75       2     93.75
+VexRiscv + BHT (2-bit)               16    87.50       4     87.50
+This work (hybrid+CG+ES)             16    93.75       2     93.75
+----------------------------------------------------------------------------
+Innovation: neural used=2/16, avg_steps=8.00, early_exit=0
+============================================================================
+CSV,strongly-taken,16,32,16,6.25,30,16.00,94,2.00,16,87.50,4         1693.7500          2

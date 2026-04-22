@@ -1,0 +1,481 @@
+
+*** Running vivado
+    with args -log risc_v_soc.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source risc_v_soc.tcl
+
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source risc_v_soc.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.srcs/utils_1/imports/synth_1/risc_v_soc.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.srcs/utils_1/imports/synth_1/risc_v_soc.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top risc_v_soc -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 2517049
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/mnt/ssd/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1963.340 ; gain = 370.770 ; free physical = 7100 ; free virtual = 17480
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1277.069; parent = 1108.626; children = 168.443
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 2940.398; parent = 1966.312; children = 974.086
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'risc_v_soc' [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/risc_v_soc.v:6]
+INFO: [Synth 8-6157] synthesizing module 'top' [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/top.v:17]
+INFO: [Synth 8-6157] synthesizing module 'ctrl' [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ctrl.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'ctrl' (0#1) [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ctrl.v:3]
+INFO: [Synth 8-6157] synthesizing module 'pc_reg' [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/pc_reg.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'pc_reg' (0#1) [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/pc_reg.v:3]
+INFO: [Synth 8-6157] synthesizing module 'i_f' [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/i_f.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'i_f' (0#1) [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/i_f.v:3]
+INFO: [Synth 8-6157] synthesizing module 'if_id' [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/if_id.v:5]
+INFO: [Synth 8-6157] synthesizing module 'pipeline_reg' [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/pipeline_reg.v:3]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'pipeline_reg' (0#1) [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/pipeline_reg.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'if_id' (0#1) [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/if_id.v:5]
+INFO: [Synth 8-6157] synthesizing module 'reg_file' [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/reg_file.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'reg_file' (0#1) [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/reg_file.v:3]
+INFO: [Synth 8-6157] synthesizing module 'id' [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/id.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'id' (0#1) [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/id.v:4]
+WARNING: [Synth 8-7071] port 'id_instr_out' of module 'id' is unconnected for instance 'id_1' [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/top.v:124]
+WARNING: [Synth 8-7071] port 'id_addr_out' of module 'id' is unconnected for instance 'id_1' [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/top.v:124]
+WARNING: [Synth 8-7023] instance 'id_1' of module 'id' has 19 connections declared, but only 17 given [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/top.v:124]
+INFO: [Synth 8-6157] synthesizing module 'id_ex' [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/id_ex.v:3]
+INFO: [Synth 8-6157] synthesizing module 'pipeline_reg__parameterized0' [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/pipeline_reg.v:3]
+	Parameter WIDTH bound to: 5 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'pipeline_reg__parameterized0' (0#1) [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/pipeline_reg.v:3]
+INFO: [Synth 8-6157] synthesizing module 'pipeline_reg__parameterized1' [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/pipeline_reg.v:3]
+	Parameter WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'pipeline_reg__parameterized1' (0#1) [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/pipeline_reg.v:3]
+INFO: [Synth 8-6157] synthesizing module 'pipeline_reg__parameterized2' [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/pipeline_reg.v:3]
+	Parameter WIDTH bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'pipeline_reg__parameterized2' (0#1) [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/pipeline_reg.v:3]
+INFO: [Synth 8-6157] synthesizing module 'pipeline_reg__parameterized3' [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/pipeline_reg.v:3]
+	Parameter WIDTH bound to: 7 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'pipeline_reg__parameterized3' (0#1) [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/pipeline_reg.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'id_ex' (0#1) [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/id_ex.v:3]
+INFO: [Synth 8-6157] synthesizing module 'ex' [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ex.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'ex' (0#1) [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ex.v:4]
+INFO: [Synth 8-6157] synthesizing module 'ex_mem' [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ex_mem.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'ex_mem' (0#1) [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ex_mem.v:3]
+INFO: [Synth 8-6157] synthesizing module 'mem' [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/mem.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'mem' (0#1) [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/mem.v:3]
+INFO: [Synth 8-6157] synthesizing module 'mem_wb' [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/mem_wb.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'mem_wb' (0#1) [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/mem_wb.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'top' (0#1) [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/top.v:17]
+INFO: [Synth 8-6157] synthesizing module 'rom' [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'rom' (0#1) [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:3]
+INFO: [Synth 8-6157] synthesizing module 'data_ram' [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/data_ram.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'data_ram' (0#1) [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/data_ram.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'risc_v_soc' (0#1) [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/risc_v_soc.v:6]
+WARNING: [Synth 8-4767] Trying to implement RAM ' ' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+WARNING: [Synth 8-3848] Net rom_mem in module/entity rom does not have driver. [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v:7]
+INFO: [Common 17-14] Message 'Synth 8-3848' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-7129] Port addr[31] in module data_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[30] in module data_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[29] in module data_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[28] in module data_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[27] in module data_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[26] in module data_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[25] in module data_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[24] in module data_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[23] in module data_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[22] in module data_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[21] in module data_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[20] in module data_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[19] in module data_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[18] in module data_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[17] in module data_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[16] in module data_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[15] in module data_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[14] in module data_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[13] in module data_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[12] in module data_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[1] in module data_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[0] in module data_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port func3[2] in module mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port func3[1] in module mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port func3[0] in module mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port id_ex_instr_in[31] in module ex is either unconnected or has no load
+WARNING: [Synth 8-7129] Port id_ex_instr_in[29] in module ex is either unconnected or has no load
+WARNING: [Synth 8-7129] Port id_ex_instr_in[28] in module ex is either unconnected or has no load
+WARNING: [Synth 8-7129] Port id_ex_instr_in[27] in module ex is either unconnected or has no load
+WARNING: [Synth 8-7129] Port id_ex_instr_in[26] in module ex is either unconnected or has no load
+WARNING: [Synth 8-7129] Port id_ex_instr_in[25] in module ex is either unconnected or has no load
+WARNING: [Synth 8-7129] Port id_ex_instr_in[24] in module ex is either unconnected or has no load
+WARNING: [Synth 8-7129] Port id_ex_instr_in[23] in module ex is either unconnected or has no load
+WARNING: [Synth 8-7129] Port id_ex_instr_in[22] in module ex is either unconnected or has no load
+WARNING: [Synth 8-7129] Port id_ex_instr_in[21] in module ex is either unconnected or has no load
+WARNING: [Synth 8-7129] Port id_ex_instr_in[20] in module ex is either unconnected or has no load
+WARNING: [Synth 8-7129] Port id_ex_instr_in[19] in module ex is either unconnected or has no load
+WARNING: [Synth 8-7129] Port id_ex_instr_in[18] in module ex is either unconnected or has no load
+WARNING: [Synth 8-7129] Port id_ex_instr_in[17] in module ex is either unconnected or has no load
+WARNING: [Synth 8-7129] Port id_ex_instr_in[16] in module ex is either unconnected or has no load
+WARNING: [Synth 8-7129] Port id_ex_instr_in[15] in module ex is either unconnected or has no load
+WARNING: [Synth 8-7129] Port id_ex_instr_in[14] in module ex is either unconnected or has no load
+WARNING: [Synth 8-7129] Port id_ex_instr_in[13] in module ex is either unconnected or has no load
+WARNING: [Synth 8-7129] Port id_ex_instr_in[12] in module ex is either unconnected or has no load
+WARNING: [Synth 8-7129] Port id_ex_instr_in[11] in module ex is either unconnected or has no load
+WARNING: [Synth 8-7129] Port id_ex_instr_in[10] in module ex is either unconnected or has no load
+WARNING: [Synth 8-7129] Port id_ex_instr_in[9] in module ex is either unconnected or has no load
+WARNING: [Synth 8-7129] Port id_ex_instr_in[8] in module ex is either unconnected or has no load
+WARNING: [Synth 8-7129] Port id_ex_instr_in[7] in module ex is either unconnected or has no load
+WARNING: [Synth 8-7129] Port id_ex_instr_in[6] in module ex is either unconnected or has no load
+WARNING: [Synth 8-7129] Port id_ex_instr_in[5] in module ex is either unconnected or has no load
+WARNING: [Synth 8-7129] Port id_ex_instr_in[4] in module ex is either unconnected or has no load
+WARNING: [Synth 8-7129] Port id_ex_instr_in[3] in module ex is either unconnected or has no load
+WARNING: [Synth 8-7129] Port id_ex_instr_in[2] in module ex is either unconnected or has no load
+WARNING: [Synth 8-7129] Port id_ex_instr_in[1] in module ex is either unconnected or has no load
+WARNING: [Synth 8-7129] Port id_ex_instr_in[0] in module ex is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2094.293 ; gain = 501.723 ; free physical = 6986 ; free virtual = 17367
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1277.069; parent = 1108.626; children = 168.443
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3068.383; parent = 2094.297; children = 974.086
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2109.137 ; gain = 516.566 ; free physical = 6986 ; free virtual = 17367
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1277.069; parent = 1108.626; children = 168.443
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3083.227; parent = 2109.141; children = 974.086
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2109.137 ; gain = 516.566 ; free physical = 6986 ; free virtual = 17367
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1277.069; parent = 1108.626; children = 168.443
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3083.227; parent = 2109.141; children = 974.086
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2109.137 ; gain = 0.000 ; free physical = 6988 ; free virtual = 17369
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.srcs/constrs_1/new/pynq_z2.xdc]
+Finished Parsing XDC File [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.srcs/constrs_1/new/pynq_z2.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.srcs/constrs_1/new/pynq_z2.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/risc_v_soc_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/risc_v_soc_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2231.730 ; gain = 0.000 ; free physical = 6812 ; free virtual = 17193
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2231.730 ; gain = 0.000 ; free physical = 6812 ; free virtual = 17193
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/mnt/ssd/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2231.730 ; gain = 639.160 ; free physical = 7076 ; free virtual = 17457
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1277.069; parent = 1108.626; children = 168.443
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3173.805; parent = 2199.719; children = 974.086
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2231.730 ; gain = 639.160 ; free physical = 7076 ; free virtual = 17457
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1277.069; parent = 1108.626; children = 168.443
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3173.805; parent = 2199.719; children = 974.086
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2231.730 ; gain = 639.160 ; free physical = 7076 ; free virtual = 17457
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1277.069; parent = 1108.626; children = 168.443
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3173.805; parent = 2199.719; children = 974.086
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2231.730 ; gain = 639.160 ; free physical = 7071 ; free virtual = 17453
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1307.025; parent = 1138.624; children = 168.443
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3173.805; parent = 2199.719; children = 974.086
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 4     
+	   3 Input   32 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 45    
+	                7 Bit    Registers := 1     
+	                5 Bit    Registers := 3     
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 7     
++---RAMs : 
+	              32K Bit	(1024 X 32 bit)          RAMs := 1     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 24    
+	   7 Input   32 Bit        Muxes := 3     
+	   2 Input    7 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 8     
+	   7 Input    5 Bit        Muxes := 3     
+	   2 Input    3 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 68    
+	   7 Input    1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2231.730 ; gain = 639.160 ; free physical = 7025 ; free virtual = 17431
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1321.533; parent = 1153.132; children = 168.443
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3189.812; parent = 2215.727; children = 974.086
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2231.730 ; gain = 639.160 ; free physical = 7023 ; free virtual = 17429
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1441.857; parent = 1273.456; children = 168.443
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3189.812; parent = 2215.727; children = 974.086
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2231.730 ; gain = 639.160 ; free physical = 7007 ; free virtual = 17414
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1442.021; parent = 1273.620; children = 168.443
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3189.812; parent = 2215.727; children = 974.086
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2231.730 ; gain = 639.160 ; free physical = 7007 ; free virtual = 17413
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1442.154; parent = 1273.753; children = 168.443
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3189.812; parent = 2215.727; children = 974.086
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2231.730 ; gain = 639.160 ; free physical = 7030 ; free virtual = 17436
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1442.311; parent = 1273.909; children = 168.443
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3189.812; parent = 2215.727; children = 974.086
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2231.730 ; gain = 639.160 ; free physical = 7030 ; free virtual = 17436
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1442.326; parent = 1273.925; children = 168.443
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3189.812; parent = 2215.727; children = 974.086
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2231.730 ; gain = 639.160 ; free physical = 7030 ; free virtual = 17436
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1442.342; parent = 1273.940; children = 168.443
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3189.812; parent = 2215.727; children = 974.086
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2231.730 ; gain = 639.160 ; free physical = 7030 ; free virtual = 17436
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1442.420; parent = 1274.019; children = 168.443
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3189.812; parent = 2215.727; children = 974.086
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2231.730 ; gain = 639.160 ; free physical = 7030 ; free virtual = 17436
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1442.420; parent = 1274.019; children = 168.443
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3189.812; parent = 2215.727; children = 974.086
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2231.730 ; gain = 639.160 ; free physical = 7030 ; free virtual = 17436
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1442.436; parent = 1274.034; children = 168.443
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3189.812; parent = 2215.727; children = 974.086
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     2|
+|3     |LUT1   |     1|
+|4     |FDRE   |     4|
+|5     |IBUF   |     2|
+|6     |OBUF   |     4|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2231.730 ; gain = 639.160 ; free physical = 7030 ; free virtual = 17436
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1442.467; parent = 1274.065; children = 168.443
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3189.812; parent = 2215.727; children = 974.086
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2231.730 ; gain = 516.566 ; free physical = 7030 ; free virtual = 17436
+Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 2231.730 ; gain = 639.160 ; free physical = 7030 ; free virtual = 17436
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2231.730 ; gain = 0.000 ; free physical = 7140 ; free virtual = 17547
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2231.730 ; gain = 0.000 ; free physical = 7141 ; free virtual = 17547
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: db5bb47
+INFO: [Common 17-83] Releasing license: Synthesis
+64 Infos, 161 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 2231.730 ; gain = 908.730 ; free physical = 7259 ; free virtual = 17665
+INFO: [Common 17-1381] The checkpoint '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.runs/synth_1/risc_v_soc.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file risc_v_soc_utilization_synth.rpt -pb risc_v_soc_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Mar 29 00:55:20 2026...

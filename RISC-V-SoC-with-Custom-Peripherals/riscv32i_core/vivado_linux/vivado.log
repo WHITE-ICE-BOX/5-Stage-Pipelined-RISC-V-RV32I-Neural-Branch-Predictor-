@@ -1,0 +1,2323 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Sat Mar 28 22:34:02 2026
+# Process ID: 2483545
+# Current directory: /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux
+# Command line: vivado vivado_linux.xpr
+# Log file: /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado.log
+# Journal file: /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado.jou
+# Running On: barkie1, OS: Linux, CPU Frequency: 3861.908 MHz, CPU Physical cores: 12, Host memory: 33381 MB
+#-----------------------------------------------------------
+start_gui
+open_project vivado_linux.xpr
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:ac701:part0:1.4 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/ac701/1.4/board.xml as part xc7a200tfbg676-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.6 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kc705/1.6/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.6/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.7/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.4 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.4/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.5 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.5/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu1500:part0:1.2 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu1500/1.2/board.xml as part xcku115-flvb2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:sp701:part0:1.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/sp701/1.0/board.xml as part xc7s100fgga676-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:sp701:part0:1.1 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/sp701/1.1/board.xml as part xc7s100fgga676-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.4 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc707/1.4/board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc709:part0:1.8 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc709/1.8/board.xml as part xc7vx690tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.2 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/2.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.1 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.1/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.6 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.6/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.7/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu110/1.4/board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.0/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.3 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.3/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.4 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.4/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128:part0:1.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu128/production/1.0/board.xml as part xcvu37p-fsvh2892-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu129/production/1.0/board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu1525:part0:1.3 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu1525/1.3/board.xml as part xcvu9p-fsgd2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.2 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/2.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.1 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.1/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180_newl/production/1.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180_es:part0:1.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/es/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+CRITICAL WARNING: [Runs 36-271] Incremental checkpoint part, xc7z020clg400-1, does not match run part, xck26-sfvc784-2LV-c.
+CRITICAL WARNING: [Runs 36-271] Incremental checkpoint part, xc7z020clg400-1, does not match run part, xck26-sfvc784-2LV-c.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/mnt/ssd/Xilinx/Vivado/2022.2/data/ip'.
+open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:05 . Memory (MB): peak = 6541.266 ; gain = 240.836 ; free physical = 13954 ; free virtual = 24229
+update_compile_order -fileset sources_1
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:ac701:part0:1.4 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/ac701/1.4/board.xml as part xc7a200tfbg676-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.6 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kc705/1.6/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.6/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.7/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.4 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.4/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.5 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.5/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu1500:part0:1.2 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu1500/1.2/board.xml as part xcku115-flvb2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:sp701:part0:1.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/sp701/1.0/board.xml as part xc7s100fgga676-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:sp701:part0:1.1 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/sp701/1.1/board.xml as part xc7s100fgga676-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.4 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc707/1.4/board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc709:part0:1.8 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc709/1.8/board.xml as part xc7vx690tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.2 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/2.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.1 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.1/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.6 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.6/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.7/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu110/1.4/board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.0/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.3 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.3/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.4 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.4/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128:part0:1.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu128/production/1.0/board.xml as part xcvu37p-fsvh2892-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu129/production/1.0/board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu1525:part0:1.3 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu1525/1.3/board.xml as part xcvu9p-fsgd2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.2 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/2.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.1 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.1/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180_newl/production/1.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180_es:part0:1.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/es/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:ac701:part0:1.4 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/ac701/1.4/board.xml as part xc7a200tfbg676-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.6 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kc705/1.6/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.6/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.7/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.4 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.4/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.5 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.5/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu1500:part0:1.2 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu1500/1.2/board.xml as part xcku115-flvb2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:sp701:part0:1.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/sp701/1.0/board.xml as part xc7s100fgga676-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:sp701:part0:1.1 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/sp701/1.1/board.xml as part xc7s100fgga676-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.4 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc707/1.4/board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc709:part0:1.8 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc709/1.8/board.xml as part xc7vx690tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.2 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/2.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.1 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.1/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.6 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.6/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.7/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu110/1.4/board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.0/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.3 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.3/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.4 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.4/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128:part0:1.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu128/production/1.0/board.xml as part xcvu37p-fsvh2892-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu129/production/1.0/board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu1525:part0:1.3 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu1525/1.3/board.xml as part xcvu9p-fsgd2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.2 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/2.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.1 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.1/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180_newl/production/1.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180_es:part0:1.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/es/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:ac701:part0:1.4 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/ac701/1.4/board.xml as part xc7a200tfbg676-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.6 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kc705/1.6/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.7/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.5 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.5/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu1500:part0:1.2 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu1500/1.2/board.xml as part xcku115-flvb2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:sp701:part0:1.1 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/sp701/1.1/board.xml as part xc7s100fgga676-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.4 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc707/1.4/board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc709:part0:1.8 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc709/1.8/board.xml as part xc7vx690tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.1 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.1/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.7/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu110/1.4/board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.4 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.4/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128:part0:1.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu128/production/1.0/board.xml as part xcvu37p-fsvh2892-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu129/production/1.0/board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu1525:part0:1.3 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu1525/1.3/board.xml as part xcvu9p-fsgd2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.1 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.1/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180_newl/production/1.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180_es:part0:1.0 available at /mnt/ssd/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/es/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s-es1 specified in board_part file is either invalid or not available
+INFO: [Common 17-14] Message 'Board 49-26' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+copy_run -name synth_1_copy_2 [get_runs synth_1] 
+CRITICAL WARNING: [Runs 36-271] Incremental checkpoint part, xc7z020clg400-1, does not match run part, xck26-sfvc784-2LV-c.
+synth_1_copy_2
+set_property board_part tul.com.tw:pynq-z2:part0:1.0 [current_project]
+WARNING: [Project 1-153] The current project device 'xck26-sfvc784-2lv-c' does not match with the device on the 'TUL.COM.TW:PYNQ-Z2:PART0:1.0' board part. A device change to match the device on 'TUL.COM.TW:PYNQ-Z2:PART0:1.0' board part is being done. Please upgrade the IP in the project via the upgrade_ip command or by selecting Reports => Reports IP Status.
+INFO: [Project 1-152] Project part set to zynq (xc7z020clg400-1)
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.srcs/utils_1/imports/synth_1/risc_v_soc.dcp with file /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.runs/synth_1/risc_v_soc.dcp
+launch_runs synth_1 -jobs 10
+[Sat Mar 28 22:34:39 2026] Launched synth_1...
+Run output will be captured here: /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 10
+[Sat Mar 28 22:35:07 2026] Launched impl_1...
+Run output will be captured here: /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 6886.910 ; gain = 0.000 ; free physical = 13331 ; free virtual = 23609
+INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2022.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF Files: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 6956.723 ; gain = 3.000 ; free physical = 13242 ; free virtual = 23521
+Restored from archive | CPU: 0.020000 secs | Memory: 0.097267 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 6956.723 ; gain = 3.000 ; free physical = 13242 ; free virtual = 23521
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7294.707 ; gain = 0.000 ; free physical = 12925 ; free virtual = 23204
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 7496.000 ; gain = 828.820 ; free physical = 12763 ; free virtual = 23042
+WARNING: [Timing 38-313] There are no user specified timing constraints. Timing constraints are needed for proper timing analysis.
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+file mkdir /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.srcs/constrs_1
+file mkdir /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.srcs/constrs_1/new
+close [ open /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.srcs/constrs_1/new/pynq_z2.xdc w ]
+add_files -fileset constrs_1 /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.srcs/constrs_1/new/pynq_z2.xdc
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/mnt/ssd/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/mnt/ssd/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/data_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module data_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ex
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ex_mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ex_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/i_f.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i_f
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/id.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module id
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/id_ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module id_ex
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/if_id.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module if_id
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/mem_wb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem_wb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/pc_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pc_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/pipeline_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pipeline_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/reg_file.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reg_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/risc_v_soc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module risc_v_soc
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rom
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /mnt/ssd/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ctrl
+Compiling module xil_defaultlib.pc_reg
+Compiling module xil_defaultlib.i_f
+Compiling module xil_defaultlib.pipeline_reg
+Compiling module xil_defaultlib.if_id
+Compiling module xil_defaultlib.reg_file
+Compiling module xil_defaultlib.id
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=5)
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=1)
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=3)
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=7)
+Compiling module xil_defaultlib.id_ex
+Compiling module xil_defaultlib.ex
+Compiling module xil_defaultlib.ex_mem
+Compiling module xil_defaultlib.mem
+Compiling module xil_defaultlib.mem_wb
+Compiling module xil_defaultlib.top
+Compiling module xil_defaultlib.rom
+Compiling module xil_defaultlib.data_ram
+Compiling module xil_defaultlib.risc_v_soc
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+
+
+==========================================================================
+   RISC-V SoC Testbench - Final Optimized Mode
+==========================================================================
+ Time  | Target | Actual Val | Expected | Status | Instruction
+-------|--------|------------|----------|--------|-------------------------
+    44 |  x 1   |          1 |        1 |  PASS  |       addi x1, x0, 1
+    76 |  x 2   |          2 |        2 |  PASS  |       addi x2, x0, 2
+   108 |  x 3   |          3 |        3 |  PASS  |      add  x3, x1, x2
+   140 |  x 4   |          1 |        1 |  PASS  |      sub  x4, x2, x1
+   172 |  x 5   |          3 |        3 |  PASS  |      or   x5, x3, x1
+   204 |  x 6   |          2 |        2 |  PASS  |      and  x6, x3, x2
+   332 |  x 8   |          3 |        3 |  PASS  |       lw   x8, 0(x0)
+   380 |   PC   |      Taken |    Taken |  PASS  |      bne (Jump!)
+   444 |  x29   |          1 |        1 |  PASS  |     slt  x29, x0, x1
+   516 |  x30   |         30 |       30 |  PASS  |     addi x30, x0, 30
+--------------------------------------------------------------------------
+$finish called at time : 1 us : File "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/tb.v" Line 98
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.srcs/utils_1/imports/synth_1/risc_v_soc.dcp with file /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.runs/synth_1/risc_v_soc.dcp
+launch_runs synth_1 -jobs 10
+[Sat Mar 28 22:47:59 2026] Launched synth_1...
+Run output will be captured here: /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 10
+[Sat Mar 28 22:48:36 2026] Launched impl_1...
+Run output will be captured here: /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.runs/impl_1/runme.log
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_2
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+report_power -name {power_1}
+Command: report_power -name power_1
+WARNING: [Power 33-232] No user defined clocks were found in the design! Power estimation will be inaccurate until this is corrected.
+Resolution: Please specify clocks using create_clock/create_generated_clock for sequential elements. For pure combinatorial circuits, please specify a virtual clock, otherwise the vectorless estimation might be inaccurate
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+0 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+refresh_design
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7822.820 ; gain = 0.000 ; free physical = 12645 ; free virtual = 22930
+INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2022.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF Files: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 7822.820 ; gain = 0.000 ; free physical = 12514 ; free virtual = 22799
+Restored from archive | CPU: 0.010000 secs | Memory: 0.078613 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 7822.820 ; gain = 0.000 ; free physical = 12514 ; free virtual = 22799
+report_power -name {power_1}
+Command: report_power -name power_1
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+0 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+report_utilization -name utilization_1
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/mnt/ssd/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/mnt/ssd/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/data_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module data_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ex
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ex_mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ex_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/i_f.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i_f
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/id.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module id
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/id_ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module id_ex
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/if_id.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module if_id
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/mem_wb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem_wb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/pc_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pc_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/pipeline_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pipeline_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/reg_file.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reg_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/risc_v_soc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module risc_v_soc
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rom
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /mnt/ssd/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ctrl
+Compiling module xil_defaultlib.pc_reg
+Compiling module xil_defaultlib.i_f
+Compiling module xil_defaultlib.pipeline_reg
+Compiling module xil_defaultlib.if_id
+Compiling module xil_defaultlib.reg_file
+Compiling module xil_defaultlib.id
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=5)
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=1)
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=3)
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=7)
+Compiling module xil_defaultlib.id_ex
+Compiling module xil_defaultlib.ex
+Compiling module xil_defaultlib.ex_mem
+Compiling module xil_defaultlib.mem
+Compiling module xil_defaultlib.mem_wb
+Compiling module xil_defaultlib.top
+Compiling module xil_defaultlib.rom
+Compiling module xil_defaultlib.data_ram
+Compiling module xil_defaultlib.risc_v_soc
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+
+
+==========================================================================
+   RISC-V SoC Testbench
+==========================================================================
+ Time  | Target | Actual Val | Expected | Status | Instruction
+-------|--------|------------|----------|--------|-------------------------
+WARNING: File instr_data.txt referenced on /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/mem_wb.v at line 11 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+--------------------------------------------------------------------------
+$finish called at time : 1 us : File "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/tb.v" Line 114
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/mnt/ssd/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/mnt/ssd/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/data_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module data_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ex
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ex_mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ex_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/i_f.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i_f
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/id.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module id
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/id_ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module id_ex
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/if_id.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module if_id
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/mem_wb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem_wb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/pc_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pc_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/pipeline_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pipeline_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/reg_file.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reg_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/risc_v_soc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module risc_v_soc
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rom
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /mnt/ssd/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ctrl
+Compiling module xil_defaultlib.pc_reg
+Compiling module xil_defaultlib.i_f
+Compiling module xil_defaultlib.pipeline_reg
+Compiling module xil_defaultlib.if_id
+Compiling module xil_defaultlib.reg_file
+Compiling module xil_defaultlib.id
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=5)
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=1)
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=3)
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=7)
+Compiling module xil_defaultlib.id_ex
+Compiling module xil_defaultlib.ex
+Compiling module xil_defaultlib.ex_mem
+Compiling module xil_defaultlib.mem
+Compiling module xil_defaultlib.mem_wb
+Compiling module xil_defaultlib.top
+Compiling module xil_defaultlib.rom
+Compiling module xil_defaultlib.data_ram
+Compiling module xil_defaultlib.risc_v_soc
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+
+
+==========================================================================
+   RISC-V SoC Testbench - Final Optimized Mode
+==========================================================================
+ Time  | Target | Actual Val | Expected | Status | Instruction
+-------|--------|------------|----------|--------|-------------------------
+    44 |  x 1   |          1 |        1 |  PASS  |       addi x1, x0, 1
+    76 |  x 2   |          2 |        2 |  PASS  |       addi x2, x0, 2
+   108 |  x 3   |          3 |        3 |  PASS  |      add  x3, x1, x2
+   140 |  x 4   |          1 |        1 |  PASS  |      sub  x4, x2, x1
+   172 |  x 5   |          3 |        3 |  PASS  |      or   x5, x3, x1
+   204 |  x 6   |          2 |        2 |  PASS  |      and  x6, x3, x2
+   332 |  x 8   |          3 |        3 |  PASS  |       lw   x8, 0(x0)
+   380 |   PC   |      Taken |    Taken |  PASS  |      bne (Jump!)
+   444 |  x29   |          1 |        1 |  PASS  |     slt  x29, x0, x1
+   516 |  x30   |         30 |       30 |  PASS  |     addi x30, x0, 30
+--------------------------------------------------------------------------
+$finish called at time : 1 us : File "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/tb.v" Line 98
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/mnt/ssd/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/mnt/ssd/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/data_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module data_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ex
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ex_mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ex_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/i_f.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i_f
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/id.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module id
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/id_ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module id_ex
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/if_id.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module if_id
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/mem_wb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem_wb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/pc_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pc_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/pipeline_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pipeline_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/reg_file.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reg_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/risc_v_soc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module risc_v_soc
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rom
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /mnt/ssd/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ctrl
+Compiling module xil_defaultlib.pc_reg
+Compiling module xil_defaultlib.i_f
+Compiling module xil_defaultlib.pipeline_reg
+Compiling module xil_defaultlib.if_id
+Compiling module xil_defaultlib.reg_file
+Compiling module xil_defaultlib.id
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=5)
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=1)
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=3)
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=7)
+Compiling module xil_defaultlib.id_ex
+Compiling module xil_defaultlib.ex
+Compiling module xil_defaultlib.ex_mem
+Compiling module xil_defaultlib.mem
+Compiling module xil_defaultlib.mem_wb
+Compiling module xil_defaultlib.top
+Compiling module xil_defaultlib.rom
+Compiling module xil_defaultlib.data_ram
+Compiling module xil_defaultlib.risc_v_soc
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+
+
+==========================================================================
+   RISC-V SoC Testbench
+==========================================================================
+ Time  | Target | Actual Val | Expected | Status | Instruction
+-------|--------|------------|----------|--------|-------------------------
+WARNING: File instr_data.txt referenced on /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/mem_wb.v at line 11 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+--------------------------------------------------------------------------
+$finish called at time : 1 us : File "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/tb.v" Line 114
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/mnt/ssd/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/mnt/ssd/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/data_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module data_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ex
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ex_mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ex_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/i_f.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i_f
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/id.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module id
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/id_ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module id_ex
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/if_id.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module if_id
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/mem_wb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem_wb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/pc_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pc_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/pipeline_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pipeline_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/reg_file.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reg_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/risc_v_soc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module risc_v_soc
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rom
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /mnt/ssd/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ctrl
+Compiling module xil_defaultlib.pc_reg
+Compiling module xil_defaultlib.i_f
+Compiling module xil_defaultlib.pipeline_reg
+Compiling module xil_defaultlib.if_id
+Compiling module xil_defaultlib.reg_file
+Compiling module xil_defaultlib.id
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=5)
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=1)
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=3)
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=7)
+Compiling module xil_defaultlib.id_ex
+Compiling module xil_defaultlib.ex
+Compiling module xil_defaultlib.ex_mem
+Compiling module xil_defaultlib.mem
+Compiling module xil_defaultlib.mem_wb
+Compiling module xil_defaultlib.top
+Compiling module xil_defaultlib.rom
+Compiling module xil_defaultlib.data_ram
+Compiling module xil_defaultlib.risc_v_soc
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+
+
+==========================================================================
+   RISC-V SoC Testbench - Final Optimized Mode
+==========================================================================
+ Time  | Target | Actual Val | Expected | Status | Instruction
+-------|--------|------------|----------|--------|-------------------------
+    44 |  x 1   |          1 |        1 |  PASS  |       addi x1, x0, 1
+    76 |  x 2   |          2 |        2 |  PASS  |       addi x2, x0, 2
+   108 |  x 3   |          3 |        3 |  PASS  |      add  x3, x1, x2
+   140 |  x 4   |          1 |        1 |  PASS  |      sub  x4, x2, x1
+   172 |  x 5   |          3 |        3 |  PASS  |      or   x5, x3, x1
+   204 |  x 6   |          2 |        2 |  PASS  |      and  x6, x3, x2
+   332 |  x 8   |          3 |        3 |  PASS  |       lw   x8, 0(x0)
+   380 |   PC   |      Taken |    Taken |  PASS  |      bne (Jump!)
+   516 |  x30   |         30 |       30 |  PASS  |     addi x30, x0, 30
+--------------------------------------------------------------------------
+$finish called at time : 1 us : File "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/tb.v" Line 98
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/mnt/ssd/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/mnt/ssd/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/data_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module data_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ex
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ex_mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ex_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/i_f.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i_f
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/id.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module id
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/id_ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module id_ex
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/if_id.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module if_id
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/mem_wb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem_wb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/pc_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pc_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/pipeline_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pipeline_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/reg_file.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reg_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/risc_v_soc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module risc_v_soc
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rom
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /mnt/ssd/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ctrl
+Compiling module xil_defaultlib.pc_reg
+Compiling module xil_defaultlib.i_f
+Compiling module xil_defaultlib.pipeline_reg
+Compiling module xil_defaultlib.if_id
+Compiling module xil_defaultlib.reg_file
+Compiling module xil_defaultlib.id
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=5)
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=1)
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=3)
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=7)
+Compiling module xil_defaultlib.id_ex
+Compiling module xil_defaultlib.ex
+Compiling module xil_defaultlib.ex_mem
+Compiling module xil_defaultlib.mem
+Compiling module xil_defaultlib.mem_wb
+Compiling module xil_defaultlib.top
+Compiling module xil_defaultlib.rom
+Compiling module xil_defaultlib.data_ram
+Compiling module xil_defaultlib.risc_v_soc
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+
+
+==========================================================================
+   RISC-V SoC Testbench - Final Optimized Mode
+==========================================================================
+ Time  | Target | Actual Val | Expected | Status | Instruction
+-------|--------|------------|----------|--------|-------------------------
+    44 |  x 1   |          1 |        1 |  PASS  |       addi x1, x0, 1
+    76 |  x 2   |          2 |        2 |  PASS  |       addi x2, x0, 2
+   108 |  x 3   |          3 |        3 |  PASS  |      add  x3, x1, x2
+   140 |  x 4   |          1 |        1 |  PASS  |      sub  x4, x2, x1
+   172 |  x 5   |          3 |        3 |  PASS  |      or   x5, x3, x1
+   204 |  x 6   |          2 |        2 |  PASS  |      and  x6, x3, x2
+   332 |  x 8   |          3 |        3 |  PASS  |       lw   x8, 0(x0)
+   380 |   PC   |      Taken |    Taken |  PASS  |      bne (Jump!)
+   516 |  x30   |         30 |       30 |  PASS  |     addi x30, x0, 30
+--------------------------------------------------------------------------
+$finish called at time : 1 us : File "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/tb.v" Line 98
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/mnt/ssd/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/mnt/ssd/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/data_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module data_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ex
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ex_mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ex_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/i_f.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i_f
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/id.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module id
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/id_ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module id_ex
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/if_id.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module if_id
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/mem_wb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem_wb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/pc_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pc_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/pipeline_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pipeline_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/reg_file.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reg_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/risc_v_soc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module risc_v_soc
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rom
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /mnt/ssd/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ctrl
+Compiling module xil_defaultlib.pc_reg
+Compiling module xil_defaultlib.i_f
+Compiling module xil_defaultlib.pipeline_reg
+Compiling module xil_defaultlib.if_id
+Compiling module xil_defaultlib.reg_file
+Compiling module xil_defaultlib.id
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=5)
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=1)
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=3)
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=7)
+Compiling module xil_defaultlib.id_ex
+Compiling module xil_defaultlib.ex
+Compiling module xil_defaultlib.ex_mem
+Compiling module xil_defaultlib.mem
+Compiling module xil_defaultlib.mem_wb
+Compiling module xil_defaultlib.top
+Compiling module xil_defaultlib.rom
+Compiling module xil_defaultlib.data_ram
+Compiling module xil_defaultlib.risc_v_soc
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+
+
+==========================================================================
+   RISC-V SoC Testbench - Final Optimized Mode
+==========================================================================
+ Time  | Target | Actual Val | Expected | Status | Instruction
+-------|--------|------------|----------|--------|-------------------------
+    44 |  x 1   |          1 |        1 |  PASS  |       addi x1, x0, 1
+    76 |  x 2   |          2 |        2 |  PASS  |       addi x2, x0, 2
+   108 |  x 3   |          3 |        3 |  PASS  |      add  x3, x1, x2
+   140 |  x 4   |          1 |        1 |  PASS  |      sub  x4, x2, x1
+   172 |  x 5   |          3 |        3 |  PASS  |      or   x5, x3, x1
+   204 |  x 6   |          2 |        2 |  PASS  |      and  x6, x3, x2
+   332 |  x 8   |          3 |        3 |  PASS  |       lw   x8, 0(x0)
+   380 |   PC   |      Taken |    Taken |  PASS  |      bne (Jump!)
+   460 |   PC   |      Taken |    Taken |  PASS  |      bne (Jump!)
+   524 |  x30   |         30 |       30 |  PASS  |     addi x30, x0, 30
+--------------------------------------------------------------------------
+$finish called at time : 1 us : File "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/tb.v" Line 98
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/mnt/ssd/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/mnt/ssd/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/data_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module data_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ex
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ex_mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ex_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/i_f.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i_f
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/id.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module id
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/id_ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module id_ex
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/if_id.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module if_id
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/mem_wb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem_wb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/pc_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pc_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/pipeline_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pipeline_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/reg_file.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reg_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/risc_v_soc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module risc_v_soc
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rom
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /mnt/ssd/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ctrl
+Compiling module xil_defaultlib.pc_reg
+Compiling module xil_defaultlib.i_f
+Compiling module xil_defaultlib.pipeline_reg
+Compiling module xil_defaultlib.if_id
+Compiling module xil_defaultlib.reg_file
+Compiling module xil_defaultlib.id
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=5)
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=1)
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=3)
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=7)
+Compiling module xil_defaultlib.id_ex
+Compiling module xil_defaultlib.ex
+Compiling module xil_defaultlib.ex_mem
+Compiling module xil_defaultlib.mem
+Compiling module xil_defaultlib.mem_wb
+Compiling module xil_defaultlib.top
+Compiling module xil_defaultlib.rom
+Compiling module xil_defaultlib.data_ram
+Compiling module xil_defaultlib.risc_v_soc
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+
+
+==========================================================================
+   RISC-V SoC Testbench - Final Optimized Mode
+==========================================================================
+ Time  | Target | Actual Val | Expected | Status | Instruction
+-------|--------|------------|----------|--------|-------------------------
+    44 |  x 1   |          1 |        1 |  PASS  |       addi x1, x0, 1
+    76 |  x 2   |          2 |        2 |  PASS  |       addi x2, x0, 2
+   108 |  x 3   |          3 |        3 |  PASS  |      add  x3, x1, x2
+   140 |  x 4   |          1 |        1 |  PASS  |      sub  x4, x2, x1
+   172 |  x 5   |          3 |        3 |  PASS  |      or   x5, x3, x1
+   204 |  x 6   |          2 |        2 |  PASS  |      and  x6, x3, x2
+   332 |  x 8   |          3 |        3 |  PASS  |       lw   x8, 0(x0)
+   380 |   PC   |      Taken |    Taken |  PASS  |      bne (Jump!)
+   460 |   PC   |      Taken |    Taken |  PASS  |      bne (Jump!)
+   476 |  x 1   |        216 |        1 |  FAIL  |       addi x1, x0, 1
+   524 |  x30   |         30 |       30 |  PASS  |     addi x30, x0, 30
+--------------------------------------------------------------------------
+$finish called at time : 1 us : File "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/tb.v" Line 98
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/mnt/ssd/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/mnt/ssd/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/data_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module data_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ex
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ex_mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ex_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/i_f.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i_f
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/id.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module id
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/id_ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module id_ex
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/if_id.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module if_id
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/mem_wb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem_wb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/pc_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pc_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/pipeline_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pipeline_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/reg_file.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reg_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/risc_v_soc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module risc_v_soc
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rom
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /mnt/ssd/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ctrl
+Compiling module xil_defaultlib.pc_reg
+Compiling module xil_defaultlib.i_f
+Compiling module xil_defaultlib.pipeline_reg
+Compiling module xil_defaultlib.if_id
+Compiling module xil_defaultlib.reg_file
+Compiling module xil_defaultlib.id
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=5)
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=1)
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=3)
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=7)
+Compiling module xil_defaultlib.id_ex
+Compiling module xil_defaultlib.ex
+Compiling module xil_defaultlib.ex_mem
+Compiling module xil_defaultlib.mem
+Compiling module xil_defaultlib.mem_wb
+Compiling module xil_defaultlib.top
+Compiling module xil_defaultlib.rom
+Compiling module xil_defaultlib.data_ram
+Compiling module xil_defaultlib.risc_v_soc
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+
+
+==========================================================================
+   RISC-V SoC Testbench - Final Optimized Mode
+==========================================================================
+ Time  | Target | Actual Val | Expected | Status | Instruction
+-------|--------|------------|----------|--------|-------------------------
+    44 |  x 1   |          1 |        1 |  PASS  |       addi x1, x0, 1
+    76 |  x 2   |          2 |        2 |  PASS  |       addi x2, x0, 2
+   108 |  x 3   |          3 |        3 |  PASS  |      add  x3, x1, x2
+   140 |  x 4   |          1 |        1 |  PASS  |      sub  x4, x2, x1
+   172 |  x 5   |          3 |        3 |  PASS  |      or   x5, x3, x1
+   204 |  x 6   |          2 |        2 |  PASS  |      and  x6, x3, x2
+   332 |  x 8   |          3 |        3 |  PASS  |       lw   x8, 0(x0)
+   380 |   PC   |      Taken |    Taken |  PASS  |      bne (Jump!)
+   460 |   PC   |      Taken |    Taken |  PASS  |      bne (Jump!)
+   524 |  x30   |         30 |       30 |  PASS  |     addi x30, x0, 30
+--------------------------------------------------------------------------
+$finish called at time : 1 us : File "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/tb.v" Line 98
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/mnt/ssd/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/mnt/ssd/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/data_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module data_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ex
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ex_mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ex_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/i_f.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i_f
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/id.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module id
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/id_ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module id_ex
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/if_id.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module if_id
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/mem_wb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem_wb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/pc_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pc_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/pipeline_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pipeline_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/reg_file.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reg_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/risc_v_soc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module risc_v_soc
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rom
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /mnt/ssd/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ctrl
+Compiling module xil_defaultlib.pc_reg
+Compiling module xil_defaultlib.i_f
+Compiling module xil_defaultlib.pipeline_reg
+Compiling module xil_defaultlib.if_id
+Compiling module xil_defaultlib.reg_file
+Compiling module xil_defaultlib.id
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=5)
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=1)
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=3)
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=7)
+Compiling module xil_defaultlib.id_ex
+Compiling module xil_defaultlib.ex
+Compiling module xil_defaultlib.ex_mem
+Compiling module xil_defaultlib.mem
+Compiling module xil_defaultlib.mem_wb
+Compiling module xil_defaultlib.top
+Compiling module xil_defaultlib.rom
+Compiling module xil_defaultlib.data_ram
+Compiling module xil_defaultlib.risc_v_soc
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+
+
+==========================================================================
+   RISC-V SoC Testbench - Final Optimized Mode
+==========================================================================
+ Time  | Target | Actual Val | Expected | Status | Instruction
+-------|--------|------------|----------|--------|-------------------------
+    44 |  x 1   |          1 |        1 |  PASS  |       addi x1, x0, 1
+    76 |  x 2   |          2 |        2 |  PASS  |       addi x2, x0, 2
+   108 |  x 3   |          3 |        3 |  PASS  |      add  x3, x1, x2
+   140 |  x 4   |          1 |        1 |  PASS  |      sub  x4, x2, x1
+   172 |  x 5   |          3 |        3 |  PASS  |      or   x5, x3, x1
+   204 |  x 6   |          2 |        2 |  PASS  |      and  x6, x3, x2
+   332 |  x 8   |          3 |        3 |  PASS  |       lw   x8, 0(x0)
+   380 |   PC   |      Taken |    Taken |  PASS  |      bne (Jump!)
+   444 |  x29   |          0 |        1 |  FAIL  |     slt  x29, x0, x1
+   460 |   PC   |      Taken |    Taken |  PASS  |      bne (Jump!)
+   476 |  x 1   |        216 |        1 |  FAIL  |       addi x1, x0, 1
+   524 |  x30   |         30 |       30 |  PASS  |     addi x30, x0, 30
+--------------------------------------------------------------------------
+$finish called at time : 1 us : File "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/tb.v" Line 98
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/mnt/ssd/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/mnt/ssd/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/data_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module data_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ex
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ex_mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ex_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/i_f.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i_f
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/id.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module id
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/id_ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module id_ex
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/if_id.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module if_id
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/mem_wb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem_wb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/pc_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pc_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/pipeline_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pipeline_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/reg_file.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reg_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/risc_v_soc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module risc_v_soc
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rom
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /mnt/ssd/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ctrl
+Compiling module xil_defaultlib.pc_reg
+Compiling module xil_defaultlib.i_f
+Compiling module xil_defaultlib.pipeline_reg
+Compiling module xil_defaultlib.if_id
+Compiling module xil_defaultlib.reg_file
+Compiling module xil_defaultlib.id
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=5)
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=1)
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=3)
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=7)
+Compiling module xil_defaultlib.id_ex
+Compiling module xil_defaultlib.ex
+Compiling module xil_defaultlib.ex_mem
+Compiling module xil_defaultlib.mem
+Compiling module xil_defaultlib.mem_wb
+Compiling module xil_defaultlib.top
+Compiling module xil_defaultlib.rom
+Compiling module xil_defaultlib.data_ram
+Compiling module xil_defaultlib.risc_v_soc
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+
+
+==========================================================================
+   RISC-V SoC Testbench - Final Optimized Mode
+==========================================================================
+ Time  | Target | Actual Val | Expected | Status | Instruction
+-------|--------|------------|----------|--------|-------------------------
+    44 |  x 1   |          1 |        1 |  PASS  |       addi x1, x0, 1
+    76 |  x 2   |          2 |        2 |  PASS  |       addi x2, x0, 2
+   108 |  x 3   |          3 |        3 |  PASS  |      add  x3, x1, x2
+   140 |  x 4   |          1 |        1 |  PASS  |      sub  x4, x2, x1
+   172 |  x 5   |          3 |        3 |  PASS  |      or   x5, x3, x1
+   204 |  x 6   |          2 |        2 |  PASS  |      and  x6, x3, x2
+   332 |  x 8   |          3 |        3 |  PASS  |       lw   x8, 0(x0)
+   380 |   PC   |      Taken |    Taken |  PASS  |      bne (Jump!)
+   444 |  x29   |          1 |        1 |  PASS  |     slt  x29, x0, x1
+   460 |   PC   |      Taken |    Taken |  PASS  |      bne (Jump!)
+   476 |  x 1   |        216 |        1 |  FAIL  |       addi x1, x0, 1
+   524 |  x30   |         30 |       30 |  PASS  |     addi x30, x0, 30
+--------------------------------------------------------------------------
+$finish called at time : 1 us : File "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/tb.v" Line 98
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/mnt/ssd/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/mnt/ssd/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/data_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module data_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ex
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ex_mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ex_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/i_f.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i_f
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/id.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module id
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/id_ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module id_ex
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/if_id.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module if_id
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/mem_wb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem_wb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/pc_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pc_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/pipeline_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pipeline_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/reg_file.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reg_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/risc_v_soc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module risc_v_soc
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rom
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /mnt/ssd/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ctrl
+Compiling module xil_defaultlib.pc_reg
+Compiling module xil_defaultlib.i_f
+Compiling module xil_defaultlib.pipeline_reg
+Compiling module xil_defaultlib.if_id
+Compiling module xil_defaultlib.reg_file
+Compiling module xil_defaultlib.id
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=5)
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=1)
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=3)
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=7)
+Compiling module xil_defaultlib.id_ex
+Compiling module xil_defaultlib.ex
+Compiling module xil_defaultlib.ex_mem
+Compiling module xil_defaultlib.mem
+Compiling module xil_defaultlib.mem_wb
+Compiling module xil_defaultlib.top
+Compiling module xil_defaultlib.rom
+Compiling module xil_defaultlib.data_ram
+Compiling module xil_defaultlib.risc_v_soc
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+
+
+==========================================================================
+   RISC-V SoC Testbench - Final Optimized Mode
+==========================================================================
+ Time  | Target | Actual Val | Expected | Status | Instruction
+-------|--------|------------|----------|--------|-------------------------
+    44 |  x 1   |          1 |        1 |  PASS  |       addi x1, x0, 1
+    76 |  x 2   |          2 |        2 |  PASS  |       addi x2, x0, 2
+   108 |  x 3   |          3 |        3 |  PASS  |      add  x3, x1, x2
+   140 |  x 4   |          1 |        1 |  PASS  |      sub  x4, x2, x1
+   172 |  x 5   |          3 |        3 |  PASS  |      or   x5, x3, x1
+   204 |  x 6   |          2 |        2 |  PASS  |      and  x6, x3, x2
+   332 |  x 8   |          3 |        3 |  PASS  |       lw   x8, 0(x0)
+   380 |   PC   |      Taken |    Taken |  PASS  |      bne (Jump!)
+   444 |  x29   |          1 |        1 |  PASS  |     slt  x29, x0, x1
+   460 |   PC   |      Taken |    Taken |  PASS  |      bne (Jump!)
+   476 |  x 1   |        216 |      216 |  PASS  |     jal x1, 8 (pc+4)
+   524 |  x30   |         30 |       30 |  PASS  |     addi x30, x0, 30
+--------------------------------------------------------------------------
+$finish called at time : 1 us : File "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/tb.v" Line 111
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.srcs/utils_1/imports/synth_1/risc_v_soc.dcp with file /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.runs/synth_1/risc_v_soc.dcp
+launch_runs synth_1 -jobs 10
+[Sat Mar 28 23:15:04 2026] Launched synth_1...
+Run output will be captured here: /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 10
+[Sat Mar 28 23:15:43 2026] Launched impl_1...
+Run output will be captured here: /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.runs/impl_1/runme.log
+refresh_design
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 8036.988 ; gain = 0.000 ; free physical = 12352 ; free virtual = 22660
+INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2022.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF Files: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 8036.988 ; gain = 0.000 ; free physical = 12248 ; free virtual = 22556
+Restored from archive | CPU: 0.020000 secs | Memory: 0.077881 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 8036.988 ; gain = 0.000 ; free physical = 12248 ; free virtual = 22556
+report_utilization -name utilization_1
+report_power -name {power_1}
+Command: report_power -name power_1
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+0 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+export_ip_user_files -of_objects  [get_files /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/tb.v] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/tb.v
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_baseline_metrics.v
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_baseline_metrics'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/mnt/ssd/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/mnt/ssd/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_baseline_metrics' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_baseline_metrics_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_baseline_metrics.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_baseline_metrics
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_baseline_metrics_behav xil_defaultlib.tb_baseline_metrics xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /mnt/ssd/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_baseline_metrics_behav xil_defaultlib.tb_baseline_metrics xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ctrl
+Compiling module xil_defaultlib.pc_reg
+Compiling module xil_defaultlib.i_f
+Compiling module xil_defaultlib.pipeline_reg
+Compiling module xil_defaultlib.if_id
+Compiling module xil_defaultlib.reg_file
+Compiling module xil_defaultlib.id
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=5)
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=1)
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=3)
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=7)
+Compiling module xil_defaultlib.id_ex
+Compiling module xil_defaultlib.ex
+Compiling module xil_defaultlib.ex_mem
+Compiling module xil_defaultlib.mem
+Compiling module xil_defaultlib.mem_wb
+Compiling module xil_defaultlib.top
+Compiling module xil_defaultlib.rom
+Compiling module xil_defaultlib.data_ram
+Compiling module xil_defaultlib.risc_v_soc
+Compiling module xil_defaultlib.tb_baseline_metrics
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_baseline_metrics_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_baseline_metrics_behav -key {Behavioral:sim_1:Functional:tb_baseline_metrics} -tclbatch {tb_baseline_metrics.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_baseline_metrics.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+
+===============================================================
+ Baseline CPU Metrics TB
+===============================================================
+WARNING: File /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/instr_data_branchstress.txt  referenced on /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/mem_wb.v at line 11 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_baseline_metrics_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+run 20 ms
+---------------------------------------------------------------
+Baseline Summary
+Total Conditional Branches : 0
+Correct Predictions       : 0
+Mispredictions            : 0
+Accuracy (x10000)         : N/A
+---------------------------------------------------------------
+$finish called at time : 2 us : File "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_baseline_metrics.v" Line 80
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_baseline_metrics'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/mnt/ssd/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/mnt/ssd/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_baseline_metrics' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_baseline_metrics_vlog.prj
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_baseline_metrics_behav xil_defaultlib.tb_baseline_metrics xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /mnt/ssd/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_baseline_metrics_behav xil_defaultlib.tb_baseline_metrics xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_baseline_metrics_behav -key {Behavioral:sim_1:Functional:tb_baseline_metrics} -tclbatch {tb_baseline_metrics.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_baseline_metrics.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+
+===============================================================
+ Baseline CPU Metrics TB
+===============================================================
+WARNING: File /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/instr_data_branchstress.txt  referenced on /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/mem_wb.v at line 11 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_baseline_metrics_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+run 20 ms
+---------------------------------------------------------------
+Baseline Summary
+Total Conditional Branches : 0
+Correct Predictions       : 0
+Mispredictions            : 0
+Accuracy (x10000)         : N/A
+---------------------------------------------------------------
+$finish called at time : 2 us : File "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_baseline_metrics.v" Line 80
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_baseline_metrics'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/mnt/ssd/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/mnt/ssd/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_baseline_metrics' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_baseline_metrics_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/data_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module data_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ex
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ex_mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ex_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/i_f.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i_f
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/id.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module id
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/id_ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module id_ex
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/if_id.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module if_id
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/mem_wb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem_wb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/pc_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pc_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/pipeline_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pipeline_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/reg_file.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reg_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/risc_v_soc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module risc_v_soc
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rom
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_baseline_metrics.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_baseline_metrics
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_baseline_metrics_behav xil_defaultlib.tb_baseline_metrics xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /mnt/ssd/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_baseline_metrics_behav xil_defaultlib.tb_baseline_metrics xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ctrl
+Compiling module xil_defaultlib.pc_reg
+Compiling module xil_defaultlib.i_f
+Compiling module xil_defaultlib.pipeline_reg
+Compiling module xil_defaultlib.if_id
+Compiling module xil_defaultlib.reg_file
+Compiling module xil_defaultlib.id
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=5)
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=1)
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=3)
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=7)
+Compiling module xil_defaultlib.id_ex
+Compiling module xil_defaultlib.ex
+Compiling module xil_defaultlib.ex_mem
+Compiling module xil_defaultlib.mem
+Compiling module xil_defaultlib.mem_wb
+Compiling module xil_defaultlib.top
+Compiling module xil_defaultlib.rom
+Compiling module xil_defaultlib.data_ram
+Compiling module xil_defaultlib.risc_v_soc
+Compiling module xil_defaultlib.tb_baseline_metrics
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_baseline_metrics_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_baseline_metrics_behav -key {Behavioral:sim_1:Functional:tb_baseline_metrics} -tclbatch {tb_baseline_metrics.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_baseline_metrics.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+
+===============================================================
+ Baseline CPU Metrics TB
+===============================================================
+[BASE] t=124 pc=56 pred=0 actual=1 total=1 correct=0 mis=1
+[BASE] t=188 pc=84 pred=0 actual=1 total=2 correct=0 mis=2
+[BASE] t=244 pc=56 pred=0 actual=0 total=3 correct=1 mis=2
+[BASE] t=300 pc=84 pred=0 actual=1 total=4 correct=1 mis=3
+[BASE] t=356 pc=56 pred=0 actual=1 total=5 correct=1 mis=4
+[BASE] t=420 pc=84 pred=0 actual=1 total=6 correct=1 mis=5
+[BASE] t=476 pc=56 pred=0 actual=0 total=7 correct=2 mis=5
+[BASE] t=532 pc=84 pred=0 actual=1 total=8 correct=2 mis=6
+[BASE] t=588 pc=56 pred=0 actual=1 total=9 correct=2 mis=7
+[BASE] t=652 pc=84 pred=0 actual=1 total=10 correct=2 mis=8
+[BASE] t=708 pc=56 pred=0 actual=0 total=11 correct=3 mis=8
+[BASE] t=764 pc=84 pred=0 actual=1 total=12 correct=3 mis=9
+[BASE] t=820 pc=56 pred=0 actual=1 total=13 correct=3 mis=10
+[BASE] t=884 pc=84 pred=0 actual=1 total=14 correct=3 mis=11
+[BASE] t=940 pc=56 pred=0 actual=0 total=15 correct=4 mis=11
+[BASE] t=996 pc=84 pred=0 actual=1 total=16 correct=4 mis=12
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_baseline_metrics_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+run 20 ms
+[BASE] t=1052 pc=56 pred=0 actual=1 total=17 correct=4 mis=13
+[BASE] t=1116 pc=84 pred=0 actual=1 total=18 correct=4 mis=14
+[BASE] t=1172 pc=56 pred=0 actual=0 total=19 correct=5 mis=14
+[BASE] t=1228 pc=84 pred=0 actual=1 total=20 correct=5 mis=15
+[BASE] t=1284 pc=56 pred=0 actual=1 total=21 correct=5 mis=16
+[BASE] t=1348 pc=84 pred=0 actual=1 total=22 correct=5 mis=17
+[BASE] t=1404 pc=56 pred=0 actual=0 total=23 correct=6 mis=17
+[BASE] t=1460 pc=84 pred=0 actual=1 total=24 correct=6 mis=18
+[BASE] t=1516 pc=56 pred=0 actual=1 total=25 correct=6 mis=19
+[BASE] t=1580 pc=84 pred=0 actual=1 total=26 correct=6 mis=20
+[BASE] t=1636 pc=56 pred=0 actual=0 total=27 correct=7 mis=20
+[BASE] t=1692 pc=84 pred=0 actual=1 total=28 correct=7 mis=21
+[BASE] t=1748 pc=56 pred=0 actual=1 total=29 correct=7 mis=22
+[BASE] t=1812 pc=84 pred=0 actual=1 total=30 correct=7 mis=23
+[BASE] t=1868 pc=56 pred=0 actual=0 total=31 correct=8 mis=23
+[BASE] t=1924 pc=84 pred=0 actual=1 total=32 correct=8 mis=24
+[BASE] t=1980 pc=56 pred=0 actual=1 total=33 correct=8 mis=25
+---------------------------------------------------------------
+Baseline Summary
+Total Conditional Branches : 33
+Correct Predictions       : 8
+Mispredictions            : 25
+Accuracy (x10000)         : 2424
+---------------------------------------------------------------
+$finish called at time : 2 us : File "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_baseline_metrics.v" Line 79
+report_power -name {power_2}
+Command: report_power -name power_2
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+0 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_baseline_metrics'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/mnt/ssd/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/mnt/ssd/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_baseline_metrics' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_baseline_metrics_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/data_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module data_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ex
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ex_mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ex_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/i_f.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i_f
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/id.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module id
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/id_ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module id_ex
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/if_id.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module if_id
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/mem_wb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem_wb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/pc_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pc_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/pipeline_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pipeline_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/reg_file.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reg_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/risc_v_soc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module risc_v_soc
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rom
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_baseline_metrics.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_baseline_metrics
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_baseline_metrics_behav xil_defaultlib.tb_baseline_metrics xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /mnt/ssd/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_baseline_metrics_behav xil_defaultlib.tb_baseline_metrics xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ctrl
+Compiling module xil_defaultlib.pc_reg
+Compiling module xil_defaultlib.i_f
+Compiling module xil_defaultlib.pipeline_reg
+Compiling module xil_defaultlib.if_id
+Compiling module xil_defaultlib.reg_file
+Compiling module xil_defaultlib.id
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=5)
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=1)
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=3)
+Compiling module xil_defaultlib.pipeline_reg(WIDTH=7)
+Compiling module xil_defaultlib.id_ex
+Compiling module xil_defaultlib.ex
+Compiling module xil_defaultlib.ex_mem
+Compiling module xil_defaultlib.mem
+Compiling module xil_defaultlib.mem_wb
+Compiling module xil_defaultlib.top
+Compiling module xil_defaultlib.rom
+Compiling module xil_defaultlib.data_ram
+Compiling module xil_defaultlib.risc_v_soc
+Compiling module xil_defaultlib.tb_baseline_metrics
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_baseline_metrics_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_baseline_metrics_behav -key {Behavioral:sim_1:Functional:tb_baseline_metrics} -tclbatch {tb_baseline_metrics.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_baseline_metrics.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+
+===============================================================
+ Baseline CPU Metrics TB
+===============================================================
+[BASE] t=124 pc=56 pred=0 actual=1 total=1 correct=0 mis=1
+[BASE] t=188 pc=84 pred=0 actual=1 total=2 correct=0 mis=2
+[BASE] t=244 pc=56 pred=0 actual=0 total=3 correct=1 mis=2
+[BASE] t=300 pc=84 pred=0 actual=1 total=4 correct=1 mis=3
+[BASE] t=356 pc=56 pred=0 actual=1 total=5 correct=1 mis=4
+[BASE] t=420 pc=84 pred=0 actual=1 total=6 correct=1 mis=5
+[BASE] t=476 pc=56 pred=0 actual=0 total=7 correct=2 mis=5
+[BASE] t=532 pc=84 pred=0 actual=1 total=8 correct=2 mis=6
+[BASE] t=588 pc=56 pred=0 actual=1 total=9 correct=2 mis=7
+[BASE] t=652 pc=84 pred=0 actual=1 total=10 correct=2 mis=8
+[BASE] t=708 pc=56 pred=0 actual=0 total=11 correct=3 mis=8
+[BASE] t=764 pc=84 pred=0 actual=1 total=12 correct=3 mis=9
+[BASE] t=820 pc=56 pred=0 actual=1 total=13 correct=3 mis=10
+[BASE] t=884 pc=84 pred=0 actual=1 total=14 correct=3 mis=11
+[BASE] t=940 pc=56 pred=0 actual=0 total=15 correct=4 mis=11
+[BASE] t=996 pc=84 pred=0 actual=1 total=16 correct=4 mis=12
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_baseline_metrics_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+run 20 ms
+[BASE] t=1052 pc=56 pred=0 actual=1 total=17 correct=4 mis=13
+[BASE] t=1116 pc=84 pred=0 actual=1 total=18 correct=4 mis=14
+[BASE] t=1172 pc=56 pred=0 actual=0 total=19 correct=5 mis=14
+[BASE] t=1228 pc=84 pred=0 actual=1 total=20 correct=5 mis=15
+[BASE] t=1284 pc=56 pred=0 actual=1 total=21 correct=5 mis=16
+[BASE] t=1348 pc=84 pred=0 actual=1 total=22 correct=5 mis=17
+[BASE] t=1404 pc=56 pred=0 actual=0 total=23 correct=6 mis=17
+[BASE] t=1460 pc=84 pred=0 actual=1 total=24 correct=6 mis=18
+[BASE] t=1516 pc=56 pred=0 actual=1 total=25 correct=6 mis=19
+[BASE] t=1580 pc=84 pred=0 actual=1 total=26 correct=6 mis=20
+[BASE] t=1636 pc=56 pred=0 actual=0 total=27 correct=7 mis=20
+[BASE] t=1692 pc=84 pred=0 actual=1 total=28 correct=7 mis=21
+[BASE] t=1748 pc=56 pred=0 actual=1 total=29 correct=7 mis=22
+[BASE] t=1812 pc=84 pred=0 actual=1 total=30 correct=7 mis=23
+[BASE] t=1868 pc=56 pred=0 actual=0 total=31 correct=8 mis=23
+[BASE] t=1924 pc=84 pred=0 actual=1 total=32 correct=8 mis=24
+[BASE] t=1980 pc=56 pred=0 actual=1 total=33 correct=8 mis=25
+---------------------------------------------------------------
+Baseline Summary
+Total Conditional Branches : 33
+Correct Predictions       : 8
+Mispredictions            : 25
+Accuracy (x10000)         : 2424
+---------------------------------------------------------------
+$finish called at time : 2 us : File "/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_baseline_metrics.v" Line 79
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.srcs/utils_1/imports/synth_1/risc_v_soc.dcp with file /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.runs/synth_1/risc_v_soc.dcp
+launch_runs synth_1 -jobs 10
+[Sun Mar 29 00:54:52 2026] Launched synth_1...
+Run output will be captured here: /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 10
+[Sun Mar 29 00:55:56 2026] Launched impl_1...
+Run output will be captured here: /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.runs/impl_1/runme.log
+refresh_design
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8238.879 ; gain = 0.000 ; free physical = 8625 ; free virtual = 19054
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2022.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF Files: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 8238.879 ; gain = 0.000 ; free physical = 8538 ; free virtual = 18967
+Restored from archive | CPU: 0.020000 secs | Memory: 0.018585 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 8238.879 ; gain = 0.000 ; free physical = 8538 ; free virtual = 18967
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs

@@ -1,0 +1,16 @@
+WARNING: ./tb_4way_compare.v:66: $readmemb(instr_data_branchstress.txt): Not enough words in the file for the requested range [0:4095].
+WARNING: ./tb_4way_compare.v:67: $readmemb(instr_data_branchstress.txt): Not enough words in the file for the requested range [0:4095].
+============================================================================
+  4-Way Predictor Comparison  |  Workload: branch-stress
+============================================================================
+Predictor                           Br.    Acc %  Pen.Cy  Pen.Red%
+----------------------------------------------------------------------------
+PicoRV32 (stall-to-resolve)          40     0.00      80      ref.
+Baseline always-NT                   40    27.50      58     27.50
+Ibex + SBP (bk-T / fwd-NT)           40    72.50      22     72.50
+VexRiscv + BHT (2-bit)               40    45.00      44     45.00
+This work (hybrid+CG+ES)             40    75.00      20     75.00
+----------------------------------------------------------------------------
+Innovation: neural used=22/40, avg_steps=7.75, early_exit=9
+============================================================================
+CSV,branch-stress,40,80,40,27.50,58,40.00,73,22.00,40,45.00,44         4075.0000         20

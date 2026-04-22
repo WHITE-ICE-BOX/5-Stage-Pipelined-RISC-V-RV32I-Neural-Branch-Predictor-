@@ -1,0 +1,30 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../bp_bimodal.v" \
+"../../../../../bp_confidence.v" \
+"../../../../../bp_history.v" \
+"../../../../../bp_perceptron.v" \
+"../../../../../bp_top.v" \
+"../../../../../ctrl_bp.v" \
+"../../../../../../riscv32i_core/data_ram.v" \
+"../../../../../../riscv32i_core/ex.v" \
+"../../../../../../riscv32i_core/ex_mem.v" \
+"../../../../../../riscv32i_core/i_f.v" \
+"../../../../../../riscv32i_core/id.v" \
+"../../../../../../riscv32i_core/id_ex.v" \
+"../../../../../../riscv32i_core/if_id.v" \
+"../../../../../../riscv32i_core/mem.v" \
+"../../../../../../riscv32i_core/mem_wb.v" \
+"../../../../../../riscv32i_core/pc_reg.v" \
+"../../../../../../riscv32i_core/pipeline_reg.v" \
+"../../../../../../riscv32i_core/reg_file.v" \
+"../../../../../risc_v_soc_bp.v" \
+"../../../../../../riscv32i_core/rom.v" \
+"../../../../../top_bp.v" \
+"../../../../../tb_bp_metrics.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

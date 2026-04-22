@@ -1,0 +1,24 @@
+0.7
+2020.2
+Oct 14 2022
+05:07:14
+/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_baseline_metrics.v,1774715703,verilog,,,,tb_baseline_metrics,,,,,,,,
+/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ctrl.v,1769264272,verilog,,/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/data_ram.v,/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/define.v,ctrl,,,,,,,,
+/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/data_ram.v,1774709259,verilog,,/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ex.v,,data_ram,,,,,,,,
+/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/define.v,1769166750,verilog,,,,,,,,,,,,
+/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ex.v,1774710433,verilog,,/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ex_mem.v,/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/define.v,ex,,,,,,,,
+/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/ex_mem.v,1769264262,verilog,,/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/i_f.v,,ex_mem,,,,,,,,
+/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/i_f.v,1769268103,verilog,,/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/id.v,,i_f,,,,,,,,
+/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/id.v,1774710292,verilog,,/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/id_ex.v,/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/define.v,id,,,,,,,,
+/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/id_ex.v,1769264246,verilog,,/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/if_id.v,/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/define.v,id_ex,,,,,,,,
+/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/if_id.v,1769264238,verilog,,/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/mem.v,/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/define.v,if_id,,,,,,,,
+/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/mem.v,1769264225,verilog,,/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/mem_wb.v,/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/define.v,mem,,,,,,,,
+/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/mem_wb.v,1769264232,verilog,,/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/pc_reg.v,,mem_wb,,,,,,,,
+/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/pc_reg.v,1769264220,verilog,,/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/pipeline_reg.v,,pc_reg,,,,,,,,
+/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/pipeline_reg.v,1769264217,verilog,,/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/reg_file.v,,pipeline_reg,,,,,,,,
+/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/reg_file.v,1774710091,verilog,,/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/risc_v_soc.v,,reg_file,,,,,,,,
+/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/risc_v_soc.v,1774716873,verilog,,/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v,,risc_v_soc,,,,,,,,
+/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/rom.v,1769264205,verilog,,/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/top.v,,rom,,,,,,,,
+/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/tb.v,1774710573,verilog,,,/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/risc_v_soc.v,tb,,,,,,,,
+/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/top.v,1769273912,verilog,,/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_baseline_metrics.v,,top,,,,,,,,
+/home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/riscv32i_core/vivado_linux/vivado_linux.sim/sim_1/behav/xsim/glbl.v,1665704903,verilog,,,,glbl,,,,,,,,

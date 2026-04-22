@@ -1,0 +1,25 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../ctrl.v" \
+"../../../../../data_ram.v" \
+"../../../../../ex.v" \
+"../../../../../ex_mem.v" \
+"../../../../../i_f.v" \
+"../../../../../id.v" \
+"../../../../../id_ex.v" \
+"../../../../../if_id.v" \
+"../../../../../mem.v" \
+"../../../../../mem_wb.v" \
+"../../../../../pc_reg.v" \
+"../../../../../pipeline_reg.v" \
+"../../../../../reg_file.v" \
+"../../../../../risc_v_soc.v" \
+"../../../../../rom.v" \
+"../../../../../top.v" \
+"../../../../../../neural_branch_predictor/tb_baseline_metrics.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

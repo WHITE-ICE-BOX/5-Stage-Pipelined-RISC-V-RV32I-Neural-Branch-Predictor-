@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Sun Mar 29 00:50:19 2026
+# Process ID: 2514491
+# Current directory: /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/vivado_linux/vivado_linux.runs/synth_1
+# Command line: vivado -log risc_v_soc_bp.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source risc_v_soc_bp.tcl
+# Log file: /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/vivado_linux/vivado_linux.runs/synth_1/risc_v_soc_bp.vds
+# Journal file: /home/barkie1/riscv32i/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/vivado_linux/vivado_linux.runs/synth_1/vivado.jou
+# Running On: barkie1, OS: Linux, CPU Frequency: 800.000 MHz, CPU Physical cores: 12, Host memory: 33381 MB
+#-----------------------------------------------------------
+source risc_v_soc_bp.tcl -notrace

@@ -1,0 +1,16 @@
+WARNING: ./tb_4way_compare.v:66: $readmemb(instr_data_nested_loop.txt): Not enough words in the file for the requested range [0:4095].
+WARNING: ./tb_4way_compare.v:67: $readmemb(instr_data_nested_loop.txt): Not enough words in the file for the requested range [0:4095].
+============================================================================
+  4-Way Predictor Comparison  |  Workload: nested-loop
+============================================================================
+Predictor                           Br.    Acc %  Pen.Cy  Pen.Red%
+----------------------------------------------------------------------------
+PicoRV32 (stall-to-resolve)          25     0.00      50      ref.
+Baseline always-NT                   25    24.00      38     24.00
+Ibex + SBP (bk-T / fwd-NT)           25    76.00      12     76.00
+VexRiscv + BHT (2-bit)               25    68.00      16     68.00
+This work (hybrid+CG+ES)             25    76.00      12     76.00
+----------------------------------------------------------------------------
+Innovation: neural used=8/25, avg_steps=7.64, early_exit=6
+============================================================================
+CSV,nested-loop,25,50,25,24.00,38,25.00,76,12.00,25,68.00,16         2576.0000         12
