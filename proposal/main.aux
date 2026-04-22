@@ -1,0 +1,150 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
+\HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
+\global\let\oldcontentsline\contentsline
+\gdef\contentsline#1#2#3#4{\oldcontentsline{#1}{#2}{#3}}
+\global\let\oldnewlabel\newlabel
+\gdef\newlabel#1#2{\newlabelxx{#1}#2}
+\gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
+\AtEndDocument{\ifx\hyper@anchor\@undefined
+\let\contentsline\oldcontentsline
+\let\newlabel\oldnewlabel
+\fi}
+\fi}
+\global\let\hyper@last\relax 
+\gdef\HyperFirstAtBeginDocument#1{#1}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\bibstyle{unsrtnat}
+\citation{patterson2020cod,hennessy2017quantitative}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Concept Description}{2}{section.1}\protected@file@percent }
+\newlabel{sec:concept}{{1}{2}{Concept Description}{section.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1}Background and Motivation}{2}{subsection.1.1}\protected@file@percent }
+\newlabel{sec:background}{{1.1}{2}{Background and Motivation}{subsection.1.1}{}}
+\citation{jimenez2001perceptron,jimenez2003fast}
+\citation{waterman2016riscv,palnitkar2003verilog}
+\citation{smith1981study}
+\citation{jimenez2001perceptron}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2}Problem Statement}{3}{subsection.1.2}\protected@file@percent }
+\newlabel{sec:problem}{{1.2}{3}{Problem Statement}{subsection.1.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3}Objectives and Expected Contributions}{3}{subsection.1.3}\protected@file@percent }
+\newlabel{sec:objectives}{{1.3}{3}{Objectives and Expected Contributions}{subsection.1.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Work Design}{4}{section.2}\protected@file@percent }
+\newlabel{sec:design}{{2}{4}{Work Design}{section.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Overall System Concept}{4}{subsection.2.1}\protected@file@percent }
+\newlabel{sec:system-concept}{{2.1}{4}{Overall System Concept}{subsection.2.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Top-level architecture of the proposed SoC. The five pipeline stages (IF--ID--EX--MEM--WB) are shown with inter-stage pipeline registers (gray). The branch predictor subsystem and its four components attach at the ID stage; the hazard control unit manages stall and flush signals. Solid arrows indicate data flow; dashed arrows indicate control or update paths.\relax }}{4}{figure.caption.2}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:arch}{{1}{4}{Top-level architecture of the proposed SoC. The five pipeline stages (IF--ID--EX--MEM--WB) are shown with inter-stage pipeline registers (gray). The branch predictor subsystem and its four components attach at the ID stage; the hazard control unit manages stall and flush signals. Solid arrows indicate data flow; dashed arrows indicate control or update paths.\relax }{figure.caption.2}{}}
+\citation{jimenez2003fast}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Core Innovation}{5}{subsection.2.2}\protected@file@percent }
+\newlabel{sec:innovation}{{2.2}{5}{Core Innovation}{subsection.2.2}{}}
+\@writefile{toc}{\contentsline {paragraph}{(a) Selective Neural Activation.}{5}{section*.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{(b) Hardware-Efficient Early Stopping.}{5}{section*.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{(c) Pipeline-Ready ID-Stage Integration.}{5}{section*.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{(d) FPGA-Validated Complete Prototype.}{5}{section*.7}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Branch prediction decision chain, spanning the ID stage (blue) and EX-stage feedback (orange). Bimodal confidence gating bypasses the perceptron for easy branches. The early-stop rule $|s_i|>(n-i)\,W_{\qopname  \relax m{max}}$ terminates dot-product computation once the result sign is determined. Mispredictions trigger both pipeline flushing and online weight updates.\relax }}{6}{figure.caption.3}\protected@file@percent }
+\newlabel{fig:bp-chain}{{2}{6}{Branch prediction decision chain, spanning the ID stage (blue) and EX-stage feedback (orange). Bimodal confidence gating bypasses the perceptron for easy branches. The early-stop rule $|s_i|>(n-i)\,W_{\max }$ terminates dot-product computation once the result sign is determined. Mispredictions trigger both pipeline flushing and online weight updates.\relax }{figure.caption.3}{}}
+\citation{picorv32}
+\citation{ibex}
+\citation{vexriscv}
+\citation{picorv32}
+\citation{ibex}
+\citation{vexriscv}
+\citation{picorv32}
+\citation{ibex}
+\citation{vexriscv}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Differences from Existing or Market-Related Products}{7}{subsection.2.3}\protected@file@percent }
+\newlabel{sec:comparison}{{2.3}{7}{Differences from Existing or Market-Related Products}{subsection.2.3}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces System comparison against representative design classes\relax }}{7}{table.caption.8}\protected@file@percent }
+\newlabel{tab:comparison}{{1}{7}{System comparison against representative design classes\relax }{table.caption.8}{}}
+\@writefile{toc}{\contentsline {paragraph}{Versus lightweight educational RISC-V CPUs.}{7}{section*.10}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Capability comparison against open-source RISC-V soft-cores. $\text  {$\mathsurround \z@ \mathchar "658$}$\nobreakspace  {}=\nobreakspace  {}fully supported;\enspace  $\triangle $\nobreakspace  {}=\nobreakspace  {}partial\,/\,conditional;\enspace  $\times $\nobreakspace  {}=\nobreakspace  {}not supported. Baselines: PicoRV32\nobreakspace  {}\cite  {picorv32}, Ibex+SBP\nobreakspace  {}\cite  {ibex}, VexRiscv+BHT\nobreakspace  {}\cite  {vexriscv}. Every row satisfies the discriminating-power criterion.\relax }}{8}{table.caption.9}\protected@file@percent }
+\newlabel{tab:capability}{{2}{8}{Capability comparison against open-source RISC-V soft-cores. $\checkmark $~=~fully supported;\enspace $\triangle $~=~partial\,/\,conditional;\enspace $\times $~=~not supported. Baselines: PicoRV32~\cite {picorv32}, Ibex+SBP~\cite {ibex}, VexRiscv+BHT~\cite {vexriscv}. Every row satisfies the discriminating-power criterion.\relax }{table.caption.9}{}}
+\@writefile{toc}{\contentsline {paragraph}{Versus commercial processor IP.}{8}{section*.11}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4}Target Application Domains}{8}{subsection.2.4}\protected@file@percent }
+\newlabel{sec:domains}{{2.4}{8}{Target Application Domains}{subsection.2.4}{}}
+\citation{waterman2016riscv,palnitkar2003verilog}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Implementation Method}{9}{section.3}\protected@file@percent }
+\newlabel{sec:method}{{3}{9}{Implementation Method}{section.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}System Architecture}{9}{subsection.3.1}\protected@file@percent }
+\newlabel{sec:architecture}{{3.1}{9}{System Architecture}{subsection.3.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Pipeline Stage Design}{9}{subsection.3.2}\protected@file@percent }
+\newlabel{sec:modules}{{3.2}{9}{Pipeline Stage Design}{subsection.3.2}{}}
+\@writefile{toc}{\contentsline {paragraph}{Stage\nobreakspace  {}1: Instruction Fetch (IF).}{9}{section*.12}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Stage\nobreakspace  {}2: Instruction Decode (ID).}{9}{section*.13}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Stage\nobreakspace  {}3: Execute (EX).}{9}{section*.14}\protected@file@percent }
+\citation{hennessy2017quantitative}
+\citation{smith1981study}
+\citation{yeh1991twolevel}
+\citation{jimenez2001perceptron}
+\@writefile{toc}{\contentsline {paragraph}{Stage\nobreakspace  {}4: Memory Access (MEM).}{10}{section*.15}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Stage\nobreakspace  {}5: Write-Back (WB).}{10}{section*.16}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Hazard Detection Unit}{10}{subsection.3.3}\protected@file@percent }
+\newlabel{sec:hazard}{{3.3}{10}{Hazard Detection Unit}{subsection.3.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Branch Predictor Architecture}{10}{subsection.3.4}\protected@file@percent }
+\newlabel{sec:bp-arch}{{3.4}{10}{Branch Predictor Architecture}{subsection.3.4}{}}
+\@writefile{toc}{\contentsline {paragraph}{Bimodal Predictor.}{10}{section*.17}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Confidence Estimator.}{10}{section*.18}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Global History Register.}{10}{section*.19}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Perceptron Predictor.}{11}{section*.20}\protected@file@percent }
+\@writefile{loa}{\contentsline {algorithm}{\numberline {3.1}{\ignorespaces Perceptron inference with hardware early stopping. In the RTL implementation, the full combinational tree is computed in parallel and the result is registered after one clock cycle; the early-stop condition reduces switching activity within the combinational path.\relax }}{11}{algorithm.3.1}\protected@file@percent }
+\newlabel{alg:earlystop}{{3.1}{11}{Perceptron inference with hardware early stopping. In the RTL implementation, the full combinational tree is computed in parallel and the result is registered after one clock cycle; the early-stop condition reduces switching activity within the combinational path.\relax }{algorithm.3.1}{}}
+\@writefile{toc}{\contentsline {paragraph}{Predictor Orchestration.}{11}{section*.21}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Sideband Pipeline Registers}{11}{subsection.3.5}\protected@file@percent }
+\newlabel{sec:sideband}{{3.5}{11}{Sideband Pipeline Registers}{subsection.3.5}{}}
+\citation{palnitkar2003verilog}
+\citation{waterman2016riscv}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6}Technical Stack}{12}{subsection.3.6}\protected@file@percent }
+\newlabel{sec:techstack}{{3.6}{12}{Technical Stack}{subsection.3.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.7}Prototype Demonstration and Operational Flow}{12}{subsection.3.7}\protected@file@percent }
+\newlabel{sec:demo}{{3.7}{12}{Prototype Demonstration and Operational Flow}{subsection.3.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.8}Data Flow and Operational Workflow}{13}{subsection.3.8}\protected@file@percent }
+\newlabel{sec:dataflow}{{3.8}{13}{Data Flow and Operational Workflow}{subsection.3.8}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.9}Testbench Suite}{13}{subsection.3.9}\protected@file@percent }
+\newlabel{sec:testbench}{{3.9}{13}{Testbench Suite}{subsection.3.9}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.9.1}Branch-Stress Evaluation Program}{13}{subsubsection.3.9.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.10}Verification and Implementation Results}{13}{subsection.3.10}\protected@file@percent }
+\newlabel{sec:results}{{3.10}{13}{Verification and Implementation Results}{subsection.3.10}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.10.1}Functional Verification}{13}{subsubsection.3.10.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Baseline CPU.}{13}{section*.24}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Innovation CPU.}{13}{section*.25}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Testbench suite and measurement scope\relax }}{14}{table.caption.22}\protected@file@percent }
+\newlabel{tab:testbenches}{{3}{14}{Testbench suite and measurement scope\relax }{table.caption.22}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Branch-stress evaluation program structure\relax }}{15}{table.caption.23}\protected@file@percent }
+\newlabel{tab:branchstress}{{4}{15}{Branch-stress evaluation program structure\relax }{table.caption.23}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.10.2}Prediction Performance}{15}{subsubsection.3.10.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Branch prediction performance: baseline always-not-taken versus this work's hybrid predictor across all six workloads (Icarus Verilog simulation; penalty\nobreakspace  {}$=2\times $mispredictions).\relax }}{15}{table.caption.26}\protected@file@percent }
+\newlabel{tab:results}{{5}{15}{Branch prediction performance: baseline always-not-taken versus this work's hybrid predictor across all six workloads (Icarus Verilog simulation; penalty~$=2\times $mispredictions).\relax }{table.caption.26}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces Innovation CPU per-workload predictor path allocation. Bimodal count is the complement of neural count. For the branch-stress workload, per-path accuracy is 94.44\% (bimodal) and 59.09\% (perceptron). Average inference depth is not reported; in the pipelined RTL implementation the early-stop mechanism reduces combinational switching but the output register always delivers results after one fixed cycle.\relax }}{16}{table.caption.27}\protected@file@percent }
+\newlabel{tab:internal}{{6}{16}{Innovation CPU per-workload predictor path allocation. Bimodal count is the complement of neural count. For the branch-stress workload, per-path accuracy is 94.44\% (bimodal) and 59.09\% (perceptron). Average inference depth is not reported; in the pipelined RTL implementation the early-stop mechanism reduces combinational switching but the output register always delivers results after one fixed cycle.\relax }{table.caption.27}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.10.3}Multi-Workload Simulation Study}{16}{subsubsection.3.10.3}\protected@file@percent }
+\newlabel{sec:multiworkload}{{3.10.3}{16}{Multi-Workload Simulation Study}{subsubsection.3.10.3}{}}
+\citation{ibex,vexriscv}
+\citation{ibex,vexriscv}
+\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces Four-way branch prediction accuracy comparison across six workloads (Icarus Verilog behavioral simulation; same instruction images used for all predictors). PicoRV32 incurs a 2-cycle stall on every branch (0\% predictive accuracy by definition). Ibex\nobreakspace  {}+\nobreakspace  {}SBP and VexRiscv\nobreakspace  {}+\nobreakspace  {}BHT are behavioural models of their documented predictor mechanisms\nobreakspace  {}\cite  {ibex,vexriscv}.\relax }}{17}{table.caption.28}\protected@file@percent }
+\newlabel{tab:multiworkload}{{7}{17}{Four-way branch prediction accuracy comparison across six workloads (Icarus Verilog behavioral simulation; same instruction images used for all predictors). PicoRV32 incurs a 2-cycle stall on every branch (0\% predictive accuracy by definition). Ibex~+~SBP and VexRiscv~+~BHT are behavioural models of their documented predictor mechanisms~\cite {ibex,vexriscv}.\relax }{table.caption.28}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {8}{\ignorespaces Accuracy--power--area trade-off summary. Accuracy values are from the six-workload unified simulation in Table\nobreakspace  {}\ref  {tab:multiworkload}. Fields marked $\dagger $ are from Vivado 2022.2 post-route reports (xc7z020clg400-1, 125\,MHz, vectorless, branchstress ROM loaded) for the two custom SoC designs (CPU\,+\,ROM\,+\,data-RAM). Fields marked $\ddagger $ are from separate core-only out-of-context syntheses under the same tool/part/clock settings (CPU core only, no instruction or data memory); numbers are not directly comparable to $\dagger $ figures due to differing scope. VexRiscv Verilog was generated from SpinalHDL (GenDynamicBHT config: RV32I, IBusSimple with DYNAMIC prediction, no cache/MMU/MUL/DIV). Neural invoke ratio is from the branch-stress workload (Table\nobreakspace  {}\ref  {tab:internal}). Average steps is the mean number of perceptron weight accumulations before early-stop termination (behavioral simulation; maximum\nobreakspace  {}8).\relax }}{18}{table.caption.29}\protected@file@percent }
+\newlabel{tab:tradeoff}{{8}{18}{Accuracy--power--area trade-off summary. Accuracy values are from the six-workload unified simulation in Table~\ref {tab:multiworkload}. Fields marked $\dagger $ are from Vivado 2022.2 post-route reports (xc7z020clg400-1, 125\,MHz, vectorless, branchstress ROM loaded) for the two custom SoC designs (CPU\,+\,ROM\,+\,data-RAM). Fields marked $\ddagger $ are from separate core-only out-of-context syntheses under the same tool/part/clock settings (CPU core only, no instruction or data memory); numbers are not directly comparable to $\dagger $ figures due to differing scope. VexRiscv Verilog was generated from SpinalHDL (GenDynamicBHT config: RV32I, IBusSimple with DYNAMIC prediction, no cache/MMU/MUL/DIV). Neural invoke ratio is from the branch-stress workload (Table~\ref {tab:internal}). Average steps is the mean number of perceptron weight accumulations before early-stop termination (behavioral simulation; maximum~8).\relax }{table.caption.29}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.10.4}FPGA Synthesis Results}{19}{subsubsection.3.10.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Vivado post-route device layout of the innovation SoC on the Xilinx xc7z020clg400-1 (PYNQ-Z2). The implemented design occupies 464 slices (3.49\,\%), concentrated in the lower-left CLB region; the remaining fabric is unoccupied and available for future I/O peripherals or co-processor extensions.\relax }}{19}{figure.caption.30}\protected@file@percent }
+\newlabel{fig:layout}{{3}{19}{Vivado post-route device layout of the innovation SoC on the Xilinx xc7z020clg400-1 (PYNQ-Z2). The implemented design occupies 464 slices (3.49\,\%), concentrated in the lower-left CLB region; the remaining fabric is unoccupied and available for future I/O peripherals or co-processor extensions.\relax }{figure.caption.30}{}}
+\citation{hennessy2017quantitative}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Maximum Benefits of the Research Outcome}{20}{section.4}\protected@file@percent }
+\newlabel{sec:benefits}{{4}{20}{Maximum Benefits of the Research Outcome}{section.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Conclusion and Future Prospects}{21}{section.5}\protected@file@percent }
+\newlabel{sec:conclusion}{{5}{21}{Conclusion and Future Prospects}{section.5}{}}
+\bibdata{references}
+\bibcite{patterson2020cod}{{1}{2020}{{Patterson and Hennessy}}{{}}}
+\bibcite{hennessy2017quantitative}{{2}{2017}{{Hennessy and Patterson}}{{}}}
+\bibcite{jimenez2001perceptron}{{3}{2001}{{Jim{\'e}nez and Lin}}{{}}}
+\bibcite{jimenez2003fast}{{4}{2003}{{Jim{\'e}nez}}{{}}}
+\bibcite{waterman2016riscv}{{5}{2016}{{Waterman et~al.}}{{Waterman, Lee, Patterson, and Asanovi\'{c}}}}
+\bibcite{palnitkar2003verilog}{{6}{2003}{{Palnitkar}}{{}}}
+\bibcite{smith1981study}{{7}{1981}{{Smith}}{{}}}
+\bibcite{picorv32}{{8}{2015}{{Wolf}}{{}}}
+\bibcite{ibex}{{9}{2019}{{lowRISC Contributors}}{{}}}
+\bibcite{vexriscv}{{10}{2016}{{Papon}}{{}}}
+\bibcite{yeh1991twolevel}{{11}{1991}{{Yeh and Patt}}{{}}}
+\gdef \@abspage@last{24}

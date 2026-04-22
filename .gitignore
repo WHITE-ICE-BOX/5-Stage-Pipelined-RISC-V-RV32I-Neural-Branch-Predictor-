@@ -1,0 +1,9 @@
+.logs/
+.remember/
+.tmp*
+ibex/
+VexRiscv/
+*.doc
+*.pdf
+CLAUDE.md
+.gstack/

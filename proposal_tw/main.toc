@@ -1,0 +1,45 @@
+\contentsline {section}{\numberline {1}概念說明}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}研究背景與動機}{2}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}問題定義}{2}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}研究目標與預期貢獻}{3}{subsection.1.3}%
+\contentsline {section}{\numberline {2}作品設計}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}整體系統概念}{3}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}核心創新}{4}{subsection.2.2}%
+\contentsline {paragraph}{（一）選擇性神經啟用.}{4}{section*.5}%
+\contentsline {paragraph}{（二）硬體高效率提前停止.}{4}{section*.6}%
+\contentsline {paragraph}{（三）可直接整合於管線的解碼階段設計.}{6}{section*.7}%
+\contentsline {paragraph}{（四）經可程式邏輯驗證之完整原型.}{6}{section*.8}%
+\contentsline {subsection}{\numberline {2.3}與既有或市場相關產品之差異}{6}{subsection.2.3}%
+\contentsline {paragraph}{相較於輕量教學型處理器.}{7}{section*.11}%
+\contentsline {paragraph}{相較於商用處理器.}{7}{section*.12}%
+\contentsline {subsection}{\numberline {2.4}目標應用領域}{7}{subsection.2.4}%
+\contentsline {section}{\numberline {3}實作方法}{8}{section.3}%
+\contentsline {subsection}{\numberline {3.1}系統架構}{8}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}管線階段設計}{8}{subsection.3.2}%
+\contentsline {paragraph}{第一階段：取指.}{8}{section*.13}%
+\contentsline {paragraph}{第二階段：解碼.}{8}{section*.14}%
+\contentsline {paragraph}{第三階段：執行.}{8}{section*.15}%
+\contentsline {paragraph}{第四階段：記憶體存取.}{8}{section*.16}%
+\contentsline {paragraph}{第五階段：回寫.}{9}{section*.17}%
+\contentsline {subsection}{\numberline {3.3}冒險偵測單元}{9}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}分支預測器架構}{9}{subsection.3.4}%
+\contentsline {paragraph}{雙模態預測器.}{9}{section*.18}%
+\contentsline {paragraph}{信心估測器.}{9}{section*.19}%
+\contentsline {paragraph}{全域歷史暫存器.}{9}{section*.20}%
+\contentsline {paragraph}{感知器預測器.}{9}{section*.21}%
+\contentsline {paragraph}{預測器協作機制.}{10}{section*.22}%
+\contentsline {subsection}{\numberline {3.5}旁帶管線暫存器}{10}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}技術堆疊}{10}{subsection.3.6}%
+\contentsline {subsection}{\numberline {3.7}原型展示與操作流程}{10}{subsection.3.7}%
+\contentsline {subsection}{\numberline {3.8}資料流與運作工作流}{11}{subsection.3.8}%
+\contentsline {subsection}{\numberline {3.9}測試平台套件}{11}{subsection.3.9}%
+\contentsline {subsubsection}{\numberline {3.9.1}分支壓力評測程式}{11}{subsubsection.3.9.1}%
+\contentsline {subsection}{\numberline {3.10}驗證與實作結果}{11}{subsection.3.10}%
+\contentsline {subsubsection}{\numberline {3.10.1}功能驗證}{11}{subsubsection.3.10.1}%
+\contentsline {paragraph}{基準處理器.}{11}{section*.25}%
+\contentsline {paragraph}{創新版本處理器.}{13}{section*.26}%
+\contentsline {subsubsection}{\numberline {3.10.2}預測效能}{13}{subsubsection.3.10.2}%
+\contentsline {subsubsection}{\numberline {3.10.3}跨情境驗證與可重跑測試}{14}{subsubsection.3.10.3}%
+\contentsline {subsubsection}{\numberline {3.10.4}可程式邏輯綜合結果}{16}{subsubsection.3.10.4}%
+\contentsline {section}{\numberline {4}研究成果可創造之最大效益}{17}{section.4}%
+\contentsline {section}{\numberline {5}結論與未來展望}{18}{section.5}%

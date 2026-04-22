@@ -1,0 +1,120 @@
+% Proposal preamble — Golden Silicon Award competition format.
+% Target layout: A4, 12 pt, single spacing (within 30 pages for the proposal body).
+% NOTE: Do NOT load listings/minted/verbatim input packages that conflict with algorithm.
+
+% ── CJK support (XeLaTeX + xeCJK) ───────────────────────────────────────────
+\usepackage{xeCJK}
+% \setCJKmainfont{AR PL KaitiM Big5}      % 楷體
+\setCJKmainfont{DFKai-SB} 
+\setCJKsansfont{AR PL UMing TW}         % 明體
+\setCJKmonofont{Droid Sans Fallback}    % 等寬 fallback
+\xeCJKsetup{CJKecglue={\hskip 0.15em plus 0.05em minus 0.05em}}  % 中英文自動間距
+
+% ── Fonts ────────────────────────────────────────────────────────────────────
+\usepackage{fontspec}
+% \setmainfont{TeX Gyre Termes}           % Times New Roman equivalent
+\setmainfont{Times New Roman}
+\setsansfont{TeX Gyre Heros}[Scale=0.92]
+\setmonofont{TeX Gyre Cursor}
+
+% ── Page Geometry ────────────────────────────────────────────────────────────
+% A4 with generous margins; headheight set to avoid fancyhdr warning.
+\usepackage[
+  a4paper,
+  top=2.54cm, bottom=2.54cm,
+  left=2.54cm, right=2.54cm,
+  headheight=15pt
+]{geometry}
+
+\usepackage{setspace}
+\singlespacing
+
+% ── Graphics ─────────────────────────────────────────────────────────────────
+\usepackage{graphicx}
+\graphicspath{{./}{figures/}}
+
+% ── Tables ───────────────────────────────────────────────────────────────────
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{makecell}
+\usepackage{multirow}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+
+% ── TikZ (required for architecture diagrams per project figure rules) ────────
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows.meta, positioning, calc, backgrounds, fit}
+
+% ── Captions ─────────────────────────────────────────────────────────────────
+\usepackage{caption}
+\captionsetup{skip=8pt, font=small}
+\captionsetup[table]{position=top}
+
+% ── Mathematics ──────────────────────────────────────────────────────────────
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+% ── SI Units (timing, frequency, bit-widths) ─────────────────────────────────
+\usepackage{siunitx}
+\sisetup{detect-all}
+
+% ── Landscape pages for wide tables/figures ──────────────────────────────────
+\usepackage{pdflscape}
+\usepackage{rotating}
+
+% ── PDF Hyperlinks ────────────────────────────────────────────────────────────
+\usepackage{hyperref}
+\usepackage{xurl}
+\hypersetup{
+  colorlinks = true,
+  linkcolor  = black,
+  citecolor  = black,
+  urlcolor   = black,
+  pdftitle   = {RISC-V RV32I SoC with Hybrid Neural Branch Predictor},
+  pdfauthor  = {}
+}
+
+% ── Header / Footer ──────────────────────────────────────────────────────────
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\nouppercase{\leftmark}}
+\fancyhead[R]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\fancypagestyle{plain}{%
+  \fancyhf{}
+  \fancyhead[L]{\nouppercase{\leftmark}}
+  \fancyhead[R]{\thepage}
+  \renewcommand{\headrulewidth}{0.4pt}
+}
+
+% ── Paragraph Spacing ────────────────────────────────────────────────────────
+\setlength{\parskip}{0pt}
+\setlength{\parindent}{2em}
+\usepackage{indentfirst}
+\emergencystretch = 3em        % Safety net for very tight paragraphs
+
+% ── Page quality: prevent orphan/widow lines and single-line pages ────────────
+\widowpenalty  = 10000         % Penalise lone last line at top of page
+\clubpenalty   = 10000         % Penalise lone first line at bottom of page
+\raggedbottom                  % Allow variable page height; no ugly vertical stretch
+
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\@afterheading}{\@afterindentfalse}{\@afterindenttrue}{}{}
+\makeatother
+
+% ── Algorithm / Pseudocode ───────────────────────────────────────────────────
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{needspace}
+
+% Reset algorithm counter per section (e.g., Algorithm 3.1, 3.2, …)
+\makeatletter
+\@addtoreset{algorithm}{section}
+\renewcommand{\thealgorithm}{\thesection.\arabic{algorithm}}
+\makeatother
+
+% ── Convenience Macro ────────────────────────────────────────────────────────
+% Missing-value placeholder for table S-column alignment
+\newcommand{\NA}{\multicolumn{1}{c}{--}}

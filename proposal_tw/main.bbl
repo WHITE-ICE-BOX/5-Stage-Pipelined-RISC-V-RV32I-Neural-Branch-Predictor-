@@ -1,0 +1,89 @@
+\begin{thebibliography}{11}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Waterman et~al.(2016)Waterman, Lee, Patterson, and
+  Asanovi\'{c}]{waterman2016riscv}
+Andrew Waterman, Yunsup Lee, David~A. Patterson, and Krste Asanovi\'{c}.
+\newblock The {RISC-V} instruction set manual, volume~{I}: User-level {ISA},
+  version~2.1.
+\newblock Technical Report UCB/EECS-2016-118, EECS Department, University of
+  California, Berkeley, May 2016.
+\newblock URL
+  \url{https://web.archive.org/web/20230101120000/https://www2.eecs.berkeley.edu/Pubs/TechRpts/2016/EECS-2016-118.pdf}.
+
+\bibitem[Patterson and Hennessy(2020)]{patterson2020cod}
+David~A. Patterson and John~L. Hennessy.
+\newblock \emph{Computer Organization and Design: The Hardware/Software
+  Interface ({RISC-V} Edition)}.
+\newblock Morgan Kaufmann, 2nd edition, 2020.
+\newblock ISBN 978-0-12-820331-6.
+
+\bibitem[Smith(1981)]{smith1981study}
+James~E. Smith.
+\newblock A study of branch prediction strategies.
+\newblock In \emph{Proceedings of the 8th Annual International Symposium on
+  Computer Architecture (ISCA)}, pages 135--148. IEEE, 1981.
+
+\bibitem[Yeh and Patt(1991)]{yeh1991twolevel}
+Tse-Yu Yeh and Yale~N. Patt.
+\newblock Two-level adaptive training branch prediction.
+\newblock In \emph{Proceedings of the 24th Annual International Symposium on
+  Microarchitecture (MICRO-24)}, pages 51--61. ACM/IEEE, 1991.
+\newblock \doi{10.1145/123465.123475}.
+
+\bibitem[Jim{\'e}nez and Lin(2001)]{jimenez2001perceptron}
+Daniel~A. Jim{\'e}nez and Calvin Lin.
+\newblock Dynamic branch prediction with perceptrons.
+\newblock In \emph{Proceedings of the 7th International Symposium on
+  High-Performance Computer Architecture (HPCA-7)}, pages 197--206. IEEE, 2001.
+\newblock \doi{10.1109/HPCA.2001.903263}.
+
+\bibitem[Jim{\'e}nez(2003)]{jimenez2003fast}
+Daniel~A. Jim{\'e}nez.
+\newblock Fast path-based neural branch prediction.
+\newblock In \emph{Proceedings of the 36th Annual International Symposium on
+  Microarchitecture (MICRO-36)}, pages 243--252. IEEE/ACM, 2003.
+\newblock \doi{10.1109/MICRO.2003.1253199}.
+\newblock URL \url{https://ieeexplore.ieee.org/document/1253199}.
+
+\bibitem[Hennessy and Patterson(2017)]{hennessy2017quantitative}
+John~L. Hennessy and David~A. Patterson.
+\newblock \emph{Computer Architecture: A Quantitative Approach}.
+\newblock Morgan Kaufmann, 6th edition, 2017.
+\newblock ISBN 978-0-12-811905-1.
+
+\bibitem[Palnitkar(2003)]{palnitkar2003verilog}
+Samir Palnitkar.
+\newblock \emph{Verilog {HDL}: A Guide to Digital Design and Synthesis}.
+\newblock Prentice Hall PTR, 2nd edition, 2003.
+\newblock ISBN 0-13-044911-3.
+
+\bibitem[Wolf(2015)]{picorv32}
+Clifford Wolf.
+\newblock {PicoRV32}: A size-optimized {RISC-V} {CPU}.
+\newblock GitHub repository, 2015.
+\newblock URL \url{https://github.com/YosysHQ/picorv32}.
+\newblock Accessed 2025. No branch prediction; branches resolved by
+  stall-until-resolve. Supports RV32I/E/C/M.
+
+\bibitem[{lowRISC Contributors}(2019)]{ibex}
+{lowRISC Contributors}.
+\newblock Ibex: An open source low-power embedded {RISC-V} core.
+\newblock GitHub repository, 2019.
+\newblock URL \url{https://github.com/lowRISC/ibex}.
+\newblock Accessed 2025. Optional static branch predictor: backward-taken,
+  forward-not-taken heuristic. Used in the OpenTitan security chip.
+
+\bibitem[Papon(2016)]{vexriscv}
+Charles Papon.
+\newblock {VexRiscv}: A configurable {RISC-V} implementation in {SpinalHDL}.
+\newblock GitHub repository, 2016.
+\newblock URL \url{https://github.com/SpinalHDL/VexRiscv}.
+\newblock Accessed 2025. Supports DYNAMIC branch prediction mode with a
+  direct-mapped 2-bit saturating-counter BHT; configurable 5-stage pipeline.
+
+\end{thebibliography}

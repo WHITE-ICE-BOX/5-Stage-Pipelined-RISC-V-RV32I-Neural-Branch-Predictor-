@@ -1,0 +1,45 @@
+\contentsline {section}{\numberline {1}Concept Description}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Background and Motivation}{2}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Problem Statement}{3}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Objectives and Expected Contributions}{3}{subsection.1.3}%
+\contentsline {section}{\numberline {2}Work Design}{4}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Overall System Concept}{4}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Core Innovation}{5}{subsection.2.2}%
+\contentsline {paragraph}{(a) Selective Neural Activation.}{5}{section*.4}%
+\contentsline {paragraph}{(b) Hardware-Efficient Early Stopping.}{5}{section*.5}%
+\contentsline {paragraph}{(c) Pipeline-Ready ID-Stage Integration.}{5}{section*.6}%
+\contentsline {paragraph}{(d) FPGA-Validated Complete Prototype.}{5}{section*.7}%
+\contentsline {subsection}{\numberline {2.3}Differences from Existing or Market-Related Products}{7}{subsection.2.3}%
+\contentsline {paragraph}{Versus lightweight educational RISC-V CPUs.}{7}{section*.10}%
+\contentsline {paragraph}{Versus commercial processor IP.}{8}{section*.11}%
+\contentsline {subsection}{\numberline {2.4}Target Application Domains}{8}{subsection.2.4}%
+\contentsline {section}{\numberline {3}Implementation Method}{9}{section.3}%
+\contentsline {subsection}{\numberline {3.1}System Architecture}{9}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Pipeline Stage Design}{9}{subsection.3.2}%
+\contentsline {paragraph}{Stage\nobreakspace {}1: Instruction Fetch (IF).}{9}{section*.12}%
+\contentsline {paragraph}{Stage\nobreakspace {}2: Instruction Decode (ID).}{9}{section*.13}%
+\contentsline {paragraph}{Stage\nobreakspace {}3: Execute (EX).}{9}{section*.14}%
+\contentsline {paragraph}{Stage\nobreakspace {}4: Memory Access (MEM).}{10}{section*.15}%
+\contentsline {paragraph}{Stage\nobreakspace {}5: Write-Back (WB).}{10}{section*.16}%
+\contentsline {subsection}{\numberline {3.3}Hazard Detection Unit}{10}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Branch Predictor Architecture}{10}{subsection.3.4}%
+\contentsline {paragraph}{Bimodal Predictor.}{10}{section*.17}%
+\contentsline {paragraph}{Confidence Estimator.}{10}{section*.18}%
+\contentsline {paragraph}{Global History Register.}{10}{section*.19}%
+\contentsline {paragraph}{Perceptron Predictor.}{11}{section*.20}%
+\contentsline {paragraph}{Predictor Orchestration.}{11}{section*.21}%
+\contentsline {subsection}{\numberline {3.5}Sideband Pipeline Registers}{11}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Technical Stack}{12}{subsection.3.6}%
+\contentsline {subsection}{\numberline {3.7}Prototype Demonstration and Operational Flow}{12}{subsection.3.7}%
+\contentsline {subsection}{\numberline {3.8}Data Flow and Operational Workflow}{13}{subsection.3.8}%
+\contentsline {subsection}{\numberline {3.9}Testbench Suite}{13}{subsection.3.9}%
+\contentsline {subsubsection}{\numberline {3.9.1}Branch-Stress Evaluation Program}{13}{subsubsection.3.9.1}%
+\contentsline {subsection}{\numberline {3.10}Verification and Implementation Results}{13}{subsection.3.10}%
+\contentsline {subsubsection}{\numberline {3.10.1}Functional Verification}{13}{subsubsection.3.10.1}%
+\contentsline {paragraph}{Baseline CPU.}{13}{section*.24}%
+\contentsline {paragraph}{Innovation CPU.}{13}{section*.25}%
+\contentsline {subsubsection}{\numberline {3.10.2}Prediction Performance}{15}{subsubsection.3.10.2}%
+\contentsline {subsubsection}{\numberline {3.10.3}Multi-Workload Simulation Study}{16}{subsubsection.3.10.3}%
+\contentsline {subsubsection}{\numberline {3.10.4}FPGA Synthesis Results}{19}{subsubsection.3.10.4}%
+\contentsline {section}{\numberline {4}Maximum Benefits of the Research Outcome}{20}{section.4}%
+\contentsline {section}{\numberline {5}Conclusion and Future Prospects}{21}{section.5}%

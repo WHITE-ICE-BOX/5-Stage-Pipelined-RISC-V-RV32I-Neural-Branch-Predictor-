@@ -1,0 +1,132 @@
+% references.bib — Golden Silicon Award proposal bibliography.
+% All entries verified for existence (URL / DOI checked 2025).
+
+% ── RISC-V Architecture ───────────────────────────────────────────────────────
+
+@techreport{waterman2016riscv,
+  title        = {The {RISC-V} Instruction Set Manual, Volume~{I}:
+                  User-Level {ISA}, Version~2.1},
+  author       = {Waterman, Andrew and Lee, Yunsup and Patterson, David A.
+                  and Asanovi\'{c}, Krste},
+  institution  = {EECS Department, University of California, Berkeley},
+  number       = {UCB/EECS-2016-118},
+  year         = {2016},
+  month        = {May},
+  url          = {https://web.archive.org/web/20230101120000/https://www2.eecs.berkeley.edu/Pubs/TechRpts/2016/EECS-2016-118.pdf}
+}
+
+@book{patterson2020cod,
+  title     = {Computer Organization and Design: The Hardware/Software Interface
+               ({RISC-V} Edition)},
+  author    = {Patterson, David A. and Hennessy, John L.},
+  year      = {2020},
+  edition   = {2nd},
+  publisher = {Morgan Kaufmann},
+  isbn      = {978-0-12-820331-6}
+}
+
+% ── Branch Prediction — Foundational ─────────────────────────────────────────
+
+% smith1981study: published before DOI registration; no DOI exists.
+@inproceedings{smith1981study,
+  title     = {A Study of Branch Prediction Strategies},
+  author    = {Smith, James E.},
+  booktitle = {Proceedings of the 8th Annual International Symposium on
+               Computer Architecture (ISCA)},
+  pages     = {135--148},
+  year      = {1981},
+  publisher = {IEEE}
+}
+
+@inproceedings{yeh1991twolevel,
+  title     = {Two-Level Adaptive Training Branch Prediction},
+  author    = {Yeh, Tse-Yu and Patt, Yale N.},
+  booktitle = {Proceedings of the 24th Annual International Symposium on
+               Microarchitecture (MICRO-24)},
+  pages     = {51--61},
+  year      = {1991},
+  publisher = {ACM/IEEE},
+  doi       = {10.1145/123465.123475}
+}
+
+% ── Neural / Perceptron Branch Prediction ────────────────────────────────────
+
+@inproceedings{jimenez2001perceptron,
+  title     = {Dynamic Branch Prediction with Perceptrons},
+  author    = {Jim{\'e}nez, Daniel A. and Lin, Calvin},
+  booktitle = {Proceedings of the 7th International Symposium on
+               High-Performance Computer Architecture (HPCA-7)},
+  pages     = {197--206},
+  year      = {2001},
+  publisher = {IEEE},
+  doi       = {10.1109/HPCA.2001.903263}
+}
+
+@inproceedings{jimenez2003fast,
+  title     = {Fast Path-Based Neural Branch Prediction},
+  author    = {Jim{\'e}nez, Daniel A.},
+  booktitle = {Proceedings of the 36th Annual International Symposium on
+               Microarchitecture (MICRO-36)},
+  pages     = {243--252},
+  year      = {2003},
+  publisher = {IEEE/ACM},
+  doi       = {10.1109/MICRO.2003.1253199},
+  url       = {https://ieeexplore.ieee.org/document/1253199}
+}
+
+% ── Computer Architecture — Pipeline and Quantitative ────────────────────────
+
+@book{hennessy2017quantitative,
+  title     = {Computer Architecture: A Quantitative Approach},
+  author    = {Hennessy, John L. and Patterson, David A.},
+  year      = {2017},
+  edition   = {6th},
+  publisher = {Morgan Kaufmann},
+  isbn      = {978-0-12-811905-1}
+}
+
+% ── RTL Design ───────────────────────────────────────────────────────────────
+
+@book{palnitkar2003verilog,
+  title     = {Verilog {HDL}: A Guide to Digital Design and Synthesis},
+  author    = {Palnitkar, Samir},
+  year      = {2003},
+  edition   = {2nd},
+  publisher = {Prentice Hall PTR},
+  isbn      = {0-13-044911-3}
+}
+
+% ── Open-Source RISC-V Soft-Core Comparisons ─────────────────────────────────
+
+@misc{picorv32,
+  author       = {Clifford Wolf},
+  title        = {{PicoRV32}: A Size-Optimized {RISC-V} {CPU}},
+  year         = {2015},
+  howpublished = {GitHub repository},
+  url          = {https://github.com/YosysHQ/picorv32},
+  note         = {Accessed 2025. No branch prediction; branches resolved by
+                  stall-until-resolve. Supports RV32I/E/C/M.}
+}
+
+@misc{ibex,
+  author       = {{lowRISC Contributors}},
+  title        = {Ibex: An Open Source Low-Power Embedded {RISC-V} Core},
+  year         = {2019},
+  howpublished = {GitHub repository},
+  url          = {https://github.com/lowRISC/ibex},
+  note         = {Accessed 2025. Optional static branch predictor:
+                  backward-taken, forward-not-taken heuristic.
+                  Used in the OpenTitan security chip.}
+}
+
+@misc{vexriscv,
+  author       = {Charles Papon},
+  title        = {{VexRiscv}: A Configurable {RISC-V} Implementation in
+                  {SpinalHDL}},
+  year         = {2016},
+  howpublished = {GitHub repository},
+  url          = {https://github.com/SpinalHDL/VexRiscv},
+  note         = {Accessed 2025. Supports DYNAMIC branch prediction mode with
+                  a direct-mapped 2-bit saturating-counter BHT; configurable
+                  5-stage pipeline.}
+}

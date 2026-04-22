@@ -1,0 +1,743 @@
+\documentclass[12pt,a4paper]{article}
+
+\input{preamble}
+\input{metadata}
+
+\usepackage[numbers,sort&compress]{natbib}
+\bibliographystyle{unsrtnat}
+
+% ── Convenience ──────────────────────────────────────────────────────────────
+\newcommand{\eg}{e.g.,\xspace}
+\usepackage{xspace}
+
+\begin{document}
+
+	% ============================================================
+	% COVER PAGE (official 第二十六屆旺宏金矽獎 format)
+	% ============================================================
+	\begin{titlepage}
+			\centering
+			\vspace*{1.5cm}
+
+			{\large\bfseries 第二十六屆旺宏金矽獎 \\[0.8em] 作品企劃書\par}
+
+			\vspace{4.5cm}
+
+			{\LARGE\bfseries \ProposalTitle \par}
+
+			\vspace{5.5cm}
+
+			\begin{tabular}{ll}
+				\large 參賽組別：         & \large\CompetitionGroup \\[0.8em]
+				\large 參賽編號：         & \large\EntryNumber      \\[0.8em]
+				\large 隊\hspace{2em}長： & \large\ProposalLeader   \\[0.8em]
+				\large 隊\hspace{2em}員： & \large\ProposalMembers  \\
+			\end{tabular}
+
+			\vfill
+	\end{titlepage}
+
+	% ============================================================
+	% TABLE OF CONTENTS
+	% ============================================================
+	\tableofcontents
+	\newpage
+
+	% ============================================================
+	% ABSTRACT
+	% ============================================================
+	\section*{摘要}
+	在生成式 AI、智慧感測與邊緣運算快速發展的環境下，處理器設計的重點已不只是「算得快」，而是能否在有限資源內更早做出正確控制決策。分支預測就是這個關鍵入口：預測越準，pipeline flush 越少，系統吞吐量與即時反應就越穩定。問題在於，傳統 always-not-taken 成本低但上限明確；全時啟用 neural predictor 雖更聰明，卻又太吃資源，不適合入門級 FPGA 與資源受限平台。
+
+	本作品提出一套面向實務落地的 5-stage RISC-V RV32I SoC，核心是 \emph{confidence-adaptive hybrid branch predictor}。系統先用 bimodal counter 作為信心閘門，僅在低信心分支才啟動 perceptron；同時在神經路徑加入硬體 early stopping，當部分和已可確定結果時就提前停止，降低不必要運算與切換活動。整體以 4-bit 整數運算完成，不依賴 DSP blocks，並在 PYNQ-Z2（125\,MHz）完成實機驗證。
+
+	在六組工作負載中，本作品平均準確率達 \textbf{84.39\%}（baseline 為 \textbf{23.87\%}），錯誤預測懲罰週期平均降低 \textbf{78.31\%}。40-branch 壓力程式準確率為 75.00\%，32-branch 強偏態迴圈可達 96.88\%。此外，信心閘門將 neural activation 控制在 55\%，顯示本架構能在效能、成本與可實作性之間取得可量測且可重現的平衡，符合業界導向企劃書所強調的「可做、可驗證、可擴充」。
+
+	\bigskip
+	\noindent\textbf{關鍵字:}\ \ProposalKeywords
+
+	\bigskip
+	% ============================================================
+	% SECTION 1 — CONCEPT DESCRIPTION
+	% ============================================================
+	\section{概念說明}
+	\label{sec:concept}
+
+	\subsection{研究背景與動機}
+	\label{sec:background}
+
+	近年處理器設計競爭的重點，已由單純追求時脈與規模，轉向在有限面積與功耗下提升「控制決策效率」。對邊緣控制、感測整合、工業自動化等場景來說，真正影響系統體驗的往往不是峰值算力，而是控制流能否快速且穩定地做對判斷。五級式管線架構雖成熟，但 conditional branch 必須到 EX stage 才能確認方向，導致 IF/ID 階段容易先走錯路；一旦 mispredict，就要 flush 並重抓指令，直接吞掉可用週期。
+
+	現場工程最常見的兩種做法，各有明顯限制：always-not-taken 成本最低，但在迴圈型程式容易持續失準；全時 neural 推論準確率較好，卻把高成本算力浪費在其實不難的分支上。這也是本作品的切入點：不是讓預測器無限複雜，而是讓處理器先判斷「值不值得」動用神經推論，把資源用在真正困難的分支上。
+
+	\subsection{問題定義}
+	\label{sec:problem}
+
+	本作品聚焦三個實務痛點：
+
+	\begin{enumerate}
+		\item \textbf{Static predictor 的準確率上限。}
+		      在 branch-stress 評測程式中，always-not-taken baseline 準確率僅 27.50\%（40 次 conditional branch resolve 中僅 11 次正確，29 次 misprediction，約 58 個 penalty cycles）。此結果具結構性不可避免：該程式為 20 次迴圈並以 XOR 切換條件，整體以 taken 分支為主，固定 not-taken 策略無法有效捕捉。
+
+		\item \textbf{全時 neural inference 的資源成本。}
+		      若 perceptron predictor 在每個分支都啟用，將固定執行 8-step dot-product，不論該分支是否早已可由簡單方法正確預測。對於缺乏專用 DSP blocks 的入門 FPGA，此作法會增加 LUT switching activity 並提高 timing closure 難度。硬體成本應與分支難度成比例，而非平均施加。
+
+		\item \textbf{RV32I 缺乏硬體導向最佳化的 hybrid 框架。}
+		      現有 perceptron predictor 多以演算法層級的獨立元件描述為主。若要將 confidence-adaptive hybrid predictor 整合進 RV32I 5-stage pipeline 的 timing-critical ID stage，並以 sideband registers 保留 prediction metadata 以支援精準 EX-stage update semantics，需進行客製化架構協同設計；在 open-source RISC-V 生態中尚無可直接對照的參考實作。
+	\end{enumerate}
+
+	\subsection{研究目標與預期貢獻}
+	\label{sec:objectives}
+
+	基於上述問題，本作品設定以下可交付目標：
+
+	\begin{enumerate}
+		\item 以 Verilog RTL 完成可綜合的 5-stage pipelined RISC-V RV32I SoC，採輕量化 ISA 子集（40 條 base 指令中實作 23 條），聚焦 branch predictor 評估所需操作並最小化面積，同時整合可處理 load-use stalls 與 control hazard flushes 的 hazard detection unit。
+
+		\item 設計並實作 confidence-adaptive hybrid branch predictor，結合 bimodal 2-bit saturating counter 與 perceptron neural predictor，僅在低信心分支啟用 neural path。
+
+		\item 在 perceptron combinational inference path 中導入硬體 early-stopping 規則，以降低非必要 switching activity，並搭配 1-cycle 輸出暫存器達成 125\,MHz timing closure。
+
+		\item 於 ID stage 整合 predictor，並以 sideband pipeline registers 與指令流同步攜帶 prediction metadata（predicted outcome、bimodal state、GHR snapshot、neural-path flag），以支援精準的 EX-stage update 與 rollback semantics。
+
+		\item 在 PYNQ-Z2 FPGA（125\,MHz）上完成整體系統驗證，並透過 self-checking 的 head-to-head testbench suite，對可直接比較的 baseline CPU 量化預測效能提升。
+	\end{enumerate}
+
+	% ============================================================
+	% SECTION 2 — WORK DESIGN
+	% ============================================================
+	\section{作品設計}
+	\label{sec:design}
+
+	\subsection{整體系統概念}
+	\label{sec:system-concept}
+
+	本案採「可直接驗證、可逐步擴充」的產品化思維，將 SoC 拆成三個可管理的核心模組：整合 branch predictor 的 pipelined CPU core、single-cycle instruction ROM，以及以 word addressing 為基礎的 data RAM，並在同一頂層完成整合。完整系統階層如 Fig.~\ref{fig:arch} 所示。
+
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[width=\linewidth]{figures/fig-arch.pdf}
+		\caption{本作品 SoC 之頂層架構圖。圖中顯示 IF--ID--EX--MEM--WB 五級管線、階段間暫存器、分支預測器子系統與 hazard 控制路徑。}
+		\label{fig:arch}
+	\end{figure}
+
+	CPU core 採輕量化路線，實作 RV32I base integer instruction set 的 23 條指令子集，涵蓋六種 R-type 算術（ADD、SUB、AND、OR、XOR、SLT）、六種 I-type 立即值運算（ADDI、SLTI、ORI、ANDI、XORI、SLLI）、五種 load（LB、LH、LW、LBU、LHU）、三種 store（SB、SH、SW）、兩種條件分支（BEQ、BNE）與無條件跳躍 JAL。此子集涵蓋 branch predictor 評估工作負載所需的全部操作，同時最小化邏輯面積。其餘 RV32I 指令——右移（SRL、SRA、SRLI、SRAI）、無號比較（SLTU、SLTIU）、額外分支（BLT、BGE、BLTU、BGEU）、間接跳躍（JALR）、上位立即值載入（LUI、AUIPC）與系統指令（ECALL、EBREAK、FENCE）——皆已於 decoder 定義檔保留，可依需求逐步啟用。先把「能穩定跑、能量測、能比較」這三件事做好，再往周邊擴充。周邊子系統（UART、SPI、DMA、AXI-Lite bus interconnect、PLIC/CLINT interrupt controller）規劃於後續里程碑導入。
+
+	branch predictor 被設計為自含式 plugin，透過兩組清楚介面與管線連接：(a)~predict port 接收 ID-stage 的 PC 與 branch-type flag；(b)~update port 接收 EX-stage 的實際結果、mispredict flag 與 GHR snapshot。這樣做的好處是導入成本低、替換成本低，也方便後續 A/B 測試不同 predictor 方案，不需要重改核心 datapath。
+
+	\subsection{核心創新}
+	\label{sec:innovation}
+
+	本案的核心創新是 \emph{confidence-adaptive two-layer prediction chain}：把神經推論從「每次都算」改成「需要才算」，並在可判定時提前停止，如 Fig.~\ref{fig:bp-chain} 所示。此設計由四項工程貢獻構成：
+
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[width=0.60\linewidth]{figures/fig-bp-chain.pdf}
+		\caption{分支預測決策鏈示意圖}
+		\label{fig:bp-chain}
+	\end{figure}
+
+	\paragraph{（一）選擇性神經啟用.}
+	相較於讓每個 branch 都經過完整 neural inference，本設計使用 bimodal 2-bit saturating counter 作為 confidence gate。僅有處於 \emph{weak counter state}（非 strongly taken、亦非 strongly not-taken）且近期行為反轉、真正難預測的分支，才會升級至 perceptron 路徑。在評測工作負載中，neural activation 被限制在 55\%，其餘 45\% 由輕量 bimodal 路徑直接解決。此機制使硬體成本隨分支難度而變化，而非隨分支頻率線性增加。
+
+	\paragraph{（二）硬體高效率提前停止.}
+	在 neural path 中，inference 並非每次都需要完整 8 個 history steps。當部分和 $s_i$ 的絕對值已大於剩餘歷史位元可造成的最大影響量時，結果方向就已確定，系統會直接提前停止。此條件由 perceptron 單元內純組合 comparator 判斷。在目前 pipelined 實作中，combinational adder tree 與 early-stop comparator 的結果會送入 1-cycle output register（為達 timing closure 而加入），因此 prediction 結果在 ID-stage 查詢後一個 cycle 可得。即便可觀測延遲固定為一個 cycle，early-stop 機制仍可降低組合路徑中的不必要 switching activity。
+
+	\paragraph{（三）可直接整合於管線的解碼階段設計.}
+	predictor 在 ID stage 內輸出結果，使系統可在 EX stage 解決分支前先進行推測性 PC 重導。專用 sideband pipeline registers 會與主指令流同步，將 prediction metadata（predicted outcome、bimodal state、GHR snapshot、neural-path flag）由 ID 傳遞至 EX。此設計可同時確保：(i)~predictor 決策能及時重導取指流程；(ii)~EX-stage update 邏輯取得與預測當下一致的 history 狀態，於 flush 與 stall 存在時仍能維持正確 online learning。
+
+	\paragraph{（四）經可程式邏輯驗證之完整原型.}
+	本系統並非僅止於 simulation。baseline CPU 與 innovation CPU 皆於 PYNQ-Z2（Zynq-7000, 125\,MHz, WNS\,=\,+0.006\,ns）達成完整 place-and-route timing closure，且 setup/hold violations 皆為零。整體算術實作採 4-bit signed integer 加減與 magnitude comparison，僅依賴 LUT fabric、不需 DSP blocks，因此可直接移植至入門級 FPGA 與 standard-cell ASIC flows。
+
+	\subsection{與既有或市場相關產品之差異}
+	\label{sec:comparison}
+
+	Table~\ref{tab:comparison} 將本系統與四類具代表性的參考設計進行比較。
+
+	\begin{table}[htbp]
+		\centering
+		\small
+		\setlength{\tabcolsep}{4pt}
+		\caption{本作品與代表性設計類別之系統比較}
+		\label{tab:comparison}
+		\begin{tabularx}{\linewidth}{p{3.0cm}YYYY}
+			\toprule
+			\textbf{比較面向}
+			 & \textbf{Static (always-NT)}
+			 & \textbf{Bimodal only}
+			 & \textbf{Always-on perceptron}
+			 & \textbf{本作品}                         \\
+			\midrule
+			Avg.\ accuracy (6-workload avg.)
+			 & 23.87\%
+			 & Limited by weak-state branches
+			 & Higher, at full cost
+			 & \textbf{84.39\%}                        \\[3pt]
+			Neural activation
+			 & None
+			 & None
+			 & 100\% (always)
+			 & \textbf{55\% (gated)}                   \\[3pt]
+			Inference cost saving
+			 & N/A
+			 & N/A
+			 & None
+			 & \textbf{Early-stop (reduced switching)} \\[3pt]
+			Online weight learning
+			 & No
+			 & Counter only
+			 & Yes
+			 & \textbf{Yes (on mispredict)}            \\[3pt]
+			DSP blocks required
+			 & No
+			 & No
+			 & Typically yes
+			 & \textbf{No (4-bit LUT)}                 \\[3pt]
+			FPGA timing validated
+			 & Yes, 125\,MHz
+			 & N/A (reference class)
+			 & Rarely at RTL level
+			 & \textbf{Yes, 125\,MHz}                  \\[3pt]
+			Complete SoC prototype
+			 & Yes (RV32I subset SoC)
+			 & No (component only)
+			 & No (component only)
+			 & \textbf{Yes (RV32I subset SoC)}           \\
+			\bottomrule
+		\end{tabularx}
+	\end{table}
+
+	本案採用三個具公開 branch prediction 機制文件的 open-source RISC-V soft-core 作為比較基準。
+	\textbf{PicoRV32} 為以面積最小化為導向的 RV32I/E/M core（YosysHQ），不含 branch prediction：每個 conditional branch 都必須等待 execute stage 解析結果，因而在每次分支指令上都承受固定 penalty。
+	\textbf{Ibex}（lowRISC，用於 OpenTitan）為 2--3-stage embedded RV32I core，可選配基於 backward-taken/forward-not-taken 規則的靜態 predictor：迴圈回跳分支預測 taken、前向分支預測 not-taken，不具 runtime 自適應。
+	\textbf{VexRiscv (DYNAMIC)} 為可配置 5-stage RV32I soft-core（SpinalHDL），採 direct-mapped 2-bit saturating-counter BHT（Branch History Table）；其 counter 可依 PC 調整，但不具 history-weight learning，亦無升級至更強 predictor 的機制。
+
+	Table~\ref{tab:capability} 依據本案三項核心機制（confidence gating、early stopping、hybrid bimodal-perceptron）所導出的能力面向，比較上述三個 open-source 設計與本系統。每一列皆保留可區辨性：至少一個 baseline 需呈現 $\triangle$（部分或條件支援）或 $\times$（不支援）。能力評等以公開機制文件為依據；與本案六種 branch-pattern 工作負載的直接對照模擬，已納入後續驗證清單。
+
+	\begin{table}[htbp]
+		\centering
+		\small
+		\setlength{\tabcolsep}{3pt}
+		\caption{本作品與 open-source RISC-V soft-core 之能力比較（$\checkmark$：完整支援；$\triangle$：部分支援；$\times$：不支援）}
+		\label{tab:capability}
+		\begin{tabularx}{\linewidth}{p{4.0cm}YYYY}
+			\toprule
+			\textbf{能力面向}
+			 & \makecell{\textbf{PicoRV32}                                              \\\textbf{(no pred.)}}
+			 & \makecell{\textbf{Ibex}                                                  \\\textbf{+SBP}}
+			 & \makecell{\textbf{VexRiscv}                                              \\\textbf{+BHT}}
+			 & \textbf{本作品}                                                          \\
+			\midrule
+			\multicolumn{5}{l}{\textit{From: confidence gating}}                        \\[2pt]
+			Confidence-scored\newline branch routing
+			 & $\times$                    & $\times$     & $\triangle$  & $\checkmark$ \\[3pt]
+			Selective neural activation\newline (hard branches only)
+			 & $\times$                    & $\times$     & $\times$     & $\checkmark$ \\[6pt]
+			\multicolumn{5}{l}{\textit{From: early stopping}}                           \\[2pt]
+			Early-stopping\newline dot-product inference
+			 & $\times$                    & $\times$     & $\times$     & $\checkmark$ \\[6pt]
+			\multicolumn{5}{l}{\textit{From: hybrid bimodal\,+\,perceptron}}            \\[2pt]
+			Online history-weight\newline learning
+			 & $\times$                    & $\times$     & $\triangle$  & $\checkmark$ \\[3pt]
+			Neural escalation for\newline hard branches
+			 & $\times$                    & $\times$     & $\times$     & $\checkmark$ \\[3pt]
+			High accuracy on\newline alternating patterns
+			 & $\times$                    & $\triangle$  & $\triangle$  & $\checkmark$ \\[3pt]
+			High accuracy on\newline strongly-biased loops
+			 & $\times$                    & $\checkmark$ & $\checkmark$ & $\checkmark$ \\
+			\bottomrule
+		\end{tabularx}
+	\end{table}
+
+	\paragraph{相較於輕量教學型處理器.}
+	常見教育用途的 open RISC-V cores（例如入門架構課程）多採 always-not-taken 或 always-taken 靜態預測。此類設計重視簡潔與可教學性，但缺乏自適應學習能力。本案在維持清楚 5-stage pipeline 結構的同時，整合可於 runtime 依實際分支行為更新權重的 learning predictor，且不需外部軟體輔助。
+
+	\paragraph{相較於商用處理器.}
+	商用 soft-core IP（如 ARM Cortex-M 系列、SiFive E-series）通常內建不可檢視或修改的 proprietary predictor。本案 RTL 為完全開放且參數化設計，便於研究、實驗與延伸，可作為 FPGA soft-core 原型開發的透明、可驗證替代方案。
+
+	\subsection{目標應用領域}
+	\label{sec:domains}
+
+	\begin{itemize}
+		\item \textbf{邊緣控制器與 IoT SoCs.}
+		      在 sensor fusion、motor control 與 real-time event processing 等情境中，資源受限的 RISC-V microcontroller 可直接受益於「將 neural 計算聚焦在困難分支」的 predictor 設計。confidence gate 能降低多數分支上的非必要 neural toggling，對 battery-powered 或 duty-cycled 的 edge 節點特別有價值。
+
+		\item \textbf{FPGA soft-core 平台.}
+		      對於需要嵌入式可程式處理器的 FPGA 設計（如客製通訊協定、硬體加速器控制、可重組控制平面），本設計可作為 drop-in soft-core 直接導入。PYNQ-Z2 於 125\,MHz 的驗證結果顯示其可立即用於 Zynq-7000 系列；可綜合撰寫風格亦確保可移植至其他 Xilinx 與 Intel FPGA 目標。
+
+		\item \textbf{分支密集型嵌入式工作負載.}
+		      digital signal processing、以 finite-state machine 驅動的 protocol stacks 與 real-time control loops 等韌體，常出現高密度且重複性的 branch patterns，正是 GHR-based perceptron weights 最易收斂的場景；本 predictor 架構與此類工作負載高度匹配。
+
+		\item \textbf{Pre-silicon ASIC 原型與架構研究.}
+		      參數化 predictor 設計、self-checking testbench 套件與完整 Vivado synthesis flow，使本系統可作為 ASIC tape-out 前 branch-predictor 研究的即用型評估平台。由於不依賴 FPGA-specific primitives 與 DSP macros，亦可直接移植至 standard-cell flows。
+	\end{itemize}
+
+	% ============================================================
+	% SECTION 3 — IMPLEMENTATION METHOD
+	% ============================================================
+	\section{實作方法}
+	\label{sec:method}
+
+	\subsection{系統架構}
+	\label{sec:architecture}
+
+	本 SoC 整合三個子系統，目的不是做單一模組展示，而是建立可交付、可比較的完整平台：
+
+	\begin{itemize}
+		\item 內含 branch predictor 的 \textbf{5-stage pipeline CPU core}；
+		\item 可在 simulation 或配置時由 binary program image 初始化的 \textbf{instruction ROM}；
+		\item 支援 byte、halfword、word load/store 與 byte-enable 邏輯的 \textbf{data RAM}。
+	\end{itemize}
+
+	baseline CPU 與創新版本使用相同管線與記憶體階層，但不含 predictor：所有分支皆在 EX stage 依 static not-taken 假設解決。此結構等價性確保比較公平，量測差異可直接回到 predictor 設計本身，便於工程決策與後續導入。
+
+	\subsection{管線階段設計}
+	\label{sec:modules}
+
+	\paragraph{第一階段：取指.}
+	IF stage 將目前 PC 輸入 instruction ROM。PC register 依優先順序在三種 next-PC 來源中選擇：(1)~EX-stage 因 misprediction 或 unconditional jump 的重導；(2)~ID-stage 在 predictor 判定 taken 時的推測性分支目標；(3)~順序執行的 PC$+4$。IF/ID pipeline register 同時支援 stall（保持當前值）與 flush（插入 NOP bubble）控制。
+
+	\paragraph{第二階段：解碼.}
+	ID stage 對已實作的指令子集進行 opcode decoding、擷取 source/destination register addresses、產生對應 RV32I 格式（I, S, B, J）的 sign-extended immediate，並輸出 memory、branch 與 register-file 控制訊號。分支目標位址以組合邏輯計算為
+	$\mathrm{PC}_\mathrm{ID} + \mathrm{imm}_{B}$.
+
+	同一時脈週期內，branch predictor 以 ID-stage PC 與 conditional-branch flag 查詢資料表，回傳推測結果與 GHR snapshot。
+
+	\paragraph{第三階段：執行.}
+	EX stage 實作整數 ALU（ADD、SUB、OR、AND、XOR、SLT、shifts）、執行分支比較（BEQ、BNE、BLT、BGE、BLTU、BGEU），並解析 unconditional jumps。實際分支結果與 misprediction 訊號會同時送往 PC 選擇邏輯與 predictor update port。
+
+	\paragraph{第四階段：記憶體存取.}
+	MEM stage 驅動 data RAM 介面執行 store，並將 load 資料回傳管線。byte 與 halfword load 依指令型態進行 sign-extend 或 zero-extend 至 32 bits。
+
+	\paragraph{第五階段：回寫.}
+	MEM/WB pipeline register 會將結果字與目的暫存器位址送至 register file write port，完成五階段執行循環。
+
+	\subsection{冒險偵測單元}
+	\label{sec:hazard}
+
+	hazard control unit 實作三種解決策略：
+
+	\begin{enumerate}
+		\item \textbf{Misprediction 或 unconditional-jump 重導:}
+		      flush 兩個 pipeline stages 以丟棄錯誤預取指令，並將 PC 重導至正確目標，這是主要的 misprediction recovery 路徑。
+
+		\item \textbf{Load-use hazard（載入-使用冒險）:}
+		      當 EX-stage memory load 的目標暫存器立即被 ID-stage 指令作為來源使用時，fetch 與 decode stages 需 stall，並插入一個 pipeline bubble，讓 load 結果先完成回寫再被使用；Register~x0 不列入判斷。
+
+		\item \textbf{ID-stage predicted-taken 推測性預取:}
+		      當 predictor 在 ID stage 輸出 taken 時，由於 PC 已重導至預測分支目標，需將 IF stage 既有的 fall-through instruction flush。
+	\end{enumerate}
+
+	\subsection{分支預測器架構}
+	\label{sec:bp-arch}
+
+	predictor 參數化設定為每個表 16 entries（index width = 4 bits）、8-bit Global History Register、範圍 $[-8,+7]$ 的 4-bit signed weights，以及 8-bit signed accumulator。
+
+	\paragraph{雙模態預測器.}
+	由 PC 低位元索引的 16-entry、2-bit saturating counter 陣列。每個 counter 在 reset 時初始化為 weak not-taken，並以 counter 的 MSB 直接輸出預測結果。更新規則為：分支實際為 taken 時朝 strong-taken 遞增，為 not-taken 時朝 strong-not-taken 遞減，且雙端飽和。
+
+	\paragraph{信心估測器.}
+	使用單一組合 gate，僅當 saturating counter 落在強態（$00_2$ 或 $11_2$）時輸出 high confidence。弱態（$01_2$ 或 $10_2$）代表該分支近期可能發生方向反轉，因此會被視為 neural path 候選。
+
+	\paragraph{全域歷史暫存器.}
+	8-bit shift register，於每次 resolved conditional branch 後更新：先左移，再將實際結果寫入 bit~0。為確保 EX-stage update 對應到預測當下的歷史狀態，ID stage 會將當前 GHR 值快照至 sideband pipeline register。
+
+	\paragraph{感知器預測器.}
+	以 PC 低位元索引的 16 個 perceptrons；每個 perceptron 皆包含一個 bias register 與八個 weight registers，且皆為 4-bit signed。推論流程為先將 bias 與歷史位元對應權重加總，再以最終和的正負決定 taken / not-taken。計算路徑採平行 combinational adder tree，並在組合路徑內套用 early-stopping 規則；結果再鎖存至 1-cycle output register，以滿足 125\,MHz timing constraint。
+
+	在硬體實作上，early stopping 會逐步檢查目前部分和與剩餘最大影響量，只要結果方向已確定就停止後續累加。此機制不改變功能正確性，主要目的在於降低不必要的切換活動與推論成本。
+
+	Online weight update 僅在 misprediction 時觸發，更新方向依實際分支結果與歷史位元一致性決定，並以 $[-8,+7]$ 範圍做飽和限制。Bias 更新方式相同：taken 時 $+1$，not-taken 時 $-1$。
+
+	\paragraph{預測器協作機制.}
+	最終預測依 bimodal confidence 在兩條路徑間選擇：信心高時直接採 bimodal，信心低時才升級到 neural path。僅當分支為 conditional instruction 且 bimodal confidence 為低時，才啟用 neural path。
+
+	\subsection{旁帶管線暫存器}
+	\label{sec:sideband}
+
+	Sideband pipeline registers 會與主指令管線同步，將 prediction metadata 由 ID stage 傳至 EX stage。所有暫存器皆支援 synchronous flush，可在管線復原時插入零值 bubble。
+
+	\begin{center}
+		\renewcommand{\arraystretch}{1.3}
+		\begin{tabularx}{\linewidth}{p{3.0cm}cX}
+			\toprule
+			\textbf{Metadata Field} & \textbf{Width} & \textbf{Purpose}                                                \\
+			\midrule
+			Predicted outcome       & 1 bit          & Used for misprediction detection at EX                          \\
+			Branch type flag        & 1 bit          & Enables predictor update on branch resolution                   \\
+			Bimodal taken           & 1 bit          & Bimodal predictor output, registered 1 cycle for timing closure \\
+			Confidence flag         & 1 bit          & Registered high-confidence indicator from bimodal gate          \\
+			GHR snapshot            & 8 bits         & History state at prediction time, for correct online update     \\
+			Neural path flag        & 1 bit          & Records whether neural path was used (for activation metric)    \\
+			\bottomrule
+		\end{tabularx}
+	\end{center}
+
+	\subsection{技術堆疊}
+	\label{sec:techstack}
+
+	\begin{itemize}
+		\item \textbf{HDL:} Verilog (IEEE 1364-2001 synthesizable subset)
+		\item \textbf{ISA:} RISC-V RV32I base integer instruction set（輕量化 23 條指令子集）
+		\item \textbf{模擬:} Vivado Simulator (xsim) / ModelSim behavioral simulation
+		\item \textbf{綜合與實作:} Xilinx Vivado (logic synthesis,
+		      place-and-route, timing analysis, power estimation)
+		\item \textbf{目標 FPGA:} Xilinx Zynq-7000 on PYNQ-Z2, 125\,MHz system clock
+		      (8.00\,ns period, LVCMOS33)
+	\end{itemize}
+
+	\subsection{原型展示與操作流程}
+	\label{sec:demo}
+
+	本系統可作為完整且可展示的自含式原型運作；從上電到可量測輸出的流程如下：
+
+	\begin{enumerate}
+		\item \textbf{程式載入.} 啟動時，instruction ROM 會由 binary program image 初始化；執行期間不需外部 loader 或軟體 tool chain。
+
+		\item \textbf{推測性管線執行.} CPU 由 address 0 開始取指。每當 ID stage 遇到 conditional branch，predictor 會立即產生推測結果：若為 taken，PC 重導至 branch target 並 flush fall-through instruction；後續執行沿預測路徑推進。
+
+		\item \textbf{EX-stage 解決與線上更新.} 當 branch 到達 EX stage 時，ALU 解析實際結果。若預測正確則不需修正；若錯誤，hazard control unit 會觸發 two-stage flush、將 PC 修正至實際目標，並對 predictor 執行 online weight update。
+
+		\item \textbf{自動化指標蒐集.} head-to-head comparison testbench 逐 cycle 監看內部 predictor 訊號，並於程式完成時自動輸出 metrics report：total branches、correct/incorrect predictions、accuracy、penalty cycles 與 neural activation count。
+
+		\item \textbf{功能通過/失敗驗證.} branch-stress functional testbench 驗證最終寄存器值 x3~$=$~10、x4~$=$~20、x30~$=$~30 皆正確，確認 speculative execution 可產生算術上完全正確的程式結果。
+	\end{enumerate}
+
+	上述從 instruction loading、speculative execution 到自動化指標輸出的端到端流程，證明本系統為可運行原型，而非僅在模擬環境成立的結果。
+
+	\subsection{資料流與運作工作流}
+	\label{sec:dataflow}
+
+	每個上升緣時，PC 前進（或在 stall 時保持）。instruction ROM 以組合邏輯回傳指令字，IF/ID register 同步擷取 instruction 與 PC。於 ID stage，decoder 產生控制/資料訊號，同時 branch predictor 進行組合查表；若 predictor 判定 taken，PC 會被推測性重導，IF stage flush 一個 bubble。ID/EX register 與五個 sideband registers 會同時鎖存已解碼操作數與 predictor metadata。EX stage 由 ALU 解出分支條件；若 misprediction，觸發兩級 flush 與 PC 重導。EX/MEM 與 MEM/WB registers 將結果送至 write-back，回寫 register file。
+
+	predictor update path 在每次 resolved conditional branch 皆會觸發：bimodal counter 一律更新，而 perceptron weight 僅在 mispredicted branches 上更新，將權重變動限制於真正預測錯誤情境。
+
+	\subsection{測試平台套件}
+	\label{sec:testbench}
+
+	共十個 self-checking testbenches 以不同粒度覆蓋兩個 CPU（Table~\ref{tab:testbenches}）。前五項先確認設計正確可用，後五項再做 head-to-head 量測，建立多程式場景下的效能輪廓，讓結論可被重現與採信。
+
+	\begin{table}[htbp]
+		\centering
+		\caption{測試平台組合與量測範圍}
+		\label{tab:testbenches}
+		\begin{tabularx}{\linewidth}{lYY}
+			\toprule
+			\textbf{Testbench} & \textbf{Target Design}                                        & \textbf{Measurements / Checks} \\
+			\midrule
+			Baseline functional
+			                   & Baseline CPU
+			                   & Register write-back values (x1--x8, x29, x30);
+			branch-taken flag; verifies ADDI, ADD, SUB, OR, AND, LW, SLT, JAL, BNE                                              \\[2pt]
+			Baseline metrics
+			                   & Baseline CPU
+			                   & Accuracy, correct count, mispredict count
+			(always-not-taken policy)                                                                                           \\[2pt]
+			Hybrid functional
+			                   & Innovation CPU
+			                   & Final register values: x3\,$=$\,10, x4\,$=$\,20, x30\,$=$\,30                                  \\[2pt]
+			Hybrid metrics
+			                   & Innovation CPU
+			                   & Accuracy, neural activation ratio                                                              \\[2pt]
+			Compare: branch-stress
+			                   & Both (concurrent)
+			                   & Accuracy, mispredict/penalty reduction, neural ratio
+			(alternating-condition 40-branch program)                                                                           \\[2pt]
+			Compare: strongly-taken
+			                   & Both (concurrent)
+			                   & Same metrics; 16-branch strongly-biased loop (31T + 1NT)                                       \\[2pt]
+			Compare: nested loop
+			                   & Both (concurrent)
+			                   & Same metrics; 25-branch 5$\times$4 nested loop                                                 \\[2pt]
+			Compare: alternating forward
+			                   & Both (concurrent)
+			                   & Same metrics; 34-branch forward/back mixed pattern                                             \\[2pt]
+			Compare: NT-biased
+			                   & Both (concurrent)
+			                   & Same metrics; 34-branch mostly-not-taken workload                                              \\[2pt]
+			Compare: long loop
+			                   & Both (concurrent)
+			                   & Same metrics; 32-branch long countdown loop (31T + 1NT)                                        \\
+			\bottomrule
+		\end{tabularx}
+	\end{table}
+
+	\subsubsection{分支壓力評測程式}
+
+	branch-stress 評測程式為 20 次迭代計數迴圈，並以 XOR 方式切換分支條件，形成刻意設計的 alternating taken / not-taken 困難模式。程式結構如 Table~\ref{tab:branchstress} 所示。
+
+	\begin{table}[htbp]
+		\centering
+		\caption{Branch-stress 評測程式結構}
+		\label{tab:branchstress}
+		\begin{tabular}{lll}
+			\toprule
+			\textbf{Line(s)} & \textbf{Instruction}      & \textbf{Purpose}                              \\
+			\midrule
+			1                & \texttt{addi x1, x0, 0}   & Initialize loop toggle bit                    \\
+			2--4             & \texttt{nop}              & Pipeline padding                              \\
+			5                & \texttt{addi x2, x0, 20}  & Initialize loop counter (20 iterations)       \\
+			6--8             & \texttt{nop}              & Pipeline padding                              \\
+			9                & \texttt{xori x1, x1, 1}   & Toggle branch condition (0$\leftrightarrow$1) \\
+			10--12           & \texttt{nop}              & Pipeline padding                              \\
+			13               & \texttt{bne x1, x0, +8}   & Conditional branch (alternates taken/NT)      \\
+			14               & \texttt{addi x3, x3, 1}   & Not-taken path counter                        \\
+			15               & \texttt{addi x4, x4, 1}   & Common path counter                           \\
+			16               & \texttt{addi x2, x2, -1}  & Decrement loop counter                        \\
+			17--19           & \texttt{nop}              & Pipeline padding                              \\
+			20               & \texttt{bne x2, x0, -44}  & Loop-back branch (taken until x2=0)           \\
+			21               & \texttt{addi x30, x0, 30} & Sentinel (marks program end)                  \\
+			\bottomrule
+		\end{tabular}
+	\end{table}
+
+	完成 20 次迭代後：x3~$=$~10（not-taken path 執行 10 次）、x4~$=$~20（common path 執行 20 次）、x30~$=$~30（sentinel 到達）。此三項條件構成 hybrid functional testbench 的 pass/fail 判準。
+
+	\subsection{驗證與實作結果}
+	\label{sec:results}
+
+	\subsubsection{功能驗證}
+
+	\paragraph{基準處理器.}
+	baseline functional testbench 逐 cycle 監看 write-back bus，並將每次 register write-back 與預先計算的 expected value table 比對。測試序列依相依性涵蓋核心 ISA 操作：immediate loads、暫存器算術（加減）、位元邏輯（OR、AND）、memory load、set-less-than 與 conditional branch。每項結果皆在 write-back stage 檢查數值與時序正確性，直接驗證 data hazard detection、load-use stall 插入與 branch-flush recovery 機制。
+
+	\paragraph{創新版本處理器.}
+	hybrid functional testbench 會執行 branch-stress loop 程式至結束，並追蹤三個 architectural sentinel registers 的最終值；其正確值取決於 20 次迭代中 taken 與 not-taken 路徑是否精確符合設計。僅當三個 sentinel 全部符合分析推導值時才判定通過，藉此確認 hybrid predictor 的 speculative execution、GHR snapshots、mispredict flushes 與 weight updates 在 40 次 conditional branches 下皆維持架構正確性。
+
+	\subsubsection{預測效能}
+
+	Table~\ref{tab:results} 彙整 always-not-taken baseline 與 hybrid predictor 在六種 branch-pattern 工作負載下的 head-to-head 比較。Penalty cycles 以 $2\times\text{mispredictions}$ 計算；penalty reduction 皆以 baseline 為相對基準。
+
+	\begin{table}[htbp]
+		\centering
+		\caption{六組工作負載下之分支預測效能比較（baseline always-not-taken vs. 本作品 hybrid predictor）}
+		\label{tab:results}
+		\begin{tabularx}{\linewidth}{p{2.0cm}rYYcYYY}
+			\toprule
+			\textbf{Workload} & \textbf{Br.}
+			                  & \textbf{ANT Acc.}
+			                  & \textbf{Hyb.\ Acc.}
+			                  & \textbf{Gain (pp)}
+			                  & \textbf{ANT Pen.}
+			                  & \textbf{Hyb.\ Pen.}
+			                  & \textbf{Pen.\ Red.}                                                                                                \\
+			\midrule
+			Branch-stress     & 40                  & 27.50\%          & \textbf{75.00\%} & $+47.50$         & 58 & \textbf{20} & \textbf{65.52\%} \\
+			Strongly-taken    & 16                  & 6.25\%           & \textbf{93.75\%} & $+87.50$         & 30 & \textbf{ 2} & \textbf{93.33\%} \\
+			Nested loop       & 25                  & 24.00\%          & \textbf{76.00\%} & $+52.00$         & 38 & \textbf{12} & \textbf{68.42\%} \\
+			Alt.\ forward     & 34                  & 29.41\%          & \textbf{70.59\%} & $+41.18$         & 48 & \textbf{20} & \textbf{58.33\%} \\
+			NT-biased         & 34                  & 52.94\%          & \textbf{94.12\%} & $+41.18$         & 32 & \textbf{ 4} & \textbf{87.50\%} \\
+			Long loop         & 32                  & 3.13\%           & \textbf{96.88\%} & $+93.75$         & 62 & \textbf{ 2} & \textbf{96.77\%} \\
+			\midrule
+			\textbf{Average}  & ---                 & \textbf{23.87\%} & \textbf{84.39\%}
+			                  & $\mathbf{+60.52}$   & ---              & ---              & \textbf{78.31\%}                                       \\
+			\bottomrule
+		\end{tabularx}
+	\end{table}
+
+	Table~\ref{tab:internal} 顯示六組程式中各工作負載的 predictor 路徑分配。在 branch-stress 工作負載中，可取得完整分路準確率：bimodal path 處理 18 個 high-confidence branches，準確率 94.44\%；perceptron path 處理 22 個 low-confidence branches，準確率 59.09\%。此結果明顯高於困難分支的 50\% 隨機基準，且可觀察到 weight table 隨迴圈推進逐步學會 alternating XOR-toggle pattern。其餘工作負載中，confidence gate 在歷史方向明確時多數分支會由 bimodal path 處理（87.5\%--93.8\%），僅在真正模糊情況升級至 perceptron。
+
+	\begin{table}[htbp]
+		\centering
+		\caption{創新版本 CPU 在各工作負載下之預測路徑分配}
+		\label{tab:internal}
+		\begin{tabularx}{\linewidth}{p{2.2cm}rYY}
+			\toprule
+			\textbf{Workload} & \textbf{Br.}
+			                  & \textbf{Bimodal}
+			                  & \textbf{Neural}                              \\
+			\midrule
+			Branch-stress     & 40               & 18 (45.0\%) & 22 (55.0\%) \\
+			Strongly-taken    & 16               & 14 (87.5\%) & 2 (12.5\%)  \\
+			Nested loop       & 25               & 17 (68.0\%) & 8 (32.0\%)  \\
+			Alt.\ forward     & 34               & 24 (70.6\%) & 10 (29.4\%) \\
+			NT-biased         & 34               & 31 (91.2\%) & 3 (8.8\%)   \\
+			Long loop         & 32               & 30 (93.8\%) & 2 (6.3\%)   \\
+			\bottomrule
+		\end{tabularx}
+	\end{table}
+
+	early-stopping 機制可在部分和於尚未用完 8 個 history steps 前已達可判定幅度時，省略組合 adder 路徑中的非必要運算。於目前 pipelined RTL 實作中，組合 early-stop 邏輯與平行 adder tree 之後接 1-cycle output register，因此不論組合路徑多早收斂，可觀測預測延遲皆固定為一個 cycle。故本設計未以「每分支提前結束次數」作為模擬指標；其硬體效益主要體現在組合 cone 內 LUT switching activity 降低，而非輸出延遲可變。
+
+	\subsubsection{跨情境驗證與可重跑測試}
+	\label{sec:multiworkload}
+
+	為確認 predictor 優勢不侷限於單一案例，並可作為工程導入時的可靠依據，本案在原 branch-stress 程式外，另外撰寫五組程式並以 head-to-head testbench 進行可重跑模擬。各程式分別對應不同 branch-pattern archetype：
+
+	\begin{itemize}
+		\item \textbf{Strongly-taken loop.} 一個 32-countdown loop，包含 31 次 taken 後接 1 次 not-taken branch。此情境是 always-not-taken predictor 的最差案例（準確率 3.13\%），同時是可快速學到主導方向之 predictor 的最佳案例。
+		\item \textbf{Nested loop.} 一個 5$\times$4 nested iteration，會產生內外層 loop-back branches 且重複次數不同，用以測試在兩個同時活躍的 branch PCs 下，per-PC table indexing 與 history tracking 的表現。
+		\item \textbf{Alternating forward.} 一個 16-iteration loop，含 forward conditional branch，當 loop variable 為奇數時略過 increment，形成 forward branch 的 taken/not-taken 交替模式，並同時存在 strongly-taken back branch。
+		\item \textbf{NT-biased.} 一個結合 never-taken comparison branch（x1$\neq$x2 恆成立，共 16 次）與 strongly-taken back branch 的 loop，用以驗證 high-confidence not-taken branches 是否可在不升級至 neural path 時仍被正確處理。
+		\item \textbf{Long countdown loop.} 一個 32-iteration countdown，模式與 strongly-taken 相同，用較長學習地平線（31 taken、1 not-taken）測試 predictor 的收斂能力。
+	\end{itemize}
+
+	為了與真實 open-source 設計進行 head-to-head 準確率比較，本案於統一的 Icarus Verilog testbench 中建立 PicoRV32（stall-to-resolve、無預測）、Ibex~+~SBP、VexRiscv~+~BHT 的行為模型，並以與主模擬相同 instruction memory images 執行全部六組 branch-pattern 程式。這些行為模型皆忠實對應其公開機制：Ibex SBP 對 signed offset 為負的分支（backward branch）預測 taken，否則預測 not-taken；VexRiscv BHT 則維持以 \texttt{PC[5:2]} 索引、初始為 weakly-not-taken 的 direct-mapped 16-entry 2-bit saturating counter 表。PicoRV32 則建模為每個 conditional branch 固定產生 2-cycle stall，對應零預測策略。
+
+	Table~\ref{tab:multiworkload} 報告四種 predictor 在六組程式上的實測 prediction accuracy。
+
+	\begin{table}[htbp]
+		\centering
+		\small
+		\setlength{\tabcolsep}{4pt}
+		\caption{六組工作負載下四種設計之分支預測準確率比較}
+		\label{tab:multiworkload}
+		\begin{tabularx}{\linewidth}{p{2.1cm} r Y Y Y Y Y}
+			\toprule
+			\textbf{Workload} & \textbf{Br.}
+			                  & \makecell{\textbf{PicoRV32}                                                                                       \\\textbf{(no pred.)}}
+			                  & \makecell{\textbf{Baseline}                                                                                       \\\textbf{always-NT}}
+			                  & \makecell{\textbf{Ibex}                                                                                           \\\textbf{+SBP}}
+			                  & \makecell{\textbf{VexRiscv}                                                                                       \\\textbf{+BHT}}
+			                  & \makecell{\textbf{本作品}                                                                                         \\\textbf{(hybrid)}} \\
+			\midrule
+			Branch-stress     & 40                          & 0.00\%           & 27.50\%          & 72.50\%          & 45.00\% & \textbf{75.00\%} \\
+			Strongly-taken    & 16                          & 0.00\%           & 6.25\%           & 93.75\%          & 87.50\% & \textbf{93.75\%} \\
+			Nested loop       & 25                          & 0.00\%           & 24.00\%          & 76.00\%          & 68.00\% & \textbf{76.00\%} \\
+			Alt.\ forward     & 34                          & 0.00\%           & 29.41\%          & \textbf{73.53\%} & 70.59\% & 70.59\%          \\
+			NT-biased         & 34                          & 0.00\%           & 52.94\%          & \textbf{97.06\%} & 94.12\% & 94.12\%          \\
+			Long loop         & 32                          & 0.00\%           & 3.13\%           & 96.88\%          & 93.75\% & \textbf{96.88\%} \\
+			\midrule
+			\textbf{Average}  & ---                         & \textbf{0.00\%}  & \textbf{23.87\%}
+			                  & \textbf{84.95\%}            & \textbf{76.49\%} & \textbf{84.39\%}                                                 \\
+			\bottomrule
+		\end{tabularx}
+	\end{table}
+
+	Table~\ref{tab:multiworkload} 中有兩組工作負載需一併解讀。在 \textbf{alternating-forward} 上，本案與 VexRiscv+BHT 皆為 70.59\%，而 Ibex+SBP 為 73.53\%。主因是 Ibex 的靜態規則（backward-taken / forward-not-taken）與該程式結構高度匹配：交錯的 forward skip-branch 以 not-taken 為主，因此規則天然有利。類似地，在 \textbf{NT-biased} 上，Ibex+SBP 為 97.06\%，高於本案與 VexRiscv 的 94.12\%，同樣來自 static forward-not-taken 對 never-taken forward comparison branch 的精準命中。這兩例顯示方向型靜態 heuristic 在「分支偏向由 offset 符號結構性決定」情境下具有優勢；相對地，learned predictor 在短程式上需要 warm-up，可能拉低整體準確率。Hybrid predictor 的價值在於通用性：其餘四組工作負載皆可追平或超越對手，且平均準確率 84.39\% 與 Ibex+SBP 的 84.95\% 相當，但在完整含記憶體 SoC 上僅需 39\% LUT 資源（919 vs.\ 2{,}331）與 76\% dynamic power（0.029\,W vs.\ 0.038\,W）。
+
+	為讓評估結果可直接用於工程決策，本案將效率比較與上述僅比較準確率的模擬比較分開呈現。Table~\ref{tab:tradeoff} 採統一的 ``accuracy--power--area'' 格式，並明確區分 post-route FPGA 實測量與外部參考模型基準。
+
+	\begin{table*}[htbp]
+		\centering
+		\footnotesize
+		\setlength{\tabcolsep}{3.5pt}
+		\caption{準確率、功耗與面積之權衡總表。$\dagger$ 為本案兩個 SoC 設計之 Vivado 2022.2 post-route 實測（xc7z020clg400-1，125\,MHz）；$\ddagger$ 為 core-only out-of-context 綜合結果（相同工具、part、時脈設定，但不含 instruction/data memory），兩者統計範圍不同，僅供趨勢比較。VexRiscv Verilog 由 SpinalHDL 產生（GenDynamicBHT 配置：RV32I、IBusSimple + DYNAMIC prediction、無 cache/MMU/MUL/DIV）。Avg.\ Steps 為 perceptron 權重累加於 early-stop 終止前之平均步數（behavioral simulation，上限~8）。}
+		\label{tab:tradeoff}
+		\resizebox{\textwidth}{!}{%
+			\begin{tabular}{lccccccccc}
+				\toprule
+				\textbf{Design}
+				                             & \textbf{Avg. Accuracy}
+				                             & \textbf{LUT}
+				                             & \textbf{FF}
+				                             & \textbf{BRAM}
+				                             & \textbf{DSP}
+				                             & \makecell{\textbf{Total}                                                                                                                               \\\textbf{Power (W)}}
+				                             & \makecell{\textbf{Dynamic}                                                                                                                             \\\textbf{Power (W)}}
+				                             & \makecell{\textbf{Neural}                                                                                                                              \\\textbf{Invoke Ratio}}
+				                             & \makecell{\textbf{Avg.}                                                                                                                                \\\textbf{Steps}} \\
+				\midrule
+				PicoRV32 (no pred.)$^\ddagger$  & 0.00\%                  & 810          & 443              & 0          & 0          & 0.119          & 0.016          & --            & --          \\
+				Baseline always-NT$^\dagger$ & 23.87\%                    & 408          & 613              & 0          & 0          & 0.113          & 0.009          & --            & --          \\
+				Ibex + SBP$^\ddagger$        & 84.95\%                    & 2{,}331      & 876              & 0          & 0          & 0.141          & 0.038          & --            & --          \\
+				VexRiscv + BHT$^\ddagger$    & 76.49\%                    & 764          & 561              & 1.5        & 0          & 0.133          & 0.030          & --            & --          \\
+				\textbf{本作品}$^\dagger$    & \textbf{84.39\%}           & \textbf{919} & \textbf{1{,}252} & \textbf{0} & \textbf{0} & \textbf{0.133} & \textbf{0.029} & \textbf{55\%} & \textbf{7.79} \\
+				\bottomrule
+			\end{tabular}%
+		}
+	\end{table*}
+
+	兩個以 $\dagger$ 標記之綜合設計採用下列公平比較約束：
+	(1) 使用相同 FPGA part（xc7z020clg400-1，PYNQ-Z2 board target），
+	(2) 使用相同 implementation tool（Vivado 2022.2）與流程（non-project，
+	\texttt{synth\_design} $\rightarrow$ \texttt{opt\_design} $\rightarrow$
+	\texttt{place\_design} $\rightarrow$ \texttt{route\_design}),
+	(3) 使用相同 clock constraint（125\,MHz，8\,ns period），
+	(4) 使用相同 branchstress workload 並於 synthesis time 預載入 ROM，
+	(5) 使用相同 vectorless power estimation flow（\texttt{report\_power} after
+	\texttt{route\_design}, no SAIF).
+	三個 $\ddagger$ 標記之 core-only 綜合皆採用相同 tool、part 與時脈設定，但目標為 out-of-context 模式下的 CPU core，不含 instruction/data memory；因此其 LUT/FF/power 數值在絕對範圍上與 $\dagger$ 組不同，僅提供架構脈絡參考，非直接對比。
+	Ibex 目標為 \texttt{ibex\_core}（\texttt{BranchPredictor=1}, \texttt{RV32M=0}, FPGA register file）。
+	PicoRV32 目標為 \texttt{picorv32}（RV32I only, \texttt{ENABLE\_MUL/DIV/IRQ=0}）。
+	VexRiscv Verilog 由 SpinalHDL 產生（GenDynamicBHT 配置：RV32I、IBusSimple + DYNAMIC prediction、無 cache/MMU/MUL/DIV）。
+
+	以下三點可直接對應本案的工程取捨與導入價值。
+	\textbf{第一}，加入 neural hybrid branch predictor 後，LUT 由 408 增至 919（+511 LUTs，\(+125\%\)），FF 由 613 增至 1{,}252（+639 FFs，\(+104\%\)），且 DSP 與 BRAM 皆維持 0，符合「避免 multiply-accumulate 硬體」的設計目標。相較前一版 non-pipelined 設計新增的 13 個 FF，對應於為達 timing closure 而插入的 pipeline registers（\texttt{bp\_perceptron} 的 parallel adder result register，以及 \texttt{bp\_top} 的 bimodal/confidence/GHR snapshot registers）。
+	\textbf{第二}，dynamic power 由 0.009\,W 上升至 0.029\,W（+0.020\,W，絕對值 \(+222\%\)）；同時準確率由 23.87\% 提升至 84.39\%（+60.52 個百分點）。若以「每瓦準確率（accuracy-per-dynamic-power）」與「每 LUT 準確率（accuracy-per-LUT）」兩項效率指標觀察，本案分別提升 \textbf{9.7\%} 與 \textbf{57\%}，代表效能增益並非僅靠堆疊硬體資源取得。
+	\textbf{第三}，核心貢獻在於計算量削減：confidence gating 將 stress 工作負載中的 neural invocation 限制在 55\%，讓 neural 資源僅用於真正困難的分支。在 40-branch stress 程式中，僅有 40 個分支中的 22 個需要 perceptron 評估，相較 always-on perceptron 的 neural 啟用次數降低 \textbf{45\%}。
+
+	\subsubsection{可程式邏輯綜合結果}
+
+	Table~\ref{tab:tradeoff} 的數據來自 Vivado 2022.2 post-route reports。baseline SoC（$\dagger$）綜合結果為 408 LUTs、613 FFs、0 BRAMs、0 DSPs，總功耗 0.113\,W、動態功耗 0.009\,W；innovation SoC（$\dagger$）為 919 LUTs、1{,}252 FFs、0 BRAMs、0 DSPs，總功耗 0.133\,W、動態功耗 0.029\,W。增加的 511 LUT 與 639 FF 主要來自 perceptron weight table、bimodal counter array、global history register、confidence comparator、pipeline sideband registers，以及為達 125\,MHz timing closure 而新增之 pipeline registers（parallel adder output register 與 bimodal/confidence/GHR snapshot registers）。全設計未使用 DSP blocks，證明 weight-update 與 dot-product 路徑確實以 LUT-level 加法與 signed comparison 實現，符合低位寬量化目標。
+
+	Figure~\ref{fig:layout} 顯示 PYNQ-Z2（xc7z020clg400-1）之 Vivado post-route 佈局。設計群集集中於左下區域（CLB columns X0Y0--X1Y1），僅佔 13{,}300 個可用 slices 中的 464 個（3.49\,\%），保留大部分 fabric 供未來周邊擴充。
+
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.72\linewidth]{figures/fig-layout.png}
+		\caption{創新版本 SoC 於 Xilinx xc7z020clg400-1（PYNQ-Z2）之 Vivado post-route 佈局結果}
+		\label{fig:layout}
+	\end{figure}
+
+	Post-route timing analysis 顯示兩個 SoC 版本在 125\,MHz 皆達成完整 timing closure。innovation SoC 的 worst negative slack（WNS）為 $+0.006$\,ns，且 setup/hold violations 皆為零。達成 closure 的關鍵包括：將 \texttt{bp\_perceptron} 中 sequential early-stop loop 改為 parallel tree adder 並接 1-cycle output register；在 \texttt{bp\_top} 新增 \texttt{bimodal\_taken}、\texttt{conf\_high}、\texttt{ghr\_snapshot} 的 pipeline registers；以及將 predictor 的 IF-stage PC 輸入（\texttt{u\_bp.pc\_id}）由 \texttt{if\_id\_pc} 改為 \texttt{if\_out\_pc}，使 IF-stage PC 提前一個 cycle 以對齊新時序。baseline 與 innovation SoC 均成功完成 place-and-route 且無 routing errors；功能正確性則由 RTL behavioral simulation 確認。
+
+	open-source Ibex core（$\ddagger$，out-of-context、無記憶體）在相同工具與時脈設定下綜合為 2{,}331 LUTs、876 FFs、0.141\,W total / 0.038\,W dynamic。此結果反映 lowRISC Ibex pipeline（含完整 compressed-instruction 支援、CSR registers 與 PMP unit）在複雜度上高於本案目的導向的五階段核心；然而在相同六組工作負載下，其 static backward-taken / forward-not-taken heuristic 仍可達到與本案接近的平均準確率（84.95\,\% vs.\ 84.39\,\%）。
+
+	% ============================================================
+	% SECTION 4 — MAXIMUM BENEFITS
+	% ============================================================
+	\section{研究成果可創造之最大效益}
+	\label{sec:benefits}
+
+	\subsection*{效益一：六組工作負載的分支錯誤預測懲罰週期平均降低 78.31\%}
+
+	最可直接量化的效益，是在六種 branch-pattern 工作負載下，\textbf{近似 pipeline penalty cycles 平均降低 78.31\%}。各案例降幅介於 58.33\%（alternating-condition pattern）至 96.77\%（strongly-biased long loop）。在主要 40-branch stress 程式中，penalty 由 baseline 的 58 降至 20（降低 65.52\%），對應準確率由 27.50\% 提升至 75.00\%。在 long countdown loop 中，準確率由 baseline 的 3.13\% 提升至 96.88\%，在不修改 ISA 與 binary 的前提下，幾乎消除全部 mispredictions。
+
+	此改善在六種 archetypes 上皆具一致性：strongly-biased 分支可在一至兩次觀察後由 bimodal table 穩定捕捉；alternating 分支則升級至 perceptron path，透過權重調適取得高於隨機基準且隨迭代提升的準確率；mixed NT-biased 工作負載受益於 confidence gating，將 never-taken 分支以高信心導向 bimodal path，僅在真正不確定時才啟用 neural inference。在分支密度更高的嵌入式情境（nested loops、interrupt handlers、recursive algorithms）中，降低 flush 開銷可直接轉化為更高有效 instructions-per-cycle。
+
+	\subsection*{效益二：神經推論成本隨分支難度調節}
+
+	confidence-adaptive 架構可在不支付每個分支完整 neural inference 成本下取得 neural 準確率提升，主要來自以下兩個互補機制：
+
+	\begin{itemize}
+		\item \textbf{Confidence gating:} 45\% 的 branches 可完全由 bimodal path 解決，不需 weight-table 讀取與 dot-product arithmetic。Neural activation 僅限於 bimodal confidence 真正偏低的 55\% branches。在 40-branch stress program 中，40 個 branches 僅有 22 個會啟用 perceptron，相較 always-on perceptron 可降低 45\% neural switching activity。
+
+		\item \textbf{Early stopping:} 在 perceptron combinational path 中，magnitude-bound comparator 會在 partial sum 的符號可被數學上確定時立即停止 accumulation tree，降低 early-convergent branches 的 LUT switching activity。在 pipelined RTL 實作中，output register 將可觀測延遲固定為一個 clock cycle；其效益主要為降低 combinational cone 內的 dynamic toggling，而非可變輸出延遲。
+	\end{itemize}
+
+	此外，整體算術路徑僅使用 4-bit 整數運算（加、減與 magnitude comparison），不需 multiply-accumulate DSP blocks；所有邏輯皆映射至 LUT fabric。此設計使 predictor 可部署於 entry-level FPGA 與共享 DSP 資源的 standard-cell ASIC flows，並相較全時啟用的全精度 neural 方法降低 dynamic toggling。
+
+	\subsection*{效益三：完整驗證且可重用的處理器開發平台}
+
+	完整系統以乾淨且參數化的可綜合 Verilog 模組階層交付，並提供十組 testbench 驗證套件與涵蓋六種 branch-pattern 工作負載的 head-to-head 比較框架。比較 testbench 於模擬結束時會自動輸出完整指標報告（accuracy、misprediction count、neural activation count），不需人工檢視波形。僅需調整 predictor table size、history length 與 weight bit-width，即可探索完整 accuracy-versus-area trade-off 空間，且無須修改管線邏輯。
+
+	在 PYNQ-Z2（125\,MHz）上的 FPGA 驗證證明此系統為可實體落地原型，而非 simulation artifact。此成果可直接作為後續發展基礎：包含 SoC 延伸整合（peripheral buses、interrupt controllers、RTOS deployment）、具實際可運作 adaptive predictor 的架構教學平台，以及 open-source PDK 下 ASIC tape-out 前的 pre-silicon predictor 評估。由於未採用 FPGA-specific primitives，設計可完整移植至其他器件家族與 standard-cell flows。
+
+	% ============================================================
+	% SECTION 5 — CONCLUSION AND FUTURE PROSPECTS
+	% ============================================================
+	\section{結論與未來展望}
+	\label{sec:conclusion}
+
+	本案已完成具 confidence-adaptive hybrid neural branch predictor 的 5-stage pipelined RISC-V RV32I SoC 設計、實作與驗證；系統以可綜合 Verilog RTL 落地，並於 PYNQ-Z2 FPGA 125\,MHz 完成確認。交付內容包含完整可運作 CPU core、instruction ROM、data RAM、hazard detection unit，以及具五個 sideband pipeline registers 的 predictor plugin，可直接支撐後續擴充與產品化評估。
+
+	量測結果具體且可重現：在六組評測程式中，hybrid predictor 平均準確率達 \textbf{84.39\%}，相較 always-not-taken baseline 的 \textbf{23.87\%}，可使 misprediction penalty cycles 平均降低 \textbf{78.31\%}。在主要 40-branch stress 程式中，準確率達 75.00\%、penalty 降低 65.52\%；在 32-branch strongly-biased loop 中，準確率達 96.88\%、penalty 降低 96.77\%。這代表本案不只在理論上可行，而是在可量測、可重跑、可落地的條件下成立。
+
+	後續規劃的發展方向如下：
+
+	\begin{itemize}
+		\item \textbf{匯流排互連與周邊整合.}
+		      導入 AXI-Lite / APB bus interconnect，並逐步整合 peripheral modules（UART、SPI、I\textsuperscript{2}C、DMA controller、Ethernet MAC）與符合 RISC-V Privileged ISA 的 PLIC/CLINT interrupt controller，以支援 RTOS deployment。
+
+		\item \textbf{運算元前遞.}
+		      新增 EX$\rightarrow$EX 與 MEM$\rightarrow$EX forwarding paths，可消除大部分 load-use stall cycles，進一步提升有效 IPC。
+
+		\item \textbf{Predictor 參數探索.}
+		      透過參數化架構，可在更廣泛 benchmark 程式上（不限 branch-stress microbenchmark）系統性探索 table sizes、history lengths 與 weight bit-widths 的影響。
+
+		\item \textbf{ASIC tape-out（流片）.}
+		      可綜合撰寫風格（無 FPGA-specific primitives、無 block-RAM macros、無 DSP instantiations）使設計可直接移植至 standard-cell ASIC flows，以進行 silicon-level PPA 驗證。
+	\end{itemize}
+
+	總結來說，本案提供的是一條「效能可提升、成本可控制、導入可執行」的實作路徑：在不依賴 multiply-accumulate 硬體、大型 on-chip memories 或 proprietary IP 的前提下，仍能得到具體且可量測的 branch prediction 改善。這讓本平台不只是研究成果，也是一個可持續迭代、可對接產業需求的 SoC 基礎。
+
+	% ============================================================
+	% REFERENCES
+	% ============================================================
+	\newpage
+	\renewcommand{\refname}{參考資料}
+	\nocite{*}
+	\bibliography{references}
+
+\end{document}

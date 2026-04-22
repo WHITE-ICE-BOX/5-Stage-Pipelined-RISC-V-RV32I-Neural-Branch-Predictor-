@@ -1,0 +1,108 @@
+=== branch-stress ===
+WARNING: /home/chiawei/SiliconAwards/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_4way_compare.v:66: $readmemb(/tmp/bp_prog/bs.txt): Not enough words in the file for the requested range [0:4095].
+WARNING: /home/chiawei/SiliconAwards/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_4way_compare.v:67: $readmemb(/tmp/bp_prog/bs.txt): Not enough words in the file for the requested range [0:4095].
+============================================================================
+  4-Way Predictor Comparison  |  Workload: branch-stress
+============================================================================
+Predictor                           Br.    Acc %  Pen.Cy  Pen.Red%
+----------------------------------------------------------------------------
+PicoRV32 (stall-to-resolve)          40     0.00      80      ref.
+Baseline always-NT                   40    27.50      58     27.50
+Ibex + SBP (bk-T / fwd-NT)           40    72.50      22     72.50
+VexRiscv + BHT (2-bit)               40    45.00      44     45.00
+This work (hybrid+CG+ES)             40    75.00      20     75.00
+----------------------------------------------------------------------------
+Innovation: neural used=22/40, avg_steps=7.75, early_exit=9
+============================================================================
+CSV,branch-stress,40,80,40,27.50,58,40.00,73,22.00,40,45.00,44         4075.0000         20
+
+=== long-loop ===
+WARNING: /home/chiawei/SiliconAwards/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_4way_compare.v:66: $readmemb(/tmp/bp_prog/ll.txt): Not enough words in the file for the requested range [0:4095].
+WARNING: /home/chiawei/SiliconAwards/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_4way_compare.v:67: $readmemb(/tmp/bp_prog/ll.txt): Not enough words in the file for the requested range [0:4095].
+============================================================================
+  4-Way Predictor Comparison  |  Workload: long-loop
+============================================================================
+Predictor                           Br.    Acc %  Pen.Cy  Pen.Red%
+----------------------------------------------------------------------------
+PicoRV32 (stall-to-resolve)          32     0.00      64      ref.
+Baseline always-NT                   32     3.12      62      3.12
+Ibex + SBP (bk-T / fwd-NT)           32    96.87       2     96.87
+VexRiscv + BHT (2-bit)               32    93.75       4     93.75
+This work (hybrid+CG+ES)             32    96.87       2     96.87
+----------------------------------------------------------------------------
+Innovation: neural used=2/32, avg_steps=8.00, early_exit=0
+============================================================================
+CSV,long-loop,32,64,32,3.12,62,32.00,97,2.00,32,93.75,4         3296.8700          2
+
+=== alternating ===
+WARNING: /home/chiawei/SiliconAwards/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_4way_compare.v:66: $readmemb(/tmp/bp_prog/af.txt): Not enough words in the file for the requested range [0:4095].
+WARNING: /home/chiawei/SiliconAwards/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_4way_compare.v:67: $readmemb(/tmp/bp_prog/af.txt): Not enough words in the file for the requested range [0:4095].
+============================================================================
+  4-Way Predictor Comparison  |  Workload: alternating
+============================================================================
+Predictor                           Br.    Acc %  Pen.Cy  Pen.Red%
+----------------------------------------------------------------------------
+PicoRV32 (stall-to-resolve)          34     0.00      68      ref.
+Baseline always-NT                   34    29.41      48     29.41
+Ibex + SBP (bk-T / fwd-NT)           34    73.52      18     73.52
+VexRiscv + BHT (2-bit)               34    70.58      20     70.58
+This work (hybrid+CG+ES)             34    70.58      20     70.58
+----------------------------------------------------------------------------
+Innovation: neural used=10/34, avg_steps=7.35, early_exit=11
+============================================================================
+CSV,alternating,34,68,34,29.41,48,34.00,74,18.00,34,70.58,20         3470.5800         20
+
+=== nt-biased ===
+WARNING: /home/chiawei/SiliconAwards/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_4way_compare.v:66: $readmemb(/tmp/bp_prog/nt.txt): Not enough words in the file for the requested range [0:4095].
+WARNING: /home/chiawei/SiliconAwards/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_4way_compare.v:67: $readmemb(/tmp/bp_prog/nt.txt): Not enough words in the file for the requested range [0:4095].
+============================================================================
+  4-Way Predictor Comparison  |  Workload: nt-biased
+============================================================================
+Predictor                           Br.    Acc %  Pen.Cy  Pen.Red%
+----------------------------------------------------------------------------
+PicoRV32 (stall-to-resolve)          34     0.00      68      ref.
+Baseline always-NT                   34    52.94      32     52.94
+Ibex + SBP (bk-T / fwd-NT)           34    97.05       2     97.05
+VexRiscv + BHT (2-bit)               34    94.11       4     94.11
+This work (hybrid+CG+ES)             34    94.11       4     94.11
+----------------------------------------------------------------------------
+Innovation: neural used=3/34, avg_steps=8.00, early_exit=0
+============================================================================
+CSV,nt-biased,34,68,34,52.94,32,34.00,97,2.00,34,94.11,4         3494.1100          4
+
+=== strongly-taken ===
+WARNING: /home/chiawei/SiliconAwards/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_4way_compare.v:66: $readmemb(/tmp/bp_prog/st.txt): Not enough words in the file for the requested range [0:4095].
+WARNING: /home/chiawei/SiliconAwards/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_4way_compare.v:67: $readmemb(/tmp/bp_prog/st.txt): Not enough words in the file for the requested range [0:4095].
+============================================================================
+  4-Way Predictor Comparison  |  Workload: strongly-taken
+============================================================================
+Predictor                           Br.    Acc %  Pen.Cy  Pen.Red%
+----------------------------------------------------------------------------
+PicoRV32 (stall-to-resolve)          16     0.00      32      ref.
+Baseline always-NT                   16     6.25      30      6.25
+Ibex + SBP (bk-T / fwd-NT)           16    93.75       2     93.75
+VexRiscv + BHT (2-bit)               16    87.50       4     87.50
+This work (hybrid+CG+ES)             16    93.75       2     93.75
+----------------------------------------------------------------------------
+Innovation: neural used=2/16, avg_steps=8.00, early_exit=0
+============================================================================
+CSV,strongly-taken,16,32,16,6.25,30,16.00,94,2.00,16,87.50,4         1693.7500          2
+
+=== nested-loop ===
+WARNING: /home/chiawei/SiliconAwards/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_4way_compare.v:66: $readmemb(/tmp/bp_prog/nl.txt): Not enough words in the file for the requested range [0:4095].
+WARNING: /home/chiawei/SiliconAwards/RISC-V-SoC-with-Custom-Peripherals/neural_branch_predictor/tb_4way_compare.v:67: $readmemb(/tmp/bp_prog/nl.txt): Not enough words in the file for the requested range [0:4095].
+============================================================================
+  4-Way Predictor Comparison  |  Workload: nested-loop
+============================================================================
+Predictor                           Br.    Acc %  Pen.Cy  Pen.Red%
+----------------------------------------------------------------------------
+PicoRV32 (stall-to-resolve)          25     0.00      50      ref.
+Baseline always-NT                   25    24.00      38     24.00
+Ibex + SBP (bk-T / fwd-NT)           25    76.00      12     76.00
+VexRiscv + BHT (2-bit)               25    68.00      16     68.00
+This work (hybrid+CG+ES)             25    76.00      12     76.00
+----------------------------------------------------------------------------
+Innovation: neural used=8/25, avg_steps=7.64, early_exit=6
+============================================================================
+CSV,nested-loop,25,50,25,24.00,38,25.00,76,12.00,25,68.00,16         2576.0000         12
+
